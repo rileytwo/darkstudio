@@ -64,4 +64,4 @@ vignettes/*.pdf
 rsconnect/
 
 # VS code
-.code-workspace
+*.code-workspace
