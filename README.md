@@ -7,7 +7,7 @@ Please create an issue if you have any problems!
 ### Darker RStudio with Editor Theme
 
 > Darker Modern Theme with Solarized Dark
-![DarkRStudio]("images/Screen Shot 2018-11-24 at 6.14.43 PM.png")
+![DarkRStudio](images/Screen\ Shot\ 2018-11-24\ at\ 6.14.43\ PM.png)
 
 <hr>
 
