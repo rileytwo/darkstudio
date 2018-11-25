@@ -1,4 +1,4 @@
-# RStudio-Customizations
+# daRkStudio
 
 This is something I did for fun, and figured other people might want to have more control over their RStudio experience.
 
