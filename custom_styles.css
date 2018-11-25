@@ -1,0 +1,940 @@
+body.rstudio-themes-flat .rstudio-themes-dark-grey {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+.rstudio-HyperlinkLabel {
+    color: #8be9fd;
+}
+.GD15MCFCGP .gwt-TabLayoutPanelContentContainer {
+    border: 1px solid rgb(10, 10, 10);
+    border-top-color: rgb(10, 10, 10);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(10, 10, 10);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(10, 10, 10);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(10, 10, 10);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+}
+.GD15MCFCGP .gwt-TabLayoutPanelTab:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-left: 1px solid rgb(10, 10, 10);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(10, 10, 10);
+}
+.rstudio-themes-flat .GD15MCFCMY {
+    border: 1px solid rgb(10, 10, 10);
+    border-top-color: rgb(10, 10, 10);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(10, 10, 10);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(10, 10, 10);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(10, 10, 10);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+}
+.rstudio-themes-flat .GD15MCFCMY {
+    background: rgb(31, 31, 31);
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(31, 31, 31);
+}
+.GD15MCFCEX {
+    background-color: rgb(60, 60, 60) !important;
+}
+.rstudio-themes-flat .gwt-DialogBox {
+	border: solid 1px rgb(35, 35, 35);
+	border-top-color: rgb(35, 35, 35);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(35, 35, 35);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(35, 35, 35);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(35, 35, 35);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	border-radius: 5px 5px 0 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background: rgb(35, 35, 35);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(35, 35, 35);
+	overflow: hidden !important;
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.26);
+	color: #fff;
+}
+.rstudio-themes-flat .gwt-DialogBox .dialogTopCenter {
+	height: 24px;
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+	border-bottom: solid 1px rgb(10, 10, 10);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(10, 10, 10);
+}
+.GD15MCFCGK {
+	background-color: inherit;
+	border: 1px solid #111;
+	border-top-color: rgb(17, 17, 17);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(17, 17, 17);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(17, 17, 17);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(17, 17, 17);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+}
+.GD15MCFCLJ {
+	background: rgb(60, 60, 60);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(60, 60, 60);
+}
+.GD15MCFCGP .gwt-TabLayoutPanelTab {
+    background: rgb(40, 40, 40);
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(40, 40, 40);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid rgb(10, 10, 10);
+    border-left: none;
+    float: none;
+}
+
+.GD15MCFCGP .gwt-TabLayoutPanelTab-selected {
+	background: rgb(60, 60, 60);
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(60, 60, 60);
+	color: #fff;
+}
+.dataGridHeader {
+    border-bottom: 1px solid rgb(10, 10, 10);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(10, 10, 10);
+    border-right: 1px solid rgb(10, 10, 10);
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgb(10, 10, 10);
+    text-align: left;
+    font-weight: normal;
+    font-size: 11px;
+    color: #f0f0f0;
+    background-color: rgb(60, 60, 60);
+    overflow: hidden;
+    cursor: default;
+}
+.rstudio-themes-flat .GD15MCFCFX:first-child {
+    border-left: 1px solid rgb(10, 10, 10);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(10, 10, 10);
+}
+.GD15MCFCFX {
+    border-bottom: 1px solid rgb(10, 10, 10) !important;
+    border-bottom-width: 1px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: rgb(10, 10, 10) !important;
+}
+.GD15MCFCPY {
+    background-color: rgb(60, 60, 60);
+}
+.rstudio-themes-flat .rstudio-themes-dark .search {
+	border-color: rgb(10, 10, 10);
+	border-top-color: rgb(10, 10, 10);
+	border-right-color: rgb(10, 10, 10);
+	border-bottom-color: rgb(10, 10, 10);
+	border-left-color: rgb(10, 10, 10);
+	background: rgb(20, 20, 20);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(20, 20, 20);
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCBS {
+	background: linear-gradient(
+		to right,
+		rgba(40, 40, 40, 0),
+		rgb(40, 40, 40) 13%
+	);
+	background-image: linear-gradient(
+		to right,
+		rgba(40, 40, 40, 0),
+		rgb(40, 40, 40) 13%
+	);
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+}
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.gwt-MenuItemSeparator
+	.menuSeparatorInner {
+	border-color: rgb(60, 60, 60);
+	border-top-color: rgb(60, 60, 60);
+	border-right-color: rgb(60, 60, 60);
+	border-bottom-color: rgb(60, 60, 60);
+	border-left-color: rgb(60, 60, 60);
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCFBC,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCECC {
+	border-color: rgb(70, 70, 70);
+	border-top-color: rgb(70, 70, 70);
+	border-right-color: rgb(70, 70, 70);
+	border-bottom-color: rgb(70, 70, 70);
+	border-left-color: rgb(70, 70, 70);
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader {
+	background: rgb(60, 60, 60);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(60, 60, 60);
+	border-color: rgb(10, 10, 10);
+	border-top-color: rgb(10, 10, 10);
+	border-right-color: rgb(10, 10, 10);
+	border-bottom-color: rgb(10, 10, 10);
+	border-left-color: rgb(10, 10, 10);
+}
+.rstudio-themes-flat.rstudio-themes-dark-menus .search {
+	border-color: rgb(10, 10, 10);
+	border-top-color: rgb(10, 10, 10);
+	border-right-color: rgb(10, 10, 10);
+	border-bottom-color: rgb(10, 10, 10);
+	border-left-color: rgb(10, 10, 10);
+	background: rgb(20, 20, 20);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(20, 20, 20);
+}
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	> div:last-child,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_toolbarWrapper,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.GD15MCFCJV.GD15MCFCPO
+	div.GD15MCFCMO
+	.GD15MCFCHS,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCJV.GD15MCFCPO {
+	border-color: rgb(10, 10, 10);
+	border-top-color: rgb(10, 10, 10);
+	border-right-color: rgb(10, 10, 10);
+	border-bottom-color: rgb(10, 10, 10);
+	border-left-color: rgb(10, 10, 10);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
+.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU button {
+	color: white;
+	background: rgba(50, 50, 50, 1);
+}
+
+.GD15MCFCIU td {
+	background: rgba(50, 50, 50, 1);
+	color: white;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb {
+	border: solid 1px rgb(40, 40, 40);
+	border-top-color: rgb(40, 40, 40);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(40, 40, 40);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(40, 40, 40);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(40, 40, 40);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+}
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+	-webkit-border-radius: 10px;
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb {
+	border: solid 1px rgb(60, 60, 60);
+	border-top-color: rgb(60, 60, 60);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(60, 60, 60);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(60, 60, 60);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(60, 60, 60);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+}
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+	-webkit-border-radius: 10px;
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	.rstheme_center,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-HDragger,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-VDragger {
+	background: rgb(40, 40, 40) !important;
+	background-image: initial !important;
+	background-position-x: initial !important;
+	background-position-y: initial !important;
+	background-size: initial !important;
+	background-repeat-x: initial !important;
+	background-repeat-y: initial !important;
+	background-attachment: initial !important;
+	background-origin: initial !important;
+	background-clip: initial !important;
+	background-color: rgb(40, 40, 40) !important;
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	table.GD15MCFCOQ
+	> tbody
+	> tr
+	> td,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCJV > div:last-child,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_secondaryToolbar,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.gwt-TabLayoutPanel
+	> div
+	> div.gwt-TabLayoutPanelTabs {
+	border-color: rgb(10, 10, 10);
+	border-top-color: rgb(10, 10, 10);
+	border-right-color: rgb(10, 10, 10);
+	border-bottom-color: rgb(10, 10, 10);
+	border-left-color: rgb(10, 10, 10);
+}
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.gwt-TabLayoutPanelTabs
+	table.rstheme_tabLayoutCenter,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.rstheme_minimizedWindowObject
+	table.rstheme_tabLayoutCenter {
+	border-color: rgb(10, 10, 10);
+	border-top-color: rgb(10, 10, 10);
+	border-right-color: rgb(10, 10, 10);
+	border-bottom-color: rgb(10, 10, 10);
+	border-left-color: rgb(10, 10, 10);
+	background: rgb(50, 50, 50);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(50, 50, 50);
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-background,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_toolbarWrapper,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.gwt-TabLayoutPanelTabs
+	.gwt-TabLayoutPanelTab-selected
+	table.rstheme_tabLayoutCenter,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_secondaryToolbar,
+.rstudio-themes-flat
+	.rstudio-themes-dark-grey
+	.GD15MCFCJV.GD15MCFCPO
+	div.GD15MCFCMO
+	.GD15MCFCHS,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelContent,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel {
+	background: rgb(60, 60, 60);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(60, 60, 60);
+}
+
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(40, 40, 40);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(40, 40, 40);
+}
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	background: rgb(60, 60, 60);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(60, 60, 60);
+	border: solid 1px rgb(10, 10, 10);
+	border-top-color: rgb(10, 10, 10);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(10, 10, 10);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(10, 10, 10);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(10, 10, 10);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+}
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
+	::-webkit-scrollbar-corner {
+	background: rgb(50, 50, 50);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(50, 50, 50);
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus .menuPopupMiddleCenter,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.themedPopupPanel
+	.popupMiddleCenter,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+	.gwt-SuggestBoxPopup
+	.suggestPopupMiddleCenter {
+	background: rgb(30, 30, 30);
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(30, 30, 30);
+	border: solid 1px rgb(80, 80, 80);
+	border-top-color: rgb(80, 80, 80);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(80, 80, 80);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(80, 80, 80);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(80, 80, 80);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	color: #f0f0f0;
+}
+.rstudio-themes-flat.rstudio-themes-dark-grey #rsGridData_info, .rstudio-themes-flat.rstudio-themes-dark-grey th, .rstudio-themes-flat.rstudio-themes-dark-grey td.first-child, .rstudio-themes-flat.rstudio-themes-dark-grey table.dataTable thead th {
+    background-color: rgb(60, 60, 60);
+}
+.rstudio-themes-flat.rstudio-themes-dark-grey #rsGridData_info, .rstudio-themes-flat.rstudio-themes-dark-grey table.dataTable thead th, .rstudio-themes-flat.rstudio-themes-dark-grey table.dataTable thead td, .rstudio-themes-flat.rstudio-themes-dark-grey table.dataTable tbody td {
+    border-color: rgb(10, 10, 10);
+    border-top-color: rgb(10, 10, 10);
+    border-right-color: rgb(10, 10, 10);
+    border-bottom-color: rgb(10, 10, 10);
+    border-left-color: rgb(10, 10, 10);
+}
+.rstudio-themes-flat .rstudio-themes-dark-grey td.GD15MCFCGXB, .rstudio-themes-flat .rstudio-themes-dark-grey td.GD15MCFCEXB, .rstudio-themes-flat .rstudio-themes-dark-grey td.GD15MCFCKXB, .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCDXB, .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCPWB {
+    border-color: rgb(40, 40, 40);
+    border-top-color: rgb(40, 40, 40);
+    border-right-color: rgb(40, 40, 40);
+    border-bottom-color: rgb(40, 40, 40);
+    border-left-color: rgb(40, 40, 40);
+}
