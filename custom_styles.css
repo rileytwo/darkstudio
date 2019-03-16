@@ -5,6 +5,34 @@
 	line-height: 1.2;
 }
 */
+/* changed keybindings background */
+.GD15MCFCFX {
+	background-color: #333333 !important;
+}
+.GD15MCFCFX td {
+	border-color: #111111 !important;
+}
+.GD15MCFCGX {
+	border-bottom: 1px solid #111111 !important;
+}
+.rstudio-themes-flat .GD15MCFCGX:first-child {
+	/* keyboard shortcuts */
+	color: #ffffff;
+	border-left: 2px solid #111111;
+}
+.GD15MCFCA- td {
+	border-color: #555555 !important;
+}
+.GD15MCFCA- {
+	background-color: #222222 !important;
+}
+.rstudio-themes-flat .GD15MCFCNY {
+	/* keyboard shortcuts */
+	border: 1px solid #111;
+	color: #ffffff;
+	background-color: #222222;
+}
+
 .rstudio-themes-flat,
 .rstudio-themes-dark .GD15MCFCJU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
@@ -91,17 +119,7 @@
 .macintosh .GD15MCFCAW pre {
 	line-height: 1.2;
 }
-.rstudio-themes-flat .GD15MCFCGX:first-child {
-	/* keyboard shortcuts */
-	border-left: 2px solid #fff;
-	color: black;
-}
-.rstudio-themes-flat .GD15MCFCNY {
-	/* keyboard shortcuts */
-	border: 1px solid #ddd;
-	color: black;
-	background: white;
-}
+
 .GD15MCFCBMB td.GD15MCFCBMB {
 	/* settings -- panel editor */
 	background-color: white;
