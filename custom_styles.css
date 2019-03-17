@@ -5,9 +5,21 @@
 	line-height: 1.2;
 }
 */
+/* import text file (from readr) dialogue */
+.GD15MCFCNID {
+	border: 1px solid #0a0a0a;
+	background-color: #323232;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 3px;
+	margin-top: 3px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
 /* changed keybindings background */
 .GD15MCFCFX {
 	background-color: #333333 !important;
+	border-bottom: 1px solid #0a0a0a !important;
 }
 .GD15MCFCFX td {
 	border-color: #111111 !important;
@@ -38,7 +50,7 @@
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
 	/* general app items */
 	font-family: SFProText-Regular, serif;
-	font-size: 11px;
+	font-size: 12px;
 }
 .rstudio-themes-flat
 	.rstudio-themes-dark
@@ -46,12 +58,12 @@
 	.gwt-TabLayoutPanelTab
 	.gwt-Label {
 	/* tab fonts & colors */
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: 600;
 }
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCPT {
-	color: white;
+	color: #ffffff;
 	text-shadow: none;
 	font-weight: 400;
 	font-family: SFProText-Regular, serif;
@@ -80,7 +92,7 @@
 .rstudio-themes-flat.editor_dark h2,
 .rstudio-themes-flat.editor_dark h3,
 .rstudio-themes-flat.editor_dark h4 {
-	color: white !important;
+	color: #ffffff !important;
 	background: none !important;
 	border-color: #6a6a6a !important;
 	font-family: SFProText-Regular, serif;
@@ -91,8 +103,8 @@
 /* snippets dialogue */
 /* snippets pane language canvas */
 .GD15MCFCI2 {
-	background-color: #fff;
-	border: 1px solid #999;
+	background: #ffffff;
+	border: 1px solid #999999;
 	width: 100%;
 	height: 100%;
 	overflow: auto;
@@ -107,7 +119,7 @@
 	margin: 0;
 	padding: 0;
 	/* background-color: #222222; */
-	color: black;
+	color: #000000;
 }
 /* --- */
 
@@ -122,22 +134,22 @@
 
 .GD15MCFCBMB td.GD15MCFCBMB {
 	/* settings -- panel editor */
-	background-color: white;
+	background: #ffffff;
 	height: 200px;
 	vertical-align: top;
 	padding-top: 0;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
-	color: black;
+	color: #000000;
 }
 .GD15MCFCC3 {
 	/* create new project -- projec type names */
-	color: black;
+	color: #000000;
 }
 .rstudio-themes-flat .GD15MCFCK2 {
 	margin-left: 5px;
-	color: white;
+	color: #ffffff;
 }
 .gwt-Label.GD15MCFCK2 {
 	/* create new project -- header */
@@ -150,41 +162,26 @@
 	/* create new project-- labels and checkmarks */
 	width: 510px;
 	height: 300px;
-	color: black;
+	color: #000000;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCCS {
 	background: linear-gradient(to right, #282828, #1e1e1e 20%);
 }
-.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	table.GD15MCFCOQ
-	> tbody
-	> tr
-	> td,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV > div:last-child,
-.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_secondaryToolbar,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.gwt-TabLayoutPanel
-	> div
-	> div.gwt-TabLayoutPanelTabs {
-	border-color: #0a0a0a;
-}
+
 .GD15MCFCAMB td.GD15MCFCAMB {
-	background-color: white;
+	background-color: #ffffff;
 	height: 200px;
 	vertical-align: top;
 	padding-top: 0;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
-	color: black;
+	color: #000000;
 }
 .rstudio-themes-flat .GD15MCFCP2 {
 	margin-left: -10px;
 	margin-right: -10px;
-	color: black;
+	color: #000000;
 }
 .GD15MCFCO2 {
 	height: 60px;
@@ -195,13 +192,13 @@
 	padding-left: 26px;
 	padding-top: 6px;
 	background-size: 79px 30px;
-	color: black;
+	color: #000000;
 }
 .GD15MCFCJ5B {
 	font-size: 9pt;
-	background-color: white;
+	background-color: #ffffff;
 	outline: none;
-	color: black;
+	color: #000000;
 }
 .GD15MCFCIID {
 	display: -ms-flexbox;
@@ -223,27 +220,17 @@
 	-ms-flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	color: black;
+	color: #000000;
 }
 body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 .rstudio-HyperlinkLabel {
 	color: #8be9fd;
 }
 
 .GD15MCFCGP .gwt-TabLayoutPanelContentContainer {
-	background-color: #3c3c3c40;
+	background: #3c3c3c40;
 	border: 1px solid #0a0a0a;
 }
 .GD15MCFCGP .gwt-TabLayoutPanelTab:first-child {
@@ -254,21 +241,10 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	border-left-style: solid;
 	border-left-color: #0a0a0a;
 }
-.rstudio-themes-flat .GD15MCFCMY {
-	border: 1px solid #0a0a0a;
-}
+
 .rstudio-themes-flat .GD15MCFCMY {
 	background: #1f1f1f;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #1f1f1f;
+	border: 1px solid #0a0a0a;
 }
 .GD15MCFCEX {
 	background-color: #3c3c3c !important;
@@ -297,60 +273,26 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	border: 1px solid #111;
 }
 .GD15MCFCLJ {
-	background-color: #3c3c3c;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
+	background: #656565;
 }
 
 .GD15MCFCGP .gwt-TabLayoutPanelTab {
 	border: 1px solid #0a0a0a;
-	background-color: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
+	background: #282828;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	padding-left: 12px;
 	padding-right: 12px;
-	border-left: none;
 	float: none;
 }
 
 .GD15MCFCGP .gwt-TabLayoutPanelTab-selected {
 	background: #3c3c3c;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #3c3c3c;
 	color: #fff;
 }
 .dataGridHeader {
 	border-bottom: 1px solid #0a0a0a;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #0a0a0a;
 	border-right: 1px solid #0a0a0a;
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-right-color: #0a0a0a;
 	text-align: left;
 	font-weight: normal;
 	font-size: 11px;
@@ -361,103 +303,36 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 }
 .rstudio-themes-flat .GD15MCFCFX:first-child {
 	border-left: 1px solid #0a0a0a;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #0a0a0a;
 }
-.GD15MCFCFX {
-	border-bottom: 1px solid #0a0a0a !important;
-	border-bottom-width: 1px !important;
-	border-bottom-style: solid !important;
-	border-bottom-color: #0a0a0a !important;
-}
+
 .GD15MCFCPY {
 	background-color: #3c3c3c;
 }
 .rstudio-themes-flat .rstudio-themes-dark .search {
 	border-color: #0a0a0a;
-	border-top-color: #0a0a0a;
-	border-right-color: #0a0a0a;
-	border-bottom-color: #0a0a0a;
-	border-left-color: #0a0a0a;
 	background: #141414;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #141414;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCBS {
 	background: linear-gradient(to right, #282828, #282828 13%);
 	background-image: linear-gradient(to right, #282828, #282828 13%);
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: initial;
 }
 .rstudio-themes-flat.rstudio-themes-dark-menus
 	.gwt-MenuItemSeparator
 	.menuSeparatorInner {
 	border-color: #3c3c3c;
-	border-top-color: #3c3c3c;
-	border-right-color: #3c3c3c;
-	border-bottom-color: #3c3c3c;
-	border-left-color: #3c3c3c;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCFBC,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCECC {
 	border-color: #464646;
-	border-top-color: #464646;
-	border-right-color: #464646;
-	border-bottom-color: #464646;
-	border-left-color: #464646;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader {
 	background: #3c3c3c;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #3c3c3c;
 	border-color: #0a0a0a;
-	border-top-color: #0a0a0a;
-	border-right-color: #0a0a0a;
-	border-bottom-color: #0a0a0a;
-	border-left-color: #0a0a0a;
 }
 .rstudio-themes-flat.rstudio-themes-dark-menus .search {
 	border-color: #0a0a0a;
-	border-top-color: #0a0a0a;
-	border-right-color: #0a0a0a;
-	border-bottom-color: #0a0a0a;
-	border-left-color: #0a0a0a;
 	background: #141414;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #141414;
 }
 .rstudio-themes-flat
 	.rstudio-themes-dark-grey
@@ -471,10 +346,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.GD15MCFCHS,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCJV.GD15MCFCPO {
 	border-color: #0a0a0a;
-	border-top-color: #0a0a0a;
-	border-right-color: #0a0a0a;
-	border-bottom-color: #0a0a0a;
-	border-left-color: #0a0a0a;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
@@ -499,27 +370,17 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU button {
-	color: white;
+	color: #ffffff;
 	background: #323232;
 }
 
 .GD15MCFCIU td {
 	background: #323232;
-	color: white;
+	color: #ffffff;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
@@ -544,16 +405,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 
 .rstudio-themes-flat
@@ -575,17 +426,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-thumb {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
-	-webkit-border-radius: 10px;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
 .rstudio-themes-flat
@@ -609,16 +449,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
@@ -643,16 +473,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
@@ -677,16 +497,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
@@ -711,16 +521,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
 .rstudio-themes-flat
@@ -744,16 +544,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 .rstudio-themes-flat
 	.rstudio-themes-dark.rstudio-themes-scrollbars
@@ -775,64 +565,11 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-thumb {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 	-webkit-border-radius: 10px;
-}
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.rstheme_minimizedWindowObject
-	.rstheme_center,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner {
-	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-HDragger,
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-VDragger {
-	background: #282828 !important;
-	background-image: initial !important;
-	background-position-x: initial !important;
-	background-position-y: initial !important;
-	background-size: initial !important;
-	background-repeat-x: initial !important;
-	background-repeat-y: initial !important;
-	background-attachment: initial !important;
-	background-origin: initial !important;
-	background-clip: initial !important;
 	background-color: #282828 !important;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border,
@@ -842,6 +579,7 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	> tbody
 	> tr
 	> td,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV > div:last-child,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCJV > div:last-child,
 .rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_secondaryToolbar,
 .rstudio-themes-flat
@@ -850,10 +588,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	> div
 	> div.gwt-TabLayoutPanelTabs {
 	border-color: #0a0a0a;
-	border-top-color: #0a0a0a;
-	border-right-color: #0a0a0a;
-	border-bottom-color: #0a0a0a;
-	border-left-color: #0a0a0a;
 }
 .rstudio-themes-flat
 	.rstudio-themes-dark-grey
@@ -863,22 +597,14 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-dark-grey
 	.rstheme_minimizedWindowObject
 	table.rstheme_tabLayoutCenter {
-	border-color: #0a0a0a;
-	border-top-color: #0a0a0a;
-	border-right-color: #0a0a0a;
-	border-bottom-color: #0a0a0a;
-	border-left-color: #0a0a0a;
 	background: #323232;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #323232;
+	border: solid 1px #0a0a0a;
+	border-radius: 3px 3px 3px 3px;
+	padding-left: 8px;
+	padding-right: 9px;
+	margin-left: -1px;
+	height: 24px;
+	color: #ffffff;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-background,
 .rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_toolbarWrapper,
@@ -896,16 +622,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelContent,
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel {
 	background: #3c3c3c;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #3c3c3c;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
@@ -915,32 +631,12 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #282828;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #282828;
 }
 .rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
 .rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
 	::-webkit-scrollbar-thumb {
 	border: solid 1px #0a0a0a;
-	-webkit-border-radius: 10px;
-	background-color: #3c3c3c;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
+	background: #3c3c3c;
 }
 .rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
 .rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
@@ -949,16 +645,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .rstudio-themes-flat.rstudio-themes-dark.rstudio-themes-scrollbars
 	::-webkit-scrollbar-corner {
 	background: #323232;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #323232;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark-menus .menuPopupMiddleCenter,
@@ -969,16 +655,7 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.gwt-SuggestBoxPopup
 	.suggestPopupMiddleCenter {
 	border: solid 1px #505050;
-	background-color: #1e1e1e;
-	background-image: initial;
-	background-position-x: initial;
-	background-position-y: initial;
-	background-size: initial;
-	background-repeat-x: initial;
-	background-repeat-y: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
+	background: #1e1e1e;
 	color: #f0f0f0;
 }
 .rstudio-themes-flat.rstudio-themes-dark-grey #rsGridData_info,
@@ -992,10 +669,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .rstudio-themes-flat.rstudio-themes-dark-grey table.dataTable thead td,
 .rstudio-themes-flat.rstudio-themes-dark-grey table.dataTable tbody td {
 	border-color: #0a0a0a;
-	border-top-color: #0a0a0a;
-	border-right-color: #0a0a0a;
-	border-bottom-color: #0a0a0a;
-	border-left-color: #0a0a0a;
 }
 .rstudio-themes-flat .rstudio-themes-dark-grey td.GD15MCFCGXB,
 .rstudio-themes-flat .rstudio-themes-dark-grey td.GD15MCFCEXB,
@@ -1003,8 +676,4 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCDXB,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCPWB {
 	border-color: #282828;
-	border-top-color: #282828;
-	border-right-color: #282828;
-	border-bottom-color: #282828;
-	border-left-color: #282828;
 }
