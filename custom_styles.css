@@ -5,6 +5,15 @@
 	line-height: 1.2;
 }
 */
+/* update packages dialogue */
+.GD15MCFCE4B {
+	padding: 2px 4px;
+	overflow: hidden;
+	cursor: default;
+	border: none;
+	outline: none;
+	color: black;
+}
 /* import text file (from readr) dialogue */
 .GD15MCFCNID {
 	border: 1px solid #0a0a0a;
@@ -49,7 +58,7 @@
 .rstudio-themes-dark .GD15MCFCJU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
 	/* general app items */
-	font-family: SFProText-Regular, serif;
+	font-family: Roboto, serif;
 	font-size: 12px;
 }
 .rstudio-themes-flat
@@ -66,11 +75,11 @@
 	color: #ffffff;
 	text-shadow: none;
 	font-weight: 400;
-	font-family: SFProText-Regular, serif;
+	font-family: Roboto, serif;
 	font-size: 11px;
 }
 .rstudio-themes-flat.rstudio-themes-dark-menus .search input {
-	font-family: SFProText-Regular, serif;
+	font-family: Roboto, serif;
 }
 
 /* some buttons */
@@ -86,7 +95,7 @@
 .rstudio-themes-flat.editor_dark.ace_editor_theme p,
 .rstudio-themes-flat.editor_dark.ace_editor_theme a,
 .rstudio-themes-dark.editor_dark.ace_editor_theme div {
-	font-family: SFProText-Regular, sans-serif;
+	font-family: Roboto, sans-serif;
 }
 .rstudio-themes-flat.editor_dark h1,
 .rstudio-themes-flat.editor_dark h2,
@@ -95,7 +104,7 @@
 	color: #ffffff !important;
 	background: none !important;
 	border-color: #6a6a6a !important;
-	font-family: SFProText-Regular, serif;
+	font-family: Roboto, serif;
 }
 
 /* end help panel */
@@ -124,7 +133,7 @@
 /* --- */
 
 .GD15MCFCMU {
-	font-family: SFProText-Regular, serif;
+	font-family: Roboto, serif;
 }
 .macintosh .GD15MCFCAW,
 .macintosh .GD15MCFCAW td,
