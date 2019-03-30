@@ -1,2 +1,0 @@
-#!/bin/bash
-cp /applications/rstudio.app/contents/resources/www/{custom_styles.css,index.htm} ..
