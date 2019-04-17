@@ -5,29 +5,23 @@
 	line-height: 1.2;
 }
 */
-/* update packages dialogue */
-.GD15MCFCE4B {
-	padding: 2px 4px;
-	overflow: hidden;
-	cursor: default;
-	border: none;
-	outline: none;
-	color: black;
+/* update packages */
+.GD15MCFCD4B {
+    color: black;
+    padding: 2px 4px;
+    overflow: hidden;
+    cursor: default;
+    border: none;
+    outline: none;
+}
+/* links in editor */
+.GD15MCFCOIC {
+	position: absolute;
+	margin-top: 0px;
+	border-bottom: 1px solid #5bd4a1;
+	pointer-events: all;
 }
 /* import text file (from readr) dialogue */
-.GD15MCFCOID {
-	color: #ffffff;
-	background: #323232;
-	padding-top: 3px;
-	padding-left: 3px;
-	padding-right: 3px;
-	padding-bottom: 3px;
-}
-.gwt-DialogBox input[type="text"] {
-	border: 1px solid #999;
-	height: 17px;
-	background: #e8e8e8;
-}
 .GD15MCFCNID {
 	border: 1px solid #0a0a0a;
 	background-color: #323232;
@@ -38,10 +32,23 @@
 	margin-right: 5px;
 	margin-left: 5px;
 }
+/* Browse Addins Menu */
+.rstudio-themes-flat .GD15MCFCGIB {
+    border: none;
+    border-bottom: 1px solid #969696;
+    color: #000;
+}
 /* changed keybindings background */
 .GD15MCFCFX {
 	background-color: #333333 !important;
 	border-bottom: 1px solid #0a0a0a !important;
+}
+/* underline in links */
+.GD15MCFCAJC {
+    position: absolute;
+    margin-top: -1px;
+    border-bottom: 1px solid #2792ff;
+    pointer-events: all;
 }
 .GD15MCFCFX td {
 	border-color: #111111 !important;
@@ -71,7 +78,7 @@
 .rstudio-themes-dark .GD15MCFCJU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
 	/* general app items */
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: roboto, serif;
 	font-size: 12px;
 }
 .rstudio-themes-flat
@@ -88,11 +95,11 @@
 	color: #ffffff;
 	text-shadow: none;
 	font-weight: 400;
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: roboto, serif;
 	font-size: 11px;
 }
 .rstudio-themes-flat.rstudio-themes-dark-menus .search input {
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: roboto, serif;
 }
 
 /* some buttons */
@@ -108,7 +115,7 @@
 .rstudio-themes-flat.editor_dark.ace_editor_theme p,
 .rstudio-themes-flat.editor_dark.ace_editor_theme a,
 .rstudio-themes-dark.editor_dark.ace_editor_theme div {
-	font-family: Roboto, "Lucida Grande", sans-serif;
+	font-family: roboto, sans-serif;
 }
 .rstudio-themes-flat.editor_dark h1,
 .rstudio-themes-flat.editor_dark h2,
@@ -117,7 +124,7 @@
 	color: #ffffff !important;
 	background: none !important;
 	border-color: #6a6a6a !important;
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: roboto, serif;
 }
 
 /* end help panel */
@@ -146,7 +153,7 @@
 /* --- */
 
 .GD15MCFCMU {
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: roboto, serif;
 }
 .macintosh .GD15MCFCAW,
 .macintosh .GD15MCFCAW td,
@@ -242,7 +249,7 @@
 	-ms-flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	/* color: #000000; */
+	color: #000000;
 }
 body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	background: #282828;
