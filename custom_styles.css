@@ -32,6 +32,29 @@
 	margin-right: 5px;
 	margin-left: 5px;
 }
+.GD15MCFCFID {
+    color: black;
+    cursor: pointer;
+    display: block;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #eaf6ff;
+}
+.GD15MCFCEID {
+    color: black;
+    cursor: pointer;
+    display: block;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.GD15MCFCCJD {
+    height: 23px;
+    color: black;
+}
 /* Browse Addins Menu */
 .rstudio-themes-flat .GD15MCFCGIB {
     border: none;
