@@ -14,6 +14,13 @@
 	outline: none;
 	color: black;
 }
+/* import excel file (from readxl) dialogue */
+.rstudio-themes-flat .gwt-DialogBox .GD15MCFCNMD {
+	color: #000000;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
 /* import text file (from readr) dialogue */
 .GD15MCFCOID {
 	color: #ffffff;
