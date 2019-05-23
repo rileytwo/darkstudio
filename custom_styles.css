@@ -79,7 +79,7 @@
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
 	/* general app items */
 	font-family: Roboto, "Lucida Grande", serif;
-	font-size: 12px;
+	/* font-size: 1.1em; */
 }
 .rstudio-themes-flat
 	.rstudio-themes-dark
@@ -87,7 +87,7 @@
 	.gwt-TabLayoutPanelTab
 	.gwt-Label {
 	/* tab fonts & colors */
-	font-size: 11px;
+	font-size: 1.1em;
 	font-weight: 600;
 }
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
@@ -350,19 +350,23 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.menuSeparatorInner {
 	border-color: #3c3c3c;
 }
+
 .rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCFBC,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCECC {
 	border-color: #464646;
 }
+
 .rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader {
 	background: #3c3c3c;
 	border-color: #0a0a0a;
 }
+
 .rstudio-themes-flat.rstudio-themes-dark-menus .search {
 	border-color: #0a0a0a;
 	background: #141414;
 }
+
 .rstudio-themes-flat
 	.rstudio-themes-dark-grey
 	.rstheme_minimizedWindowObject
@@ -377,29 +381,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	border-color: #0a0a0a;
 }
 
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.rstheme_minimizedWindowObject
-	.rstheme_center,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner {
-	background: #282828;
-}
 
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU button {
@@ -412,40 +393,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	color: #ffffff;
 }
 
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.rstheme_minimizedWindowObject
-	.rstheme_center,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner {
-	background: #282828;
-}
-
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-thumb,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-thumb {
-	border: solid 1px #282828;
-}
 .rstudio-themes-flat
 	.rstudio-themes-dark.rstudio-themes-scrollbars
 	::-webkit-scrollbar-thumb,
@@ -455,102 +402,11 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	.rstudio-themes-scrollbars
 	::-webkit-scrollbar-thumb {
 	background: #282828;
-}
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.rstheme_minimizedWindowObject
-	.rstheme_center,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner {
-	background: #282828;
+	border: solid 1px #282828
 }
 
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.rstheme_minimizedWindowObject
-	.rstheme_center,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner {
-	background: #282828;
-}
 
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.rstheme_minimizedWindowObject
-	.rstheme_center,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner {
-	background: #282828;
-}
 
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat
-	.rstudio-themes-dark-grey
-	.rstheme_minimizedWindowObject
-	.rstheme_center,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat
-	.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-	.rstudio-themes-scrollbars
-	::-webkit-scrollbar-corner {
-	background: #282828;
-}
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
 .rstudio-themes-flat
 	.rstudio-themes-dark-grey
