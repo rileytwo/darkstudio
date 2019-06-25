@@ -23,7 +23,14 @@ like to help out by contributing, please do! I'd love the help :).
 
 <hr>
 
-# How do I use this?
+# How do I install?
+
+## Wait!
+**You may want to back up the original files.**
+
+I recommend placing them into a folder, something like `before-daRkStudio`,
+`RStudio-original`, `original-rstudio-files-that-were-there-before-i-started-using-this-awesome-repo-thanksriley` etc., somewhere outside of RStudio's file directory
+(so they won't be removed when you update RStudio!).
 
 ### macOS
 ```sh
@@ -48,6 +55,11 @@ Copy-Item "daRkStudio\index.htm" `
     ` -Force
 ```
 
+You may not have the permission to copy or overwrite items in `C:\Program Files`.
+If that's the case, run PowerShell in an elevated prompt (as an Adminstrator)
+and try to copy the items to `C:\Program Files\RStudio\Resources\www\custome_styles.css`
+again. If that doesn't work, try doing the same, but from File Explorer.
+
 ### Linux
 ```sh
 git clone https://github.com/livelaughriley/daRkStudio
@@ -59,12 +71,11 @@ cp "daRkStudio/index.htm" \
     "/usr/local/rstudio/<version-goes-here>/resources/www/index.htm"
 ```
 
-# But Wait!
-**You may want to back up the original files.**
+# How do I update?
 
-I recommend placing them into a folder, something like `before-daRkStudio`,
-`RStudio-original`, `original-rstudio-files-that-were-there-before-i-started-using-this-awesome-repo-thanksriley` etc., somewhere outside of RStudio's file directory
-(so they won't be removed when you update RStudio!).
+If you cloned the repositories, `cd` into the direcory that contains this repo. 
+
+Execute `git pull --rebase`, and copy the files to `RStudio`'s `www` directory again.
 
 If you run into any troubles, please file an issue.
 
