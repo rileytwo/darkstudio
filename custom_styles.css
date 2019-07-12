@@ -127,7 +127,6 @@
 	font-family: Roboto, "Lucida Grande", serif;
 }
 
-/* end help panel */
 
 /* snippets dialogue */
 /* snippets pane language canvas */
@@ -141,7 +140,6 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-/* --- */
 
 /* snippets text */
 .GD15MCFCH2 {
@@ -150,7 +148,7 @@
 	/* background-color: #222222; */
 	color: #000000;
 }
-/* --- */
+
 
 .GD15MCFCMU {
 	font-family: Roboto, "Lucida Grande", serif;
@@ -278,6 +276,18 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .GD15MCFCEX {
 	background-color: #3c3c3c !important;
 }
+
+/* Console Pane (without any other tabs) */
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO div.GD15MCFCMO .GD15MCFCIS {
+	background-color: #282828;
+	border-color: #0a0a0a;
+}
+
+/* Console Pane top border (without any other tabs) */
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO div.GD15MCFCMO .GD15MCFCIS, .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO {
+	border-color: #0a0a0a;
+}
+
 .rstudio-themes-flat .gwt-DialogBox {
 	border: solid 2px #232323;
 	border-radius: 5px 5px 0 0;
