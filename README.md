@@ -39,7 +39,7 @@ git clone https://github.com/livelaughriley/daRkStudio
 cp "daRkStudio/custom_styles.css" \
     "/Applications/RStudio.app/Contents/Resources/www/custom_styles.css"
 
-cp "daRkStudio/index.htm" 
+cp "daRkStudio/index.htm" \
     "/Applications/RStudio.app/Contents/Resources/www/index.htm"
 ```
 ### Windows
