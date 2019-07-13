@@ -41,9 +41,4 @@ Icon
 # VS code
 *.code-workspace
 
-*.ps1
-*.sh
-
-sh/
-ps1/
 
