@@ -593,3 +593,19 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
   background-color: rgb(68, 68, 68) !important;
 }
 
+/* Addins dialogue border */
+.rstudio-themes-flat .GD15MCFCNJB {
+	border: solid 1px #0a0a0a;
+
+}
+
+/* Addins dialogue pane */
+.rstudio-themes-flat .GD15MCFCNJB table {
+	border-collapse: collapse;
+	color: #111111;
+}
+
+/* Addins dialogue selected addin */
+.rstudio-themes-flat .GD15MCFCNJB .GD15MCFCIJB {
+	background: #cecece
+}
