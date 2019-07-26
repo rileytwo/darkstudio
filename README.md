@@ -16,16 +16,17 @@ in RStudio's DevTools, by selecting elements
 and changing their properties. So, if anyone would
 like to help out by contributing, please do! I'd love the help :).
 
-### What it does:
+## What it does:
 
 > Darker Modern Theme
 > ![DarkRStudio](images/dark-rstudio.png)
 
-<hr>
+***
 
-# How do I install?
+## How do I install?
 
 ## Wait!
+
 **You may want to back up the original files.**
 
 I recommend placing them into a folder, something like `before-daRkStudio`,
@@ -33,7 +34,8 @@ I recommend placing them into a folder, something like `before-daRkStudio`,
 (so they won't be removed when you update RStudio!).
 
 ### macOS
-```sh
+
+```bash
 git clone https://github.com/livelaughriley/daRkStudio
 
 cp "daRkStudio/custom_styles.css" \
@@ -42,16 +44,18 @@ cp "daRkStudio/custom_styles.css" \
 cp "daRkStudio/index.htm" \
     "/Applications/RStudio.app/Contents/Resources/www/index.htm"
 ```
+
 ### Windows
-```pwsh
+
+```powershell
 git clone https://github.com/livelaughriley/daRkStudio
 
 Copy-Item "daRkStudio\custom_styles.css" `
-    "C:\Program Files\RStudio\Resources\www\custom_styles.css" `
+    "C:\Program Files\RStudio\www\custom_styles.css" `
     -Force
 
-Copy-Item "daRkStudio\index.htm" ` 
-    "C:\Program Files\RStudio\Resources\www\index.htm"
+Copy-Item "daRkStudio\index.htm" `
+    "C:\Program Files\RStudio\www\index.htm"
     ` -Force
 ```
 
@@ -61,7 +65,8 @@ and try to copy the items to `C:\Program Files\RStudio\Resources\www\custome_sty
 again. If that doesn't work, try doing the same, but from File Explorer.
 
 ### Linux
-```sh
+
+```bash
 git clone https://github.com/livelaughriley/daRkStudio
 
 cp "daRkStudio/custom_styles.css" \
@@ -71,11 +76,10 @@ cp "daRkStudio/index.htm" \
     "/usr/local/rstudio/<version-goes-here>/resources/www/index.htm"
 ```
 
-# How do I update?
+### How do I update?
 
-If you cloned the repositories, `cd` into the direcory that contains this repo. 
+If you cloned the repositories, `cd` into the direcory that contains this repo.
 
 Execute `git pull --rebase`, and copy the files to `RStudio`'s `www` directory again.
 
 If you run into any troubles, please file an issue.
-
