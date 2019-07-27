@@ -1,0 +1,272 @@
+/* ------ TABS -------- */
+.rstudio-themes-flat
+	.rstudio-themes-dark
+	.GD15MCFCBS
+	.gwt-TabLayoutPanelTab
+	.gwt-Label {
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+/* ------ FONTS ------ */
+.gwt-DialogBox input[type="text"] {
+	border: 1px solid #999;
+	height: 17px;
+	background: #e8e8e8;
+}
+
+/* update packages dialogue */
+.GD15MCFCE4B {
+	padding: 2px 4px;
+	overflow: hidden;
+	cursor: default;
+	border: none;
+	outline: none;
+	color: black;
+}
+
+/* import text file (from readr) dialogue */
+.GD15MCFCOID {
+	color: #ffffff;
+	background: #323232;
+	padding-top: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+}
+/* import excel file (from readxl) dialogue */
+.rstudio-themes-flat .gwt-DialogBox .GD15MCFCNMD {
+	color: #000000;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+/* keyboard shortcuts */
+.rstudio-themes-flat .GD15MCFCGX:first-child {
+	color: #ffffff;
+	border-left: 2px solid #111111;
+}
+.rstudio-themes-flat .GD15MCFCNY {
+	/* keyboard shortcuts */
+	border: 1px solid #111;
+	color: #ffffff;
+	background-color: #222222;
+}
+
+/* --------- KEYBINDINGS ---------- */
+.GD15MCFCFX {
+	background-color: #333333 !important;
+	border-bottom: 1px solid #0a0a0a !important;
+}
+.GD15MCFCFX td {
+	border-color: #111111 !important;
+}
+.GD15MCFCGX {
+	border-bottom: 1px solid #111111 !important;
+}
+.GD15MCFCA- td {
+	border-color: #555555 !important;
+}
+.GD15MCFCA- {
+	background-color: #222222 !important;
+}
+
+/* -------- PREFERENCES ---------- */
+/* preferences panel container */
+.rstudio-themes-flat .gwt-DialogBox {
+	border: solid 2px #232323;
+	border-radius: 5px 5px 0 0;
+	background: #232323;
+	background-color: #232323;
+	overflow: hidden !important;
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	box-shadow: 0 15px 15px #000000;
+	color: #fff;
+}
+/* top panel under "Options" */
+.rstudio-themes-flat .gwt-DialogBox .dialogTopCenter {
+	height: 24px;
+	background-color: #282828;
+	border-bottom: solid 1px #0a0a0a;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #0a0a0a;
+}
+/* "Basic" & "Advanced" buttons under "General" */
+.GJQ3LUQCGP .gwt-TabLayoutPanelTab {
+  /* background: #f5f5f5 -moz-linear-gradient(top, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0.9) 17%, rgba(255, 255, 255, 0) 50%); */
+  background: #282828;
+  background: #282828;
+  background: #282828;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid #c0c0c0;
+  border-left: none;
+  float: none;
+}
+/* snippets dialogue */
+/* snippets pane language canvas */
+.GD15MCFCI2 {
+	background: #ffffff;
+	border: 1px solid #999999;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+/* snippets text */
+.GD15MCFCH2 {
+	margin: 0;
+	padding: 0;
+	/* background-color: #222222; */
+	color: #000000;
+}
+
+
+/* ------ UNKNOWN ------ */
+/* some buttons */
+.GD15MCFCD1 {
+	text-align: center;
+	font-size: 12px;
+	font-family: inherit;
+}
+
+/* help panel */
+.rstudio-themes-flat.editor_dark.ace_editor_theme p,
+.rstudio-themes-flat.editor_dark.ace_editor_theme a,
+.rstudio-themes-dark.editor_dark.ace_editor_theme div {
+	font-family: Roboto, "Lucida Grande", sans-serif;
+}
+
+.GD15MCFCMU {
+	font-family: Roboto, "Lucida Grande", serif;
+}
+
+.GD15MCFCBMB td.GD15MCFCBMB {
+	/* settings -- panel editor */
+	background: #ffffff;
+	height: 200px;
+	vertical-align: top;
+	padding-top: 0;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	color: #000000;
+}
+.GD15MCFCC3 {
+	/* create new project -- projec type names */
+	color: #000000;
+}
+.rstudio-themes-flat .GD15MCFCK2 {
+	margin-left: 5px;
+	color: #ffffff;
+}
+.gwt-Label.GD15MCFCK2 {
+	/* create new project -- header */
+	font-size: 14px;
+	font-weight: bold;
+	cursor: default;
+	color: #2f89e4;
+}
+.GD15MCFCN2 {
+	/* create new project-- labels and checkmarks */
+	width: 510px;
+	height: 300px;
+	color: #000000;
+}
+.GD15MCFCAMB td.GD15MCFCAMB {
+	background-color: #ffffff;
+	height: 200px;
+	vertical-align: top;
+	padding-top: 0;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	color: #000000;
+}
+.rstudio-themes-flat .GD15MCFCP2 {
+	margin-left: -10px;
+	margin-right: -10px;
+	color: #000000;
+}
+.GD15MCFCO2 {
+	height: 60px;
+	width: 158px;
+	overflow: hidden;
+	border: none;
+	font-weight: bold;
+	padding-left: 26px;
+	padding-top: 6px;
+	background-size: 79px 30px;
+	color: #000000;
+}
+.GD15MCFCJ5B {
+	font-size: 9pt;
+	background-color: #ffffff;
+	outline: none;
+	color: #000000;
+}
+.GD15MCFCIID {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-grow: 1;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	padding-right: 5px;
+	color: #dbd7d7;
+}
+.GD15MCFCMGD {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	/* color: #000000; */
+}
+.GD15MCFCNID {
+	border: 1px solid #0a0a0a;
+	background-color: #323232;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 3px;
+	margin-top: 3px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.GD15MCFCEX {
+	background-color: #3c3c3c !important;
+}
+
+.rstudio-themes-flat .GD15MCFCMY {
+	background: #1f1f1f;
+	border: 1px solid #0a0a0a;
+}
+.GD15MCFCGK {
+	background-color: #333;
+	border: 1px solid #111;
+}
+.GD15MCFCLJ {
+	background: #656565;
+}
+
+.GD15MCFCGP .gwt-TabLayoutPanelTab {
+	border: 1px solid #0a0a0a;
+	background: #282828;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	float: none;
+}
