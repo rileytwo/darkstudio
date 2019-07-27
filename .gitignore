@@ -38,7 +38,4 @@ Icon
 # RStudio files
 .Rproj.user/
 
-# VS code
-*.code-workspace
-
 *install*
