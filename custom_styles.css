@@ -1,18 +1,12 @@
-/*
-.macintosh .GD15MCFCPV,
-.macintosh .GD15MCFCPV td,
-.macintosh .GD15MCFCPV pre {
-	line-height: 1.2;
-}
-*/
-
-.macintosh .GD15MCFCAW,
-.macintosh .GD15MCFCAW td,
-.macintosh .GD15MCFCAW pre {
-	line-height: 1.275;
-}
 
 /* -------- FONTS --------- */
+/* mac font height (is set to 1.45 by default) */
+.macintosh .GJQ3LUQCBW,
+.macintosh .GJQ3LUQCBW td,
+.macintosh .GJQ3LUQCBW pre {
+	line-height: 1.25;
+}
+
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCPT {
 	color: #ffffff;
@@ -121,14 +115,9 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	background: linear-gradient(to right, #282828, #1e1e1e 20%) !important;
   	border-color: #0a0a0a !important;
 }
-/* 
-.rstudio-themes-flat .rstudio-themes-dark-grey .GJQ3LUQCCS,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCCS {
-	background: linear-gradient(to right, #282828, #1e1e1e 20%);
-}
-*/
 
 /* scrollbars */
+/*
 ::-webkit-scrollbar {
   height: calc(17px * 10 / 16) !important;
   width: 10px !important;
@@ -156,12 +145,11 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 ::-webkit-scrollbar-track:vertical {
   box-shadow: inset 1px 0 0 0 var(--separator);
 }
+
+*/
 .rstudio-HyperlinkLabel {
 	color: #8be9fd;
 }
-
-
-
 
 /* Console Pane (without any other tabs) */
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO div.GD15MCFCMO .GD15MCFCIS {
