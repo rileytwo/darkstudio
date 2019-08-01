@@ -184,7 +184,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 }
 
 
-
 /* tabs */
 .rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
 .rstudio-themes-dark .rstheme_minimizedWindowObject .rstheme_center {
@@ -201,7 +200,7 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 /* active tab */
 .rstudio-themes-dark .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
 	background-color: #3b3b3b !important;
-	color: white !important;
+	color: white;
 	border-color: #0a0a0a !important;
 }
 
