@@ -19,19 +19,20 @@
 	color: #ffffff;
 	text-shadow: none;
 	font-weight: 400;
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: "Fira Sans", Roboto, "Lucida Grande", serif;
 	font-size: 11px;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark-menus .search input {
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: "Fira Sans", Roboto, "Lucida Grande", serif;
 }
 
 /* general app items */
 .rstudio-themes-flat,
 .rstudio-themes-dark .GD15MCFCJU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: "Fira Sans", Roboto, "Lucida Grande",
+		serif;
 	/* font-size: 1.1em; */
 }
 
@@ -43,7 +44,8 @@
 	color: #ffffff !important;
 	background: none !important;
 	border-color: #6a6a6a !important;
-	font-family: Roboto, "Lucida Grande", serif;
+	font-family: "Fira Sans", Roboto, "Lucida Grande",
+		serif;
 }
 
 
