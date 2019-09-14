@@ -1,10 +1,6 @@
 # Overview
 
-This is something I did for fun, and figured other people
-might want to have more control
-over their RStudio experience. I personally use a Mac,
-so I'll be able to provide better support for macOS.
-However, I do use a PC for work and have found this to work on Windows also.
+This is something I did for fun, and figured other people might enjoy this as much as I do.
 
 I have little experience in writing css and javascript,
 and even less experience in building IDEs. I did most of the work
