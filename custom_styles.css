@@ -19,8 +19,8 @@
 	color: #ffffff;
 	text-shadow: none;
 	font-weight: 400;
-	font-family: "Fira Sans", Roboto, "Lucida Grande", serif;
-	font-size: 11px;
+	font-family: "SF Pro Text", "Fira Sans", Roboto, "Lucida Grande", serif;
+	font-size: 12px;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark-menus .search input {
