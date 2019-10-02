@@ -5,21 +5,13 @@
 }
 
 body .ace_scrollbar-v {
-	-webkit-transition: opacity .1s ease-in-out;
-	-moz-transition   : opacity .1s ease-in-out;
-	-ms-transition    : opacity .1s ease-in-out;
-	-o-transition     : opacity .1s ease-in-out;
-	transition        : opacity .1s ease-in-out;
-	opacity           : 0;
-}
-
-body .ace_editor:hover .ace_scrollbar-v {
-	opacity: 1;
+	display: none !important;
 }
 
 body .ace_editor:hover .ace_scrollbar-v {
 	display: block !important;
 }
+
 
 /* mac font height (is set to 1.45 by default) */
 /* RStudio 1.3.* */
