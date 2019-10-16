@@ -166,6 +166,10 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	border-color: #0a0a0a !important;
 }
 
+ /* gradient in files pane that displays when path is too long */
+.rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb .GD15MCFCCJ {
+	background: linear-gradient(to right, #282828, #1e1e1e00) !important;
+}
 /* Menu Separators */
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItemSeparator .menuSeparatorInner {
 	border-color: #3b3b3b !important;
