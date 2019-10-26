@@ -4,7 +4,7 @@
 	--fonts: "SF Pro Text", "Fira Sans", "Lucida Grande", serif;
 }
 
-.ace_scrollbar-v, 
+.ace_scrollbar-v,
 body .ace_scrollbar-v {
 	display: none !important;
 }
@@ -62,6 +62,14 @@ body .ace_editor:hover .ace_scrollbar-v {
 	font-family: var(--fonts) !important;
 	font-size: 12px !important;
 }
+
+
+/* "Packages ... are required but not installed... */
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCB2C {
+	background-color: var(--tab) !important;
+	border-bottom: var(--border) !important;
+}
+
 
 /* Search Input */
 .rstudio-themes-flat.rstudio-themes-dark-menus .search input {
@@ -166,10 +174,11 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 	border-color: #0a0a0a !important;
 }
 
- /* gradient in files pane that displays when path is too long */
+/* gradient in files pane that displays when path is too long */
 .rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb .GD15MCFCCJ {
 	background: linear-gradient(to right, #282828, #1e1e1e00) !important;
 }
+
 /* Menu Separators */
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItemSeparator .menuSeparatorInner {
 	border-color: #3b3b3b !important;
