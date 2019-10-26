@@ -97,8 +97,7 @@ body .ace_editor:hover .ace_scrollbar-v {
 	color: #ffffff !important;
 	background: none !important;
 	border-color: #6a6a6a !important;
-	font-family: "Fira Sans", Roboto, "Lucida Grande",
-		serif;
+	font-family: var(--fonts) !important;
 }
 
 
