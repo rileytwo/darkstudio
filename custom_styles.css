@@ -34,6 +34,7 @@ body .ace_editor:hover .ace_scrollbar-v {
 .rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-thumb {
 	background: #232323;
 	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 
 /* mac font height (is set to 1.45 by default) */
