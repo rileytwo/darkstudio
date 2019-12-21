@@ -2,11 +2,7 @@
 
 This is something I did for fun, and figured other people might enjoy this as much as I do.
 
-I have little experience in writing css and javascript,
-and even less experience in building IDEs. I did most of the work
-in RStudio's DevTools, by selecting elements
-and changing their properties. So, if anyone would
-like to help out by contributing, please do! I'd love the help :smile:.
+I have little experience in writing css and javascript, and even less experience in building IDEs. I did most of the work in RStudio's DevTools, by selecting elements and changing their properties. So, if anyone would like to help out by contributing, please do! I'd love the help :smile:.
 
 ## This is not an editor theme
 
@@ -41,7 +37,7 @@ I recommend placing them into a folder, something like `before-daRkStudio`,
 
 ### macOS
 
-```sh
+```bash
 git clone https://github.com/livelaughriley/daRkStudio
 
 cp "daRkStudio/custom_styles.css" \
@@ -61,8 +57,8 @@ Copy-Item "daRkStudio\custom_styles.css" `
     -Force
 
 Copy-Item "daRkStudio\index.htm" `
-    "C:\Program Files\RStudio\www\index.htm"
-    ` -Force
+    "C:\Program Files\RStudio\www\index.htm" ` 
+    -Force
 ```
 
 You may not have the permission to copy or overwrite items in `C:\Program Files`.
