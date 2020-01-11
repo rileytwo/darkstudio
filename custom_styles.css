@@ -171,6 +171,12 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
   border-color: #0a0a0a !important;
 }
 
+utCenter,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstheme_multiPodUtilityTabArea {
+  background: #282828 !important;
+}
+
 /* gradient in files pane that displays when path is too long */
 .rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb .GD15MCFCCJ {
   background: linear-gradient(to right, #282828, #1e1e1e00) !important;
@@ -178,7 +184,7 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 
 /* Menu Separators */
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItemSeparator .menuSeparatorInner {
-  border-color: #3b3b3b !important;
+  border-color: #282828 !important;
 }
 
 /* scrollbars */
@@ -272,6 +278,13 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 
 .rstudio-themes-dark .dataTable tbody>tr:hover>td {
   background-color: #2c2c2c !important;
+}
+
+/* Packages tab */
+.rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCHBC,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCGCC {
+  border-color: #333 !important;
 }
 
 /* search menus */
