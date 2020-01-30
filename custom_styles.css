@@ -295,7 +295,8 @@ utCenter,
 }
 
 /* buttons */
-.rstudio-themes-flat .rstudio-themes-dark button.GJQ3LUQCC1>table:first-child {
+.rstudio-themes-flat .rstudio-themes-dark button.GJQ3LUQCC1>table:first-child,
+.rstudio-themes-flat .rstudio-themes-dark button.GD15MCFCB1>table:first-child {
   border-color: #444444;
   background: #777777;
 }
