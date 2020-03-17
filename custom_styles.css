@@ -6,11 +6,11 @@
   --borders: #0a0a0a;
   --ui-font-foreground-color: #FFFFFF;
   --tab-gradient-dark: linear-gradient(to right, #28282800, #282828 13%);
-  --tab-gradient-light: linear-gradient(to left, #30303000, #303030 100%);
+  --tab-gradient-light: linear-gradient(to right, #3b3b3b, #3b3b3b00);
   --scrollbar-background-color: #282828;
   --scrollbar-border: solid 2px #6a6a6a;
 }
-
+/* linear-gradient(to right, rgb(78, 92, 104), rgba(78, 92, 104, 0)) */
 .ace_scrollbar-v,
 body .ace_scrollbar-v {
   display: none !important;
