@@ -2,6 +2,13 @@
 
 :root {
   --fonts: "SF Compact Text Regular", "SF Pro Text", "Fira Sans", "Lucida Grande", serif;
+  --inactive-tabs: #303030;
+  --borders: #0a0a0a;
+  --ui-font-foreground-color: #FFFFFF;
+  --tab-gradient-dark: linear-gradient(to right, #28282800, #282828 13%);
+  --tab-gradient-light: linear-gradient(to left, #30303000, #303030 100%);
+  --scrollbar-background-color: #282828;
+  --scrollbar-border: solid 2px #6a6a6a;
 }
 
 .ace_scrollbar-v,
@@ -20,18 +27,13 @@ body .ace_editor:hover .ace_scrollbar-v {
 .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
 .rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-track,
 .rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-corner {
-  background: #282828 !important;
+  background: var(--scrollbar-background-color) !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-thumb,
 .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
 .rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-thumb {
-  border: solid 2px #6a6a6a;
-}
-
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-thumb,
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
-.rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-thumb {
+  border: var(--scrollbar-border);
   background: #232323;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -54,11 +56,16 @@ body .ace_editor:hover .ace_scrollbar-v {
 .GD15MCFCBS .gwt-TabLayoutPanelTab,
 .GGBOEFPDCS .gwt-TabLayoutPanelTab,
 .GGBOEFPDOU {
-  color: #ffffff;
+  color: var(--ui-font-foreground-color);
   text-shadow: none;
   font-weight: 400;
   font-family: var(--fonts) !important;
   font-size: 12px !important;
+}
+
+/* Source editor tab overflow gradient */
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDDS {
+    background: var(--tab-gradient-dark);
 }
 
 /* "Packages ... are required but not installed... */
@@ -169,7 +176,7 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea,
   .GD15MCFCCS,
   .GJQ3LUQCCS) {
-  background: linear-gradient(to right, #282828, #1e1e1e 20%) !important;
+  background: var(--tab-gradient-dark);
   border-color: #0a0a0a !important;
 }
 
@@ -182,7 +189,7 @@ utCenter,
 /* gradient in files pane that displays when path is too long */
 .rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb .GD15MCFCCJ,
 .rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb .GGBOEFPDCJ {
-  background: linear-gradient(to right, #282828, #1e1e1e00) !important;
+  background: var(--tab-gradient-light);
 }
 
 /* Menu Separators */
@@ -245,7 +252,7 @@ utCenter,
 /* tabs */
 .rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
 .rstudio-themes-dark .rstheme_minimizedWindowObject .rstheme_center {
-  background-color: #303030 !important;
+  background-color: var(--inactive-tabs) !important;
   color: var(--editor-foreground) !important;
   border-color: #0a0a0a !important;
   cursor: pointer;
