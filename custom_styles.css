@@ -1,7 +1,7 @@
 /* -------- FONTS --------- */
 
 :root {
-  --fonts: "SF Compact Text Regular", "SF Pro Text", "Fira Sans", "Lucida Grande", serif;
+  --fonts: "SF Compact Text Regular", "SF Pro Text", "Fira Sans", "Lucida Grande", "Segoe UI", serif;
   --inactive-tabs: #303030;
   --borders: #0a0a0a;
   --ui-font-foreground-color: #FFFFFF;
@@ -61,6 +61,10 @@ body .ace_editor:hover .ace_scrollbar-v {
   font-weight: 400;
   font-family: var(--fonts) !important;
   font-size: 12px !important;
+}
+
+input[type="text"] {
+    font-family: var(--fonts) !important;
 }
 
 /* Source editor tab overflow gradient */
