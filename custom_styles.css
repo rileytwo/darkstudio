@@ -74,17 +74,17 @@
 }
 
 input[type="text"] {
-    font-family: var(--fonts) !important;
+  font-family: var(--fonts) !important;
 }
 
 /* Source editor tab overflow gradient */
 .rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDDS {
-    background: var(--tab-gradient-dark);
+  background: var(--tab-gradient-dark);
 }
 
 /* "Packages ... are required but not installed... */
-.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCB2C {
-  background-color: var(--active-tabs) !important;
+.rstudio-themes-flat .rstudio-themes-dark-grey :-webkit-any(.GGBOEFPDC4C, GD15MCFCB2C) {
+  background-color: var(--ui-background) !important;
   border-bottom: var(--borders) !important;
 }
 
@@ -93,9 +93,9 @@ input[type="text"] {
   font-family: var(--fonts) !important;
 }
 
-.rstudio-themes-dark .gwt-TabLayoutPanelContent > div:nth-last-child(2):nth-child(4) .rstudio-themes-background {
-    background-color: var(--inactive-tabs) !important;
-  }
+.rstudio-themes-dark .gwt-TabLayoutPanelContent>div:nth-last-child(2):nth-child(4) .rstudio-themes-background {
+  background-color: var(--inactive-tabs) !important;
+}
 
 .rstudio-themes-dark :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar) .search,
 .rstudio-themes-flat .themedPopupPanel .search {
@@ -149,16 +149,16 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 
 /* Menu Separators */
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItemSeparator .menuSeparatorInner {
-    border-color: var(--borders) !important;
+  border-color: var(--borders) !important;
 }
-  
+
 .rstudio-themes-flat .GJQ3LUQCLV.GJQ3LUQCPO div.GJQ3LUQCMO .GJQ3LUQCIS {
-    margin-right: 0;
-    margin-bottom: 2px;
-    border-bottom: solid 1px var(--borders);
-    background-color: var(--ui-background) !important;
+  margin-right: 0;
+  margin-bottom: 2px;
+  border-bottom: solid 1px var(--borders);
+  background-color: var(--ui-background) !important;
 }
-  
+
 
 /* tabs */
 .rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
@@ -185,9 +185,9 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 
 /* other toolbars */
 .rstudio-themes-dark .rstudio-themes-background {
-    background-color: var(--active-tabs) !important;
-    border-top-color: var(--borders) !important;
-    border-bottom-color: var(--borders) !important;
+  background-color: var(--active-tabs) !important;
+  border-top-color: var(--borders) !important;
+  border-bottom-color: var(--borders) !important;
 }
 
 
@@ -200,9 +200,11 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 /* windows */
 .rstudio-themes-dark .windowframe,
 /* gradients */
-.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea,
-    .GD15MCFCCS,
-    .GJQ3LUQCCS) {
+.rstudio-themes-dark :-webkit-any(.gwt-TabLayoutPanelTabs,
+  .windowframe,
+  .rstheme_multiPodUtilityTabArea,
+  .GD15MCFCCS,
+  .GJQ3LUQCCS) {
     background: var(--tab-gradient-dark);
     border-color: var(--borders) !important;
 }
@@ -219,8 +221,7 @@ utCenter,
 }
 
 /* panel dividers */
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-HDragger,
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-VDragger {
+.rstudio-themes-flat .rstudio-themes-dark-grey :-webkit-any(.gwt-SplitLayoutPanel-HDragger, .gwt-SplitLayoutPanel-VDragger) {
   background: var(--ui-divider-background) !important;
 }
 
@@ -245,22 +246,21 @@ utCenter,
 
 
 /* gradient in files pane that displays when path is too long */
-.rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb .GD15MCFCCJ,
-.rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb .GGBOEFPDCJ {
+.rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb :-webkit-any(.GD15MCFCCJ, .GGBOEFPDCJ) {
   background: var(--tab-gradient-light);
 }
 
 
 /* Console Pane (without any other tabs) */
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO div.GD15MCFCMO .GD15MCFCIS {
-    background-color: var(--ui-background) !important;
-    border-color: var(--borders) !important;
-  }  
+  background-color: var(--ui-background) !important;
+  border-color: var(--borders) !important;
+}
 
 /* Console Pane top border (without any other tabs) */
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO div.GD15MCFCMO .GD15MCFCIS,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GJQ3LUQCLV.GJQ3LUQCPO {
+.rstudio-themes-flat .rstudio-themes-dark-grey :-webkit-any(
+  .GD15MCFCKV.GD15MCFCPO, .GJQ3LUQCLV.GJQ3LUQCPO) {
   border-color: var(--borders) !important;
 }
 
