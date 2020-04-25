@@ -63,8 +63,6 @@
 /* Most Tabs, e.g. Environment, Files, Source File Name, etc. */
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCPT,
-.GD15MCFCBS .gwt-TabLayoutPanelTab,
-.GGBOEFPDCS .gwt-TabLayoutPanelTab,
 .GGBOEFPDOU {
   color: var(--ui-font-foreground-color);
   text-shadow: none;
@@ -73,13 +71,13 @@
   font-size: 12px !important;
 }
 
-input[type="text"] {
-  font-family: var(--fonts) !important;
+.GGBOEFPDCS .gwt-TabLayoutPanelTab,
+.GD15MCFCBS .gwt-TabLayoutPanelTab {
+  font-size: 12px !important;
 }
 
-/* Source editor tab overflow gradient */
-.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDDS {
-  background: var(--tab-gradient-dark);
+input[type="text"] {
+  font-family: var(--fonts) !important;
 }
 
 /* "Packages ... are required but not installed... */
@@ -164,7 +162,7 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 .rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
 .rstudio-themes-dark .rstheme_minimizedWindowObject .rstheme_center {
   background-color: var(--inactive-tabs) !important;
-  color: var(--editor-foreground) !important;
+  /* color: var(--editor-foreground) !important; */
   border-color: var(--borders) !important;
   cursor: pointer;
 }
@@ -210,10 +208,16 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 }
 
 utCenter,
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstheme_multiPodUtilityTabArea {
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs {
   background: var(--ui-background) !important;
 }
+
+/* Source editor tab overflow gradient */
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDDS,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCCS {
+  background: var(--tab-gradient-dark);
+}
+
 
 /* containers */
 .rstudio-themes-flat>.rstudio-themes-dark :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)>div:last-child {
