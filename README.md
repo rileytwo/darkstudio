@@ -18,7 +18,7 @@ Meaning, when the editor theme is dark (i.e. `rs-theme-is-dark: TRUE`), RStudio'
 If you're curious, they use a different palette when using a [light theme](https://support.rstudio.com/hc/en-us/articles/115011846747-Using-RStudio-Themes#modern-theme).
 
 Classic, however, does not change its appearance, regardless of `rs-theme-is-dark: TRUE` or `rs-theme-is-dark: FALSE`.
-I think this can be overriden, but I don't plan to do so with daRkStudio.
+I think this can be overriden, but I don't plan to do so here.
 
 TL;DR: whether you have your RStudio theme set to Modern or Sky, daRkStudio will work as long as you're using a dark editor theme.
 
@@ -38,7 +38,7 @@ I recommend placing them into a folder, something like `before-daRkStudio`,
 ### macOS
 
 ```bash
-git clone https://github.com/livelaughriley/daRkStudio
+git clone https://github.com/rileytwo/daRkStudio
 
 cp "daRkStudio/custom_styles.css" \
     "/Applications/RStudio.app/Contents/Resources/www/custom_styles.css"
@@ -50,7 +50,7 @@ cp "daRkStudio/index.htm" \
 ### Windows
 
 ```powershell
-git clone https://github.com/livelaughriley/daRkStudio
+git clone https://github.com/rileytwo/daRkStudio
 
 Copy-Item "daRkStudio\custom_styles.css" `
     "C:\Program Files\RStudio\www\custom_styles.css" `
@@ -74,7 +74,7 @@ It's been a while since I've used RStudio on Linux (Kubuntu 18.04), so I'm not s
 If you're using Linux and find that these paths no longer work, please open an issue or pull request.
 
 ```bash
-git clone https://github.com/livelaughriley/daRkStudio
+git clone https://github.com/rileytwo/daRkStudio
 
 cp "daRkStudio/custom_styles.css" \
     "/usr/local/rstudio/<version-goes-here>/resources/www/custom_styles.css"
