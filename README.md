@@ -40,8 +40,8 @@ I recommend placing them into a folder, something like `before-daRkStudio`,
 ```bash
 git clone https://github.com/rileytwo/daRkStudio
 
-cp "daRkStudio/custom_styles.css" \
-    "/Applications/RStudio.app/Contents/Resources/www/custom_styles.css"
+cp "daRkStudio/darkstudio.css" \
+    "/Applications/RStudio.app/Contents/Resources/www/darkstudio.css"
 
 cp "daRkStudio/index.htm" \
     "/Applications/RStudio.app/Contents/Resources/www/index.htm"
@@ -52,8 +52,8 @@ cp "daRkStudio/index.htm" \
 ```powershell
 git clone https://github.com/rileytwo/daRkStudio
 
-Copy-Item "daRkStudio\custom_styles.css" `
-    "C:\Program Files\RStudio\www\custom_styles.css" `
+Copy-Item "daRkStudio\darkstudio.css" `
+    "C:\Program Files\RStudio\www\darkstudio.css" `
     -Force
 
 Copy-Item "daRkStudio\index.htm" `
@@ -63,7 +63,7 @@ Copy-Item "daRkStudio\index.htm" `
 
 You may not have the permission to copy or overwrite items in `C:\Program Files`.
 If that's the case, run PowerShell in an elevated prompt (as an Adminstrator)
-and try to copy the items to `C:\Program Files\RStudio\Resources\www\custom_styles.css`
+and try to copy the items to `C:\Program Files\RStudio\Resources\www\darkstudio.css`
 again. If that doesn't work, try opening the daRkStudio folder from File Explorer, and manually copying the files to the `C:\Program Files\RStudio\Resources\www\` directory.
 
 If you're STILL unable to copy the files (it's Windows, so who knows?) open an issue and I'll do what I can to help.
@@ -76,8 +76,8 @@ If you're using Linux and find that these paths no longer work, please open an i
 ```bash
 git clone https://github.com/rileytwo/daRkStudio
 
-cp "daRkStudio/custom_styles.css" \
-    "/usr/local/rstudio/<version-goes-here>/resources/www/custom_styles.css"
+cp "daRkStudio/darkstudio.css" \
+    "/usr/local/rstudio/<version-goes-here>/resources/www/darkstudio.css"
 
 cp "daRkStudio/index.htm" \
     "/usr/local/rstudio/<version-goes-here>/resources/www/index.htm"
