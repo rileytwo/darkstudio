@@ -7,9 +7,11 @@
   --ui-divider-background: #282828;
   --active-tabs: #3b3b3b;
   --inactive-tabs: #303030;
+  --active-secondary-tabs: var(--ui-background);
   --tab-gradient-dark: linear-gradient(to right, #28282800, #282828 13%);
   --tab-gradient-light: linear-gradient(to right, #3b3b3b, #3b3b3b00);
   --borders: #0a0a0a;
+  --grid-borders: #4a4a4a;
   --scrollbar-background-color: #282828;
   --scrollbar-border: solid 2px #6a6a6a;
 }
@@ -128,7 +130,8 @@ input[type="text"] {
 /* ------ MAIN ------- */
 
 /* wrapper around four panes */
-body.rstudio-themes-flat .rstudio-themes-dark-grey {
+body.rstudio-themes-flat .rstudio-themes-dark-grey,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-background {
   background: var(--ui-background) !important;
 }
 
@@ -183,7 +186,7 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey {
 
 /* other toolbars */
 .rstudio-themes-dark .rstudio-themes-background {
-  background-color: var(--active-tabs) !important;
+  background-color: var(--active-secondary-tabs) !important;
   border-top-color: var(--borders) !important;
   border-bottom-color: var(--borders) !important;
 }
@@ -283,7 +286,7 @@ utCenter,
 }
 
 .rstudio-themes-dark .dataTable :-webkit-any(th, td, tr) {
-  border-color: silver !important;
+  border-color: var(--grid-borders) !important;
 }
 
 .rstudio-themes-dark .dataTable tbody>tr:hover>td {
@@ -297,6 +300,12 @@ utCenter,
   border-color: #333 !important;
 }
 
+/* Environment tab */
+/* .rstudio-themes-flat .rstudio-themes-dark-grey td.GGBOEFPDB-B, */
+/* .rstudio-themes-flat .rstudio-themes-dark-grey td.GGBOEFPDD-B, */
+.rstudio-themes-flat .rstudio-themes-dark-grey :-webkit-any(td) {
+  border-color: var(--grid-borders) !important;
+}
 
 /* buttons */
 .rstudio-themes-flat .rstudio-themes-dark button.GJQ3LUQCC1>table:first-child,
