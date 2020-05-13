@@ -11,7 +11,7 @@
   --tab-gradient-dark: linear-gradient(to right, #28282800, #282828 13%);
   --tab-gradient-light: linear-gradient(to right, #3b3b3b, #3b3b3b00);
   --borders: #0a0a0a;
-  --grid-borders: #4a4a4a;
+  --grid-borders: #2f2f2f;
   --scrollbar-background-color: #282828;
   --scrollbar-border: solid 2px #6a6a6a;
 }
@@ -300,11 +300,16 @@ utCenter,
   border-color: #333 !important;
 }
 
-/* Environment tab */
+/* Environment tab/pane */
 /* .rstudio-themes-flat .rstudio-themes-dark-grey td.GGBOEFPDB-B, */
 /* .rstudio-themes-flat .rstudio-themes-dark-grey td.GGBOEFPDD-B, */
 .rstudio-themes-flat .rstudio-themes-dark-grey :-webkit-any(td) {
   border-color: var(--grid-borders) !important;
+}
+
+/* Files tab/pane */
+#rstudio_workbench_panel_files * {
+    border-color: transparent !important;
 }
 
 /* buttons */
