@@ -5,6 +5,7 @@
   --ui-background: #2c2c2c;
   --ui-font-foreground-color: #FFFFFF;
   --ui-divider-background: #282828;
+  --input-box-bg: #141414;
   --active-tabs: #3b3b3b;
   --inactive-tabs: #303030;
   --active-secondary-tabs: var(--ui-background);
@@ -64,11 +65,15 @@
 
 /* Most Tabs, e.g. Environment, Files, Source File Name, etc. */
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCIU,
-.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCPT,
-.GGBOEFPDOU {
+.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCPT {
   color: var(--ui-font-foreground-color);
   text-shadow: none;
   font-weight: 400;
+  font-family: var(--fonts) !important;
+  font-size: 12px !important;
+}
+
+.GGBOEFPDOU {
   font-family: var(--fonts) !important;
   font-size: 12px !important;
 }
@@ -100,7 +105,7 @@ input[type="text"] {
 .rstudio-themes-dark :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar) .search,
 .rstudio-themes-flat .themedPopupPanel .search {
   border-color: var(--borders) !important;
-  background: #141414 !important;
+  background: var(--input-box-bg) !important;
 }
 
 /* general app items--this isn't constant */
