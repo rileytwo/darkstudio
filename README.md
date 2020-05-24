@@ -24,7 +24,7 @@ TL;DR: whether you have your RStudio theme set to Modern or Sky, daRkStudio will
 
 ## Pics or it didn't happen
 
-![DarkRStudio](images/dark-rstudio.png)
+![DarkRStudio](inst/media/dark-rstudio.png)
 
 Here, the RStudio theme is set to Modern (remember, Sky would work here as well), and the editor theme is using an `*.rstheme` with `rs-theme-is-dark: TRUE`.
 
