@@ -10,11 +10,10 @@
 #' On Windows, you will likely need Administrator Privileges if you've
 #' installed RStudio to the default location, "C:\Program Files\RStudio".
 #'
-#' Installation on a Mac shouldn't require any additional privileges.
 #'
 #' @return nothing.
 #' @export
-install_darkstudio <- function(backup = TRUE) {
+install_darkstudio <- function(backup = TRUE, .path = NULL) {
 
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
@@ -32,7 +31,12 @@ install_darkstudio <- function(backup = TRUE) {
     warning(wmsg)
   }
 
-  index_file <- find_index_file()
+  index_file <- find_index_file(path = .path)
+
+  if (backup == TRUE) {
+    backup_index_file(.index_file = index_file)
+  }
+
 
 }
 

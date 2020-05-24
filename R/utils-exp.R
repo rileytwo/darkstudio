@@ -1,6 +1,6 @@
 #
-# utils.R
-# 2020-05-21
+# utils-exp.R
+# 2020-05-23
 #
 
 host <- function() {
@@ -43,13 +43,6 @@ locate_rstudio_index <- function(override = FALSE) {
 }
 
 
-
-
-
-
-backup_index <- function() {
-
-}
 
 # May Use Later
 
