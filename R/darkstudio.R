@@ -14,12 +14,10 @@
 #' @return nothing.
 #' @export
 install_darkstudio <- function(backup = TRUE, .path = NULL) {
-
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
     stop("RStudio must be running in order to install daRkStudio.")
   }
-
   # Print message about compatibility with older RStudio versions
   if (rstudioapi::versionInfo()$version <= "1.2") {
     wmsg <- paste0(
@@ -32,11 +30,19 @@ install_darkstudio <- function(backup = TRUE, .path = NULL) {
   }
 
   index_file <- find_index_file(path = .path)
-
   if (backup == TRUE) {
     backup_index_file(.index_file = index_file)
   }
 
+  darkstudio_css <- link_default()
 
+  index_htm <- read_index_file(.index_file = index_file)
+
+  new_index_htm <- modify_index_file(.index_file = index_htm)
+
+  return(index_htm)
 }
+
+
+
 

@@ -47,8 +47,39 @@ find_index_file <- function(path = NULL) {
   return(index_file)
 }
 
+
 backup_index_file <- function(.index_file = NULL) {
+  if (length(.index_file) == 0) {
+    err <- "A file must be specified for backup."
+    stop(err)
+  }
+
   parent_dir <- dirname(.index_file)
   backup_file <- fs::path_join(c(parent_dir, "index.htm.backup"))
-  fs::file_copy(.index_file, backup_file)
+  if (fs::file_exists(backup_file)) {
+    wmsg <- "A backup index file already exists. Aborting backup."
+    warning(wmsg)
+  } else {
+    fs::file_copy(.index_file, backup_file)
+  }
+}
+
+
+read_index_file <- function(.index_file = NULL) {
+  .con = .index_file
+  index_htm <- readLines(con = .con)
+  return(index_htm)
+}
+
+
+modify_index_file <- function(.index_file = NULL) {
+  if (length(.index_file) == 0) {
+    err <- "A file must be specified for modification."
+    stop(err)
+  }
+
+
+  endof_index_htm <- index_htm[length(index_htm)]
+  index_htm[length(index_htm) + 1] <- endof_index_htm
+
 }
