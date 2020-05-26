@@ -31,19 +31,27 @@ install_darkstudio <- function(backup = TRUE, .path = NULL) {
 
   index_file_path <- find_index_file(path = .path)
   if (backup == TRUE) {
-    backup_index_file(.index_file = index_file)
+    backup_index_file(.index_file = index_file_path)
   }
-
-  darkstudio_css <- link_default()
 
   index_file <- read_index_file(.index_file = index_file_path)
 
-  new_index_file <- modify_index_file(
-    .index_file = index_file,
-    link = darkstudio_css
+  darkstudio_link <- link_default()
+  darkstudio_css <- fs::path(
+    fs::path_package(package = "darkstudio"), "resources/darkstudio.css"
   )
 
-  writeLines(text = new_index_file, con = .path)
+  fs::file_copy(
+    path = darkstudio_css,
+    new_path = dirname(index_file_path)
+  )
+
+  new_index_file <- modify_index_file(
+    .index_file = index_file,
+    link = darkstudio_link
+  )
+
+  writeLines(text = new_index_file, con = index_file_path)
 
 }
 
