@@ -1,19 +1,40 @@
 #' Install daRkStudio
 #'
-#' daRkStudio modifies `index.htm`, a file used by RStudio to construct it's
+#' daRkStudio modifies \code{index.htm}, a file used by RStudio to construct it's
 #' DOM (Document Object Model).
 #'
-#' The only change we make is the inclusion of a `<link>` element near the end
-#' of the file, which tells RStudio to load `darkstudio.css`.
+#' The only change to \code{index.htm} the inclusion of a \code{<link>} element
+#' near the end of the file, which tells RStudio to load \code{darkstudio.css}.
 #'
 #'
 #' On Windows, you will likely need Administrator Privileges if you've
-#' installed RStudio to the default location, "C:\Program Files\RStudio".
+#' installed RStudio to the default location, \code{C:\Program Files\RStudio}.
 #'
+#'
+#' @param backup logical:
+#'   TRUE or FALSE. Copies the default \code{index.htm} file to
+#'   \code{index.htm.bak}. Defaults to TRUE.
+#' @param index_file character:
+#'   Path to RStudio's \code{index.htm}. Useful for times when the default
+#'   installation method cannot successfully locate the file.
+#'
+#' @examples
+#' # Default:
+#' install_darkstudio()
+#'
+#'
+#' # macOS:
+#' index_htm <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
+#' install_darkstudio(backup = TRUE, index_file = index_htm)
+#'
+#'
+#' # Windows:
+#' index_htm <- "C:/Program Files/RStudio/www/index.htm"
+#' install_darkstudio(backup = TRUE, index_file = index_htm)
 #'
 #' @return nothing.
 #' @export
-install_darkstudio <- function(backup = TRUE, .path = NULL) {
+install_darkstudio <- function(backup = TRUE, index_file = NULL) {
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
     stop("RStudio must be running in order to install daRkStudio.")
@@ -29,14 +50,14 @@ install_darkstudio <- function(backup = TRUE, .path = NULL) {
     warning(wmsg)
   }
 
-  index_file_path <- find_index_file(path = .path)
-  if (backup == TRUE) {
-    backup_index_file(.index_file = index_file_path)
+  index_file_path <- find_index_file(path = index_file)
+  if (.backup == TRUE) {
+    backup_index_file(.index_file_path = index_file_path)
   }
 
-  index_file <- read_index_file(.index_file = index_file_path)
+  index_file <- read_index_file(.index_file_path = index_file_path)
 
-  darkstudio_link <- link_default()
+  darkstudio_link <- create_darkstudio_link(href = NULL)
   darkstudio_css <- fs::path(
     fs::path_package(package = "darkstudio"), "resources/darkstudio.css"
   )
@@ -47,14 +68,19 @@ install_darkstudio <- function(backup = TRUE, .path = NULL) {
   )
 
   new_index_file <- modify_index_file(
-    .index_file = index_file,
-    link = darkstudio_link
+    .index_file      = index_file,
+    .darkstudio_link = darkstudio_link
   )
 
   writeLines(text = new_index_file, con = index_file_path)
-
 }
 
 
+
+uninstall_darkstudio <- function(index_file = NULL) {
+  index_file_path <- find_index_file(path = index_file)
+
+
+}
 
 
