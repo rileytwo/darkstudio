@@ -19,7 +19,7 @@ find_index_file <- function(path = NULL) {
                     user    = "~/Applications/RStudio.app/",
                     index   = "Contents/Resources/www/index.htm")
     },
-    Windows_NT = {
+    Windows = {
       paths <- list(default = "C:/Program Files/RStudio/",
                     user    = "~/R/RStudio/",
                     index   = "www/index.htm")
@@ -72,14 +72,16 @@ read_index_file <- function(.index_file = NULL) {
 }
 
 
-modify_index_file <- function(.index_file = NULL) {
+modify_index_file <- function(.index_file = NULL, link = NULL) {
   if (length(.index_file) == 0) {
     err <- "A file must be specified for modification."
     stop(err)
   }
 
+  .index_file[length(.index_file) + 1] <- .index_file[length(.index_file)]
+  .index_file[length(.index_file) - 1] <- link
 
-  endof_index_htm <- index_htm[length(index_htm)]
-  index_htm[length(index_htm) + 1] <- endof_index_htm
+  #index_htm[length(index_htm) + 1] <- endof_index_htm
+  return(.index_file)
 
 }
