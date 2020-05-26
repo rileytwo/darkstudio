@@ -81,7 +81,6 @@ modify_index_file <- function(.index_file = NULL, link = NULL) {
   .index_file[length(.index_file) + 1] <- .index_file[length(.index_file)]
   .index_file[length(.index_file) - 1] <- link
 
-  #index_htm[length(index_htm) + 1] <- endof_index_htm
   return(.index_file)
 
 }
