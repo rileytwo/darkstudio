@@ -1,3 +1,13 @@
+# daRkStudio is a package!
+daRkStudio can now be installed as an R package.
+
+## Installation
+
+```r
+remotes::install_github("rileytwo/darkstudio")
+darkstudio::install_darkstudio()
+```
+
 # Overview
 
 This is something I did for fun, and figured other people might enjoy this as much as I do.
