@@ -42,45 +42,57 @@ find_index_file <- function(path = NULL) {
     return(index_path)
   }
 
-  index_file <- check_paths(p = paths)
+  index_file_path <- check_paths(p = paths)
 
-  return(index_file)
+  return(index_file_path)
 }
 
 
-backup_index_file <- function(.index_file = NULL) {
-  if (length(.index_file) == 0) {
+backup_index_file <- function(.index_file_path = NULL) {
+  if (length(.index_file_path) == 0) {
     err <- "A file must be specified for backup."
     stop(err)
   }
 
-  parent_dir <- dirname(.index_file)
-  backup_file <- fs::path_join(c(parent_dir, "index.htm.backup"))
-  if (fs::file_exists(backup_file)) {
+  parent_dir       <- dirname(.index_file_path)
+  backup_file_path <- fs::path_join(c(parent_dir, "index.htm.bak"))
+
+  if (fs::file_exists(backup_file_path)) {
     wmsg <- "A backup index file already exists. Aborting backup."
     warning(wmsg)
   } else {
-    fs::file_copy(.index_file, backup_file)
+    fs::file_copy(.index_file_path, backup_file_path)
   }
 }
 
 
-read_index_file <- function(.index_file = NULL) {
-  .con = .index_file
+restore_index_file <- function(.index_file_path = NULL) {
+  if (length(.index_file_path) == 0) {
+    err <- "A file must be specified for restoration."
+    stop(err)
+  }
+
+  parent_dir       <- dirname(.index_file_path)
+  backup_file_path <- fs::path_join(c(parent_dir, "index.htm.bak"))
+
+  fs::file_copy(backup_file_path, .index_file_path, overwrite = TRUE)
+}
+
+read_index_file <- function(.index_file_path = NULL) {
+  .con = .index_file_path
   index_htm <- readLines(con = .con)
   return(index_htm)
 }
 
 
-modify_index_file <- function(.index_file = NULL, link = NULL) {
+modify_index_file <- function(.index_file = NULL, .darkstudio_link = NULL) {
   if (length(.index_file) == 0) {
     err <- "A file must be specified for modification."
     stop(err)
   }
 
   .index_file[length(.index_file) + 1] <- .index_file[length(.index_file)]
-  .index_file[length(.index_file) - 1] <- link
+  .index_file[length(.index_file) - 1] <- .darkstudio_link
 
   return(.index_file)
-
 }
