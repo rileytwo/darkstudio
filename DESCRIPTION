@@ -9,4 +9,6 @@ License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    rstudioapi
+    rstudioapi,
+    fs
+RoxygenNote: 7.1.0
