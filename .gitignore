@@ -38,4 +38,6 @@ Icon
 # RStudio files
 .Rproj.user/
 
+# Exclude man from being ignored
 *install*
+!/man/*install*
