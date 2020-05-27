@@ -6,6 +6,14 @@
 #' The only change to \code{index.htm} the inclusion of a \code{<link>} element
 #' near the end of the file, which tells RStudio to load \code{darkstudio.css}.
 #'
+#' daRkStudio creates a directory, "darkstudio", inside the \code{www} folder,
+#' which is found at \code{/Applications/RStudio.app/Contents/Resources/www} on
+#' macOS, and \code{C:\\Program Files\\RStudio\www} on Windows.
+#'
+#' \code{install_darkstudio()} will create a backup of \code{index.htm} at
+#' \code{www/darkstudio/index.htm.pre-ds}. \code{www/darkstudio} is also where
+#' you will find \code{darkstudio.css}, which is the bread and butter of this
+#' package.
 #'
 #' On Windows, you will likely need Administrator Privileges if you've
 #' installed RStudio to the default location, \code{C:\\Program Files\\RStudio}.
@@ -13,7 +21,7 @@
 #'
 #' @param backup logical:
 #'   TRUE or FALSE. Copies the default \code{index.htm} file to
-#'   \code{index.htm.bak}. Defaults to TRUE.
+#'   \code{index.htm.pre-ds}. Defaults to TRUE.
 #' @param index_file character:
 #'   Path to RStudio's \code{index.htm}. Useful for times when the default
 #'   installation method cannot successfully locate the file.
@@ -51,25 +59,32 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
   }
 
   index_file_path <- find_index_file(path = index_file)
+
+  if (!ds_dir_exists(.index_file_path = index_file_path)) {
+    ds_dir <- ds_dir_create(
+      .index_file_path = index_file_path
+    )
+  } else {
+    ds_dir <- ds_dir_exists(
+      .index_file_path = index_file_path,
+      value            = TRUE
+    )
+  }
+
   if (backup == TRUE) {
     backup_index_file(.index_file_path = index_file_path)
   }
 
-  index_file <- read_index_file(.index_file_path = index_file_path)
-
-  darkstudio_link <- create_darkstudio_link(href = NULL)
-  darkstudio_css <- fs::path(
+  ds_css <- fs::path(
     fs::path_package(package = "darkstudio"), "resources/darkstudio.css"
   )
 
-  fs::file_copy(
-    path = darkstudio_css,
-    new_path = dirname(index_file_path)
-  )
+  fs::file_copy(path = ds_css, new_path = ds_dir)
 
+  index_file <- read_index_file(.index_file_path = index_file_path)
   new_index_file <- modify_index_file(
-    .index_file      = index_file,
-    .darkstudio_link = darkstudio_link
+    .index_file = index_file,
+    .ds_link    = index_link()
   )
 
   writeLines(text = new_index_file, con = index_file_path)
@@ -84,7 +99,22 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
 #' @export
 
 uninstall_darkstudio <- function(index_file = NULL) {
+  msg <- paste0(
+    "This function does NOT uninstall the darkstudio package. ",
+    "To uninstall the darkstudio package, copy and ",
+    "paste uninstall.packages('darkstudio') into the console."
+  )
+  warning(msg)
   index_file_path <- find_index_file(path = index_file)
+
+  restore_index_file(.index_file_path = index_file_path)
+
+  if (!ds_dir_exists(.index_file_path = index_file_path)) {
+    warning("daRkStudio directory does not exist.")
+  } else {
+    ds_dir <- ds_dir_exists(.index_file_path = index_file_path, value = TRUE)
+    fs::dir_delete(ds_dir)
+  }
 
 }
 

@@ -54,11 +54,13 @@ backup_index_file <- function(.index_file_path = NULL) {
     stop(err)
   }
 
-  parent_dir       <- dirname(.index_file_path)
-  backup_file_path <- fs::path_join(c(parent_dir, "index.htm.bak"))
+  parent_dir <- dirname(.index_file_path)
+  ds_dir     <- fs::path_join(c(parent_dir, "darkstudio"))
+
+  backup_file_path <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
 
   if (fs::file_exists(backup_file_path)) {
-    wmsg <- "A backup index file already exists. Aborting backup."
+    wmsg <- "A backup index file already exists. Not backing up."
     warning(wmsg)
   } else {
     fs::file_copy(.index_file_path, backup_file_path)
@@ -72,11 +74,14 @@ restore_index_file <- function(.index_file_path = NULL) {
     stop(err)
   }
 
-  parent_dir       <- dirname(.index_file_path)
-  backup_file_path <- fs::path_join(c(parent_dir, "index.htm.bak"))
+  parent_dir <- dirname(.index_file_path)
+  ds_dir     <- fs::path_join(c(parent_dir, "darkstudio"))
+
+  backup_file_path <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
 
   fs::file_copy(backup_file_path, .index_file_path, overwrite = TRUE)
 }
+
 
 read_index_file <- function(.index_file_path = NULL) {
   .con = .index_file_path
@@ -85,14 +90,14 @@ read_index_file <- function(.index_file_path = NULL) {
 }
 
 
-modify_index_file <- function(.index_file = NULL, .darkstudio_link = NULL) {
+modify_index_file <- function(.index_file = NULL, .ds_link = NULL) {
   if (length(.index_file) == 0) {
     err <- "A file must be specified for modification."
     stop(err)
   }
 
   .index_file[length(.index_file) + 1] <- .index_file[length(.index_file)]
-  .index_file[length(.index_file) - 1] <- .darkstudio_link
+  .index_file[length(.index_file) - 1] <- .ds_link
 
   return(.index_file)
 }
