@@ -102,7 +102,7 @@ uninstall_darkstudio <- function(index_file = NULL) {
   msg <- paste0(
     "This function does NOT uninstall the darkstudio package. ",
     "To uninstall the darkstudio package, copy and ",
-    "paste uninstall.packages('darkstudio') into the console."
+    "paste remove.packages('darkstudio') into the console."
   )
   warning(msg)
   index_file_path <- find_index_file(path = index_file)
