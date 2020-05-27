@@ -1,14 +1,14 @@
 #' Install daRkStudio
 #'
-#' daRkStudio modifies \code{index.htm}, a file used by RStudio to construct it's
-#' DOM (Document Object Model).
+#' daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
+#' it's DOM (Document Object Model).
 #'
 #' The only change to \code{index.htm} the inclusion of a \code{<link>} element
 #' near the end of the file, which tells RStudio to load \code{darkstudio.css}.
 #'
 #'
 #' On Windows, you will likely need Administrator Privileges if you've
-#' installed RStudio to the default location, \code{C:\Program Files\RStudio}.
+#' installed RStudio to the default location, \code{C:\\Program Files\\RStudio}.
 #'
 #'
 #' @param backup logical:
@@ -51,7 +51,7 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
   }
 
   index_file_path <- find_index_file(path = index_file)
-  if (.backup == TRUE) {
+  if (backup == TRUE) {
     backup_index_file(.index_file_path = index_file_path)
   }
 
@@ -76,10 +76,15 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
 }
 
 
+#' Uninstall daRkStudio
+#'
+#' Remove and replace the modified \code{index.htm} with the backup
+#' \code{index.htm.bak} file.
+#' @return nothing
+#' @export
 
 uninstall_darkstudio <- function(index_file = NULL) {
   index_file_path <- find_index_file(path = index_file)
-
 
 }
 
