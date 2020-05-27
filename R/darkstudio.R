@@ -8,7 +8,7 @@
 #'
 #' daRkStudio creates a directory, "darkstudio", inside the \code{www} folder,
 #' which is found at \code{/Applications/RStudio.app/Contents/Resources/www} on
-#' macOS, and \code{C:\\Program Files\\RStudio\www} on Windows.
+#' macOS, and \code{C:\\Program Files\\RStudio\\www} on Windows.
 #'
 #' \code{install_darkstudio()} will create a backup of \code{index.htm} at
 #' \code{www/darkstudio/index.htm.pre-ds}. \code{www/darkstudio} is also where
