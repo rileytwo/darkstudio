@@ -5,6 +5,8 @@
 		}
 	],
 	"settings": {
-		"editor.colorDecorators": false
+		"editor.colorDecorators": false,
+		"editor.formatOnSave": true,
+		"editor.hover.enabled": false
 	}
 }
