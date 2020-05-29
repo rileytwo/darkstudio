@@ -36,7 +36,10 @@ find_index_file <- function(path = NULL) {
     .user    <- fs::path_join(c(p$default, p$index))
 
     index_path <- which(fs::file_exists(.default), fs::file_exists(.user))
-    if (length(index_path) == 0) return(NULL)
+    if (length(index_path) == 0) {
+      return(NULL)
+    }
+
     index_path <- names(index_path)
 
     return(index_path)
@@ -55,13 +58,13 @@ backup_index_file <- function(.index_file_path = NULL) {
   }
 
   parent_dir <- dirname(.index_file_path)
-  ds_dir     <- fs::path_join(c(parent_dir, "darkstudio"))
+  ds_dir <- fs::path_join(c(parent_dir, "darkstudio"))
 
   backup_file_path <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
 
   if (fs::file_exists(backup_file_path)) {
-    wmsg <- "A backup index file already exists. Not backing up."
-    warning(wmsg)
+    msg <- "A backup index file already exists. Not backing up."
+    warning(msg)
   } else {
     fs::file_copy(.index_file_path, backup_file_path)
   }
@@ -75,7 +78,7 @@ restore_index_file <- function(.index_file_path = NULL) {
   }
 
   parent_dir <- dirname(.index_file_path)
-  ds_dir     <- fs::path_join(c(parent_dir, "darkstudio"))
+  ds_dir <- fs::path_join(c(parent_dir, "darkstudio"))
 
   backup_file_path <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
 
@@ -84,7 +87,7 @@ restore_index_file <- function(.index_file_path = NULL) {
 
 
 read_index_file <- function(.index_file_path = NULL) {
-  .con = .index_file_path
+  .con <- .index_file_path
   index_htm <- readLines(con = .con)
   return(index_htm)
 }
