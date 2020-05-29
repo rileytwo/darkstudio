@@ -60,15 +60,10 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
 
   index_file_path <- find_index_file(path = index_file)
 
-  if (!ds_dir_exists(.index_file_path = index_file_path)) {
-    ds_dir <- ds_dir_create(
-      .index_file_path = index_file_path
-    )
+  if (!darkstudio_dir_exists(path = index_file_path)) {
+    ds_dir <- darkstudio_dir_create(path = index_file_path)
   } else {
-    ds_dir <- ds_dir_exists(
-      .index_file_path = index_file_path,
-      value            = TRUE
-    )
+    ds_dir <- darkstudio_dir_exists(path = index_file_path, value = TRUE)
   }
 
   if (backup == TRUE) {
@@ -109,10 +104,10 @@ uninstall_darkstudio <- function(index_file = NULL) {
 
   restore_index_file(.index_file_path = index_file_path)
 
-  if (!ds_dir_exists(.index_file_path = index_file_path)) {
+  if (!darkstudio_dir_exists(path = index_file_path)) {
     warning("daRkStudio directory does not exist.")
   } else {
-    ds_dir <- ds_dir_exists(.index_file_path = index_file_path, value = TRUE)
+    ds_dir <- darkstudio_dir_exists(path = index_file_path, value = TRUE)
     fs::dir_delete(ds_dir)
   }
 
