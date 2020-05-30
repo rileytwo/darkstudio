@@ -10,10 +10,9 @@ find_index_file <- function(path = NULL) {
   }
 
   host <- Sys.info()[["sysname"]]
-  rs_version <- as.character(rstudioapi::getVersion())
 
   switch(
-    host, "Could not determine the operating system.",
+    host, stop("Could not determine the operating system."),
     Darwin = {
       paths <- list(default = "/Applications/RStudio.app/",
                     user    = "~/Applications/RStudio.app/",
@@ -25,8 +24,9 @@ find_index_file <- function(path = NULL) {
                     index   = "www/index.htm")
     },
     Linux = {
-      paths <- list(default = paste0("/usr/local/rstudio/", rs_version),
-                    user    = paste0("/usr/local/rstudio/", rs_version),
+      rs_ver <- as.character(rstudioapi::getVersion())
+      paths <- list(default = paste0("/usr/local/rstudio/", rs_ver),
+                    user    = paste0("/usr/local/rstudio/", rs_ver),
                     index   = "www/index.htm")
     }
   )
