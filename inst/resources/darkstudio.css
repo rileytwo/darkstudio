@@ -1,10 +1,10 @@
 /* -------- FONTS --------- */
 
 :root {
-  --ds-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ds-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --ds-ui-bg: #2c2c2c;
-  --ds-ui-font-fg: #FFFFFF;
+  --ds-ui-font-fg: #ffffff;
   --ds-ui-divider-bg: #282828;
   --ds-input-bg: #141414;
   --ds-active-tab: #3b3b3b;
@@ -16,10 +16,9 @@
   --ds-grid-border: #2f2f2f;
   --ds-scrollbar-bg: #282828;
   --ds-scrollbar-bg-hover: #333333;
-  --ds-scrollbar-bg-active: #3482D1;
+  --ds-scrollbar-bg-active: #3482d1;
   --ds-scrollbar-border: solid 2px #6a6a6a;
 }
-
 
 /*
     Scrollbars
@@ -57,7 +56,6 @@
 #rstudio_source_text_editor.ace_editor :-webkit-any(.ace_gutter, .ace_scroller, .ace_scrollbar-v) {
   box-shadow: inset 0 6px 6px -6px black;
 }
-
 
 /*
     General (Not Specific to Any Individual Pane)
@@ -219,7 +217,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey,
   background-color: var(--ds-ui-bg) !important;
 }
 
-
 /* tabs */
 .rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
 .rstudio-themes-dark .rstheme_minimizedWindowObject .rstheme_center {
@@ -242,7 +239,6 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey,
   border-top-color: var(--ds-ui-border) !important;
   border-bottom-color: var(--ds-ui-border) !important;
 }
-
 
 .rstudio-themes-dark .gwt-TabLayoutPanelTab .gwt-Label {
   cursor: pointer;
@@ -297,12 +293,10 @@ utCenter,
   border-bottom-left-radius: 4px;
 }
 
-
 /* gradient in files pane that displays when path is too long */
 .rstudio-themes-flat .rstudio-themes-dark-grey .breadcrumb :-webkit-any(.GD15MCFCCJ, .GGBOEFPDCJ) {
   background: var(--ds-tab-gradient-light);
 }
-
 
 /* Console Pane (without any other tabs) */
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCKV.GD15MCFCPO div.GD15MCFCMO .GD15MCFCIS {
@@ -315,7 +309,6 @@ utCenter,
 .rstudio-themes-flat .rstudio-themes-dark-grey :-webkit-any(.GD15MCFCKV.GD15MCFCPO, .GJQ3LUQCLV.GJQ3LUQCPO) {
   border-color: var(--ds-ui-border) !important;
 }
-
 
 /* datagrid */
 .rstudio-themes-dark .dataGridHeader,
