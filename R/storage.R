@@ -20,8 +20,7 @@ darkstudio_dir_create <- function(path = NULL) {
 
 darkstudio_dir_exists <- function(path = NULL, value = FALSE) {
   if (length(path) == 0) {
-    msg <- "No path name was given. (path = NULL)"
-    warning(msg)
+    path <- find_index_file()
   }
   dir_name <- dirname(path)
   darkstudio_dir <- fs::path_join(c(dir_name, "darkstudio"))
