@@ -76,22 +76,70 @@
   border: 1px solid var(--ds-ui-border) !important;
 }
 
-/* Active Primary/Secondary Tab Toolbar(s) */
+/**
+* Active Primary/Secondary Tab Toolbar(s)
+*/
 .rstudio-themes-dark .rstheme_toolbarWrapper,
 .rstudio-themes-dark .rstheme_secondaryToolbar {
   background-color: var(--ds-active-tab) !important;
   border-color: var(--ds-active-tab) !important;
 }
 
-/*
-    UI of Elements Attached to a Tab
-    Example: Background of Path bar in the Files Pane
- */
+/**
+* UI of Elements Attached to a Tab
+* Example: Background of Path bar in the Files Pane
+*/
 .rstudio-themes-flat > .rstudio-themes-dark,
 .rstudio-themes-flat
   > .rstudio-themes-dark
   :-webkit-any(.gwt-TabLayoutPanel, .gwt-TabLayoutPanelContent) {
   background: var(--ds-ui-bg) !important;
+}
+
+/**
+* Input Boxes
+*/
+input[type="text"] {
+  font-family: var(--ds-ui-font) !important;
+}
+
+/* Search */
+.search .rstheme_center {
+
+}
+.rstudio-themes-dark .search input {
+  font-family: var(--ds-ui-font) !important;
+  font-size: 11px;
+}
+
+.rstudio-themes-dark
+  :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar)
+  .search,
+.rstudio-themes-flat .themedPopupPanel .search {
+  border-color: var(--ds-ui-border) !important;
+  background: var(--ds-input-bg) !important;
+}
+
+.js-focus-visible .focus-visible:not(.gwt-MenuBar),
+  input[type="checkbox"].focus-visible {
+    outline: #2188ff solid 2px !important;
+    outline-offset: -1px !important;
+}
+
+/**
+* Buttons
+*/
+#rstudio_find_replace_bar :-webkit-any(button)>table:first-child {
+  background-color: #2188ff !important;
+}
+.GGBOEFPDE1 {
+  font-size: 10px;
+}
+
+/* Check box options in find and replace bar */
+.GGBOEFPDD3B .gwt-Label, .GGBOEFPDA3B .gwt-Label {
+    font-size: 11px;
+    margin-top: 3px !important;
 }
 
 /*******
@@ -218,28 +266,11 @@
   font-size: 12px !important;
 }
 
-input[type="text"] {
-  font-family: var(--ds-ui-font) !important;
-}
-
-/* Search */
-.rstudio-themes-dark .search input {
-  font-family: var(--ds-ui-font) !important;
-}
-
 .rstudio-themes-dark
   .gwt-TabLayoutPanelContent
   > div:nth-last-child(2):nth-child(4)
   .rstudio-themes-background {
   background-color: var(--ds-inactive-tab) !important;
-}
-
-.rstudio-themes-dark
-  :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar)
-  .search,
-.rstudio-themes-flat .themedPopupPanel .search {
-  border-color: var(--ds-ui-border) !important;
-  background: var(--ds-input-bg) !important;
 }
 
 /* general app items--this isn't constant */
