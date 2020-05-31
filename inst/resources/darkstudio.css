@@ -2,7 +2,7 @@
 
 :root {
   --ds-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    Arial, sans-serif;
   --ds-ui-bg: #2c2c2c;
   --ds-ui-font-fg: #ffffff;
   --ds-ui-divider-bg: #282828;
@@ -18,11 +18,15 @@
   --ds-scrollbar-bg-hover: #333333;
   --ds-scrollbar-bg-active: #3482d1;
   --ds-scrollbar-border: solid 2px #6a6a6a;
+  --ds-autocomplete-bg: #222222;
+  --ds-autocomplete-fg: #dddddd;
+  --ds-autocomplete-border: #0a0a0a;
 }
 
-/*
-    Scrollbars
-
+/*******
+*
+* Scrollbars
+*
 */
 ::-webkit-scrollbar {
   height: calc(17px * 10 / 14) !important;
@@ -104,11 +108,18 @@
   line-height: 1.3;
 }
 
-/* autocomplete */
+/****
+* autocomplete
+*/
+#rstudio_popup_completions {
+  background-color: var(--ds-autocomplete-bg);
+  color: var(--ds-autocomplete-fg);
+  border: var(--ds-autocomplete-border);
+}
 .rstudio-themes-flat.rstudio-themes-dark-menus .ace_editor.ace_autocomplete {
-  background: #3c3c3c;
+  background: var(--ds-autocomplete-bg);
   border: solid 1px var(--ds-ui-border) !important;
-  color: #f0f0f0;
+  color: var(--ds-autocomplete-fg);
 }
 
 .rstudio-themes-flat.rstudio-themes-dark-menus
@@ -121,6 +132,29 @@
   .ace_line-hover {
   background: rgba(255, 255, 255, 0.15);
   border: none;
+}
+
+/* autocomplete documentation popup */
+.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDPWB {
+  color: var(--ds-autocomplete-fg);
+  background: var(--ds-autocomplete-bg);
+  border: 1px solid var(--ds-autocomplete-border);
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDGWB {
+  background: var(--ds-autocomplete-bg);
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus .menuPopupMiddleCenter,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .themedPopupPanel
+  .popupMiddleCenter,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .gwt-SuggestBoxPopup
+  .suggestPopupMiddleCenter {
+  background: var(--ds-autocomplete-bg);
+  border: solid 1px var(--ds-autocomplete-border);
+  color: var(--ds-autocomplete-fg);
 }
 
 /* "Packages ... are required but not installed... */
@@ -414,18 +448,6 @@ utCenter,
 
 .rstudio-themes-flat.rstudio-themes-dark-menus:-webkit-any(.gwt-MenuItemSeparator, .menuSeparatorInner) {
   border-color: var(--ds-ui-border) !important;
-}
-
-.rstudio-themes-flat.rstudio-themes-dark-menus .menuPopupMiddleCenter,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-  .themedPopupPanel
-  .popupMiddleCenter,
-.rstudio-themes-flat.rstudio-themes-dark-menus
-  .gwt-SuggestBoxPopup
-  .suggestPopupMiddleCenter {
-  background: #232323;
-  border: solid 1px #3e3e3e;
-  color: #f0f0f0;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark-menus .GJQ3LUQCIVB {
