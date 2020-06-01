@@ -104,9 +104,6 @@ input[type="text"] {
 }
 
 /* Search */
-.search .rstheme_center {
-
-}
 .rstudio-themes-dark .search input {
   font-family: var(--ds-ui-font) !important;
   font-size: 11px;
@@ -121,15 +118,15 @@ input[type="text"] {
 }
 
 .js-focus-visible .focus-visible:not(.gwt-MenuBar),
-  input[type="checkbox"].focus-visible {
-    outline: #2188ff solid 2px !important;
-    outline-offset: -1px !important;
+input[type="checkbox"].focus-visible {
+  outline: #2188ff solid 2px !important;
+  outline-offset: -1px !important;
 }
 
 /**
 * Buttons
 */
-#rstudio_find_replace_bar :-webkit-any(button)>table:first-child {
+#rstudio_find_replace_bar :-webkit-any(button) > table:first-child {
   background-color: #2188ff !important;
 }
 .GGBOEFPDE1 {
@@ -137,9 +134,10 @@ input[type="text"] {
 }
 
 /* Check box options in find and replace bar */
-.GGBOEFPDD3B .gwt-Label, .GGBOEFPDA3B .gwt-Label {
-    font-size: 11px;
-    margin-top: 3px !important;
+.GGBOEFPDD3B .gwt-Label,
+.GGBOEFPDA3B .gwt-Label {
+  font-size: 11px;
+  margin-top: 3px !important;
 }
 
 /*******
@@ -236,6 +234,16 @@ input[type="text"] {
 /* tr[__gwt_header_row] > :-webkit-any(td, th) { */
 /* border-color: transparent; */
 /* } */
+
+/*******
+*
+* Packages
+*
+*/
+
+#rstudio_workbench_panel_packages :-webkit-any(td) {
+  border-color: var(--ds-grid-border) !important;
+}
 
 /*******
 *
