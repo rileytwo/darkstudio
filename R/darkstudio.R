@@ -39,7 +39,6 @@
 #' # Windows:
 #' index_htm <- "C:/Program Files/RStudio/www/index.htm"
 #' install_darkstudio(backup = TRUE, index_file = index_htm)
-#'
 #' @return nothing.
 #' @export
 install_darkstudio <- function(backup = TRUE, index_file = NULL) {
@@ -79,7 +78,7 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
   index_file <- read_index_file(.index_file_path = index_file_path)
   new_index_file <- modify_index_file(
     .index_file = index_file,
-    .ds_link    = index_link()
+    .ds_link = index_link()
   )
 
   writeLines(text = new_index_file, con = index_file_path)
@@ -89,7 +88,7 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
 #' Uninstall daRkStudio
 #'
 #' Remove and replace the modified \code{index.htm} with the backup
-#' \code{index.htm.bak} file.
+#' \code{index.htm.pre-ds} file.
 #' @return nothing
 #' @export
 
@@ -110,7 +109,4 @@ uninstall_darkstudio <- function(index_file = NULL) {
     ds_dir <- darkstudio_dir_exists(path = index_file_path, value = TRUE)
     fs::dir_delete(ds_dir)
   }
-
 }
-
-

@@ -51,5 +51,4 @@ install_darkstudio(backup = TRUE, index_file = index_htm)
 # Windows:
 index_htm <- "C:/Program Files/RStudio/www/index.htm"
 install_darkstudio(backup = TRUE, index_file = index_htm)
-
 }

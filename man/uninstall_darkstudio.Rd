@@ -11,5 +11,5 @@ nothing
 }
 \description{
 Remove and replace the modified \code{index.htm} with the backup
-\code{index.htm.bak} file.
+\code{index.htm.pre-ds} file.
 }
