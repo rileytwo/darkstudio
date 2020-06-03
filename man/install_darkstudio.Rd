@@ -16,7 +16,7 @@ Path to RStudio's \code{index.htm}. Useful for times when the default
 installation method cannot successfully locate the file.}
 }
 \value{
-nothing.
+TRUE
 }
 \description{
 daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
