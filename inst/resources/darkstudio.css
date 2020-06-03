@@ -182,15 +182,16 @@ input[type="checkbox"].focus-visible {
 }
 
 /* autocomplete documentation popup */
-.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDPWB {
+.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDPWB,
+.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDAXB {
   color: var(--ds-autocomplete-fg);
   background: var(--ds-autocomplete-bg);
   border: 1px solid var(--ds-autocomplete-border);
 }
 
-.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDGWB {
-  background: var(--ds-autocomplete-bg);
-}
+/* .rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDGWB { */
+/* background: var(--ds-autocomplete-bg); */
+/* } */
 
 .rstudio-themes-flat.rstudio-themes-dark-menus .menuPopupMiddleCenter,
 .rstudio-themes-flat.rstudio-themes-dark-menus
