@@ -39,7 +39,7 @@
 #' # Windows:
 #' index_htm <- "C:/Program Files/RStudio/www/index.htm"
 #' install_darkstudio(backup = TRUE, index_file = index_htm)
-#' @return nothing.
+#' @return TRUE
 #' @export
 install_darkstudio <- function(backup = TRUE, index_file = NULL) {
   # Fail quickly if the RStudio API is not available
@@ -73,7 +73,7 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
     fs::path_package(package = "darkstudio"), "resources/darkstudio.css"
   )
 
-  fs::file_copy(path = ds_css, new_path = ds_dir)
+  fs::file_copy(path = ds_css, new_path = ds_dir, overwrite = TRUE)
 
   index_file <- read_index_file(.index_file_path = index_file_path)
   new_index_file <- modify_index_file(
@@ -82,23 +82,26 @@ install_darkstudio <- function(backup = TRUE, index_file = NULL) {
   )
 
   writeLines(text = new_index_file, con = index_file_path)
+
+  return(TRUE)
 }
 
 
 #' Uninstall daRkStudio
 #'
 #' Remove and replace the modified \code{index.htm} with the backup
-#' \code{index.htm.pre-ds} file.
-#' @return nothing
+#' \code{index.htm.pre-ds} file. Also deletes the \code{darkstudio} directory.
+#'
+#' This function does NOT uninstall the daRkStudio package.
+#' To uninstall the darkstudio package, copy and
+#' paste remove.packages('darkstudio') into the console.
+#'
+#' @param index_file character:
+#'   Path to RStudio's \code{index.htm}.
+#'
+#' @return TRUE
 #' @export
-
 uninstall_darkstudio <- function(index_file = NULL) {
-  msg <- paste(
-    "This function does NOT uninstall the darkstudio package.",
-    "To uninstall the darkstudio package, copy and",
-    "paste remove.packages('darkstudio') into the console."
-  )
-  warning(msg)
   index_file_path <- find_index_file(path = index_file)
 
   restore_index_file(.index_file_path = index_file_path)
@@ -109,4 +112,20 @@ uninstall_darkstudio <- function(index_file = NULL) {
     ds_dir <- darkstudio_dir_exists(path = index_file_path, value = TRUE)
     fs::dir_delete(ds_dir)
   }
+  return(TRUE)
+}
+
+
+#' Update darkstudio.css
+#'
+#' Updates the \code{darkstudio.css}. Meant to be used after upgrading the
+#' daRkStudio package.
+#'
+#' @return TRUE
+#' @export
+update_darkstudio <- function() {
+  if (uninstall_darkstudio() == TRUE) {
+    install_darkstudio()
+  }
+  return(TRUE)
 }
