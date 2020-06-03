@@ -112,7 +112,8 @@ input[type="text"] {
 .rstudio-themes-dark
   :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar)
   .search,
-.rstudio-themes-flat .themedPopupPanel .search {
+.rstudio-themes-flat .themedPopupPanel .search,
+.rstudio-themes-flat.rstudio-themes-dark-menus .search {
   border-color: var(--ds-ui-border) !important;
   background: var(--ds-input-bg) !important;
 }
