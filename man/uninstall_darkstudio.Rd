@@ -6,10 +6,19 @@
 \usage{
 uninstall_darkstudio(index_file = NULL)
 }
+\arguments{
+\item{index_file}{character:
+Path to RStudio's \code{index.htm}.}
+}
 \value{
-nothing
+TRUE
 }
 \description{
 Remove and replace the modified \code{index.htm} with the backup
-\code{index.htm.bak} file.
+\code{index.htm.pre-ds} file. Also deletes the \code{darkstudio} directory.
+}
+\details{
+This function does NOT uninstall the daRkStudio package.
+To uninstall the darkstudio package, copy and
+paste remove.packages('darkstudio') into the console.
 }
