@@ -226,7 +226,7 @@ input[type="checkbox"].focus-visible {
 /* "Packages ... are required but not installed... */
 .rstudio-themes-flat
   .rstudio-themes-dark-grey
-  :-webkit-any(.GGBOEFPDC4C, GD15MCFCB2C) {
+  :-webkit-any(.GGBOEFPDC4C, GD15MCFCB2C, .GGBOEFPDD4C) {
   background-color: var(--ds-ui-bg) !important;
   border-bottom: var(--ds-ui-border) !important;
 }
