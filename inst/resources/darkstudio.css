@@ -76,6 +76,15 @@
   border: 1px solid var(--ds-ui-border) !important;
 }
 
+/* introduced in RStudio 1.4 */
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border {
+  border-color: var(--ds-ui-border); !important;
+}
+
+#rstudio_command_palette_search {
+  font-size: 12px;
+}
+
 /**
 * Active Primary/Secondary Tab Toolbar(s)
 */
@@ -382,11 +391,12 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey,
 /* windows */
 .rstudio-themes-dark .windowframe,
 /* gradients */
-.rstudio-themes-dark :-webkit-any(.gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat .rstudio-themes-dark :-webkit-any(.gwt-TabLayoutPanelTabs,
   .windowframe,
   .rstheme_multiPodUtilityTabArea,
   .GD15MCFCCS,
-  .GJQ3LUQCCS) {
+  .GJQ3LUQCCS,
+  .GGFDNYQDDS) {
   background: var(--ds-tab-gradient-dark);
   border-color: var(--ds-ui-border) !important;
 }
