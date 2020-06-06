@@ -1,5 +1,13 @@
 #' Install daRkStudio
 #'
+#' @param index_file character:
+#'   Path to RStudio's \code{index.htm}. Useful for times when the default
+#'   installation method cannot successfully locate the file.
+#' @param backup logical:
+#'   TRUE or FALSE. Copies the default \code{index.htm} file to
+#'   \code{index.htm.pre-ds}. Defaults to TRUE.
+#'
+#'
 #' daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
 #' it's DOM (Document Object Model).
 #'
@@ -19,29 +27,22 @@
 #' installed RStudio to the default location, \code{C:\\Program Files\\RStudio}.
 #'
 #'
-#' @param backup logical:
-#'   TRUE or FALSE. Copies the default \code{index.htm} file to
-#'   \code{index.htm.pre-ds}. Defaults to TRUE.
-#' @param index_file character:
-#'   Path to RStudio's \code{index.htm}. Useful for times when the default
-#'   installation method cannot successfully locate the file.
-#'
 #' @examples
 #' # Default:
 #' install_darkstudio()
-#'
 #'
 #' # macOS:
 #' index_htm <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
 #' install_darkstudio(backup = TRUE, index_file = index_htm)
 #'
-#'
 #' # Windows:
 #' index_htm <- "C:/Program Files/RStudio/www/index.htm"
 #' install_darkstudio(backup = TRUE, index_file = index_htm)
+#'
+#'
 #' @return TRUE
 #' @export
-install_darkstudio <- function(backup = TRUE, index_file = NULL) {
+install_darkstudio <- function(index_file = NULL, backup = TRUE) {
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
     stop("RStudio must be running in order to install daRkStudio.")
