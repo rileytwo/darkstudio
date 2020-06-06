@@ -4,25 +4,21 @@
 \alias{install_darkstudio}
 \title{Install daRkStudio}
 \usage{
-install_darkstudio(backup = TRUE, index_file = NULL)
+install_darkstudio(index_file = NULL, backup = TRUE)
 }
 \arguments{
-\item{backup}{logical:
-TRUE or FALSE. Copies the default \code{index.htm} file to
-\code{index.htm.pre-ds}. Defaults to TRUE.}
-
 \item{index_file}{character:
 Path to RStudio's \code{index.htm}. Useful for times when the default
 installation method cannot successfully locate the file.}
-}
-\value{
-TRUE
-}
-\description{
+
+\item{backup}{logical:
+  TRUE or FALSE. Copies the default \code{index.htm} file to
+  \code{index.htm.pre-ds}. Defaults to TRUE.
+
+
 daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
 it's DOM (Document Object Model).
-}
-\details{
+
 The only change to \code{index.htm} the inclusion of a \code{<link>} element
 near the end of the file, which tells RStudio to load \code{darkstudio.css}.
 
@@ -36,19 +32,25 @@ you will find \code{darkstudio.css}, which is the bread and butter of this
 package.
 
 On Windows, you will likely need Administrator Privileges if you've
-installed RStudio to the default location, \code{C:\\Program Files\\RStudio}.
+installed RStudio to the default location, \code{C:\\Program Files\\RStudio}.}
+}
+\value{
+TRUE
+}
+\description{
+Install daRkStudio
 }
 \examples{
 # Default:
 install_darkstudio()
 
-
 # macOS:
 index_htm <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
 install_darkstudio(backup = TRUE, index_file = index_htm)
 
-
 # Windows:
 index_htm <- "C:/Program Files/RStudio/www/index.htm"
 install_darkstudio(backup = TRUE, index_file = index_htm)
+
+
 }
