@@ -41,6 +41,7 @@
 #' }
 #'
 #' @return TRUE
+#' @return Returns \code{TRUE} if the operation is successful.
 #' @export
 activate <- function(index_file = NULL, backup = TRUE) {
   # Fail quickly if the RStudio API is not available
@@ -100,7 +101,7 @@ activate <- function(index_file = NULL, backup = TRUE) {
 #' @param index_file character:
 #'   Path to RStudio's \code{index.htm}.
 #'
-#' @return TRUE
+#' @return Returns \code{TRUE} if the operation is successful.
 #' @export
 deactivate <- function(index_file = NULL) {
   index_file_path <- find_index_file(path = index_file)
@@ -122,7 +123,7 @@ deactivate <- function(index_file = NULL) {
 #' Updates the \code{darkstudio.css}. Meant to be used after upgrading
 #' \code{daRkStudio} and/or after upgrading RStudio.
 #'
-#' @return TRUE
+#' @return Returns \code{TRUE} if the operation is successful.
 #' @export
 update_styles <- function() {
   if (deactivate() == TRUE) {

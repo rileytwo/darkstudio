@@ -11,7 +11,7 @@ deactivate(index_file = NULL)
 Path to RStudio's \code{index.htm}.}
 }
 \value{
-TRUE
+Returns \code{TRUE} if the operation is successful.
 }
 \description{
 Remove and replace the modified \code{index.htm} with the backup

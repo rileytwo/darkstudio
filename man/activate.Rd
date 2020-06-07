@@ -34,7 +34,7 @@ On Windows, you will likely need Administrator Privileges if you've
 installed RStudio to the default location, \code{C:\\Program Files\\RStudio}.}
 }
 \value{
-TRUE
+Returns \code{TRUE} if the operation is successful.
 }
 \description{
 Activate daRkStudio
