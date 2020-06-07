@@ -27,6 +27,7 @@
 #'
 #'
 #' @examples
+#' \dontrun{
 #' # Default:
 #' activate()
 #'
@@ -37,7 +38,7 @@
 #' # Windows:
 #' index_htm <- "C:/Program Files/RStudio/www/index.htm"
 #' activate(backup = TRUE, index_file = index_htm)
-#'
+#' }
 #'
 #' @return TRUE
 #' @export
