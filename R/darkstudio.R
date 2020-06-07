@@ -1,4 +1,4 @@
-#' Install daRkStudio
+#' Activate daRkStudio
 #'
 #' @param index_file character:
 #'   Path to RStudio's \code{index.htm}. Useful for times when the default
@@ -6,7 +6,6 @@
 #' @param backup logical:
 #'   TRUE or FALSE. Copies the default \code{index.htm} file to
 #'   \code{index.htm.pre-ds}. Defaults to TRUE.
-#'
 #'
 #' daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
 #' it's DOM (Document Object Model).
@@ -18,7 +17,7 @@
 #' which is found at \code{/Applications/RStudio.app/Contents/Resources/www} on
 #' macOS, and \code{C:\\Program Files\\RStudio\\www} on Windows.
 #'
-#' \code{install_darkstudio()} will create a backup of \code{index.htm} at
+#' \code{activate()} will create a backup of \code{index.htm} at
 #' \code{www/darkstudio/index.htm.pre-ds}. \code{www/darkstudio} is also where
 #' you will find \code{darkstudio.css}, which is the bread and butter of this
 #' package.
@@ -29,20 +28,20 @@
 #'
 #' @examples
 #' # Default:
-#' install_darkstudio()
+#' activate()
 #'
 #' # macOS:
 #' index_htm <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
-#' install_darkstudio(backup = TRUE, index_file = index_htm)
+#' activate(backup = TRUE, index_file = index_htm)
 #'
 #' # Windows:
 #' index_htm <- "C:/Program Files/RStudio/www/index.htm"
-#' install_darkstudio(backup = TRUE, index_file = index_htm)
+#' activate(backup = TRUE, index_file = index_htm)
 #'
 #'
 #' @return TRUE
 #' @export
-install_darkstudio <- function(index_file = NULL, backup = TRUE) {
+activate <- function(index_file = NULL, backup = TRUE) {
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
     stop("RStudio must be running in order to install daRkStudio.")
@@ -88,7 +87,7 @@ install_darkstudio <- function(index_file = NULL, backup = TRUE) {
 }
 
 
-#' Uninstall daRkStudio
+#' Deactivate daRkStudio
 #'
 #' Remove and replace the modified \code{index.htm} with the backup
 #' \code{index.htm.pre-ds} file. Also deletes the \code{darkstudio} directory.
@@ -102,7 +101,7 @@ install_darkstudio <- function(index_file = NULL, backup = TRUE) {
 #'
 #' @return TRUE
 #' @export
-uninstall_darkstudio <- function(index_file = NULL) {
+deactivate <- function(index_file = NULL) {
   index_file_path <- find_index_file(path = index_file)
 
   restore_index_file(.index_file_path = index_file_path)
@@ -117,16 +116,19 @@ uninstall_darkstudio <- function(index_file = NULL) {
 }
 
 
-#' Update darkstudio.css
+#' Update Styles
 #'
-#' Updates the \code{darkstudio.css}. Meant to be used after upgrading the
-#' daRkStudio package.
+#' Updates the \code{darkstudio.css}. Meant to be used after upgrading
+#' \code{daRkStudio} and/or after upgrading RStudio.
+#'
+#' @param ...
+#'   Optional arguments passed to \code{activate}
 #'
 #' @return TRUE
 #' @export
-update_darkstudio <- function() {
-  if (uninstall_darkstudio() == TRUE) {
-    install_darkstudio()
+update_styles <- function() {
+  if (deactivate() == TRUE) {
+    activate()
   }
   return(TRUE)
 }
