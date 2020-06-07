@@ -121,9 +121,6 @@ deactivate <- function(index_file = NULL) {
 #' Updates the \code{darkstudio.css}. Meant to be used after upgrading
 #' \code{daRkStudio} and/or after upgrading RStudio.
 #'
-#' @param ...
-#'   Optional arguments passed to \code{activate}
-#'
 #' @return TRUE
 #' @export
 update_styles <- function() {
