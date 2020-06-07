@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • darkstudio</title>
+<title>Deactivate daRkStudio — deactivate • darkstudio</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Deactivate daRkStudio — deactivate" />
+<meta property="og:description" content="Remove and replace the modified index.htm with the backup
+index.htm.pre-ds file. Also deletes the darkstudio directory." />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,54 +102,40 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Deactivate daRkStudio</h1>
+    
+    <div class="hidden name"><code>deactivate.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Remove and replace the modified <code>index.htm</code> with the backup
+<code>index.htm.pre-ds</code> file. Also deletes the <code>darkstudio</code> directory.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>deactivate</span>(<span class='kw'>index_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="activate.html">activate()</a></code> </p>
-        </td>
-        <td><p>Activate daRkStudio</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="deactivate.html">deactivate()</a></code> </p>
-        </td>
-        <td><p>Deactivate daRkStudio</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="update_styles.html">update_styles()</a></code> </p>
-        </td>
-        <td><p>Update Styles</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>index_file</th>
+      <td><p>character:
+Path to RStudio's <code>index.htm</code>.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>TRUE</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function does NOT uninstall the daRkStudio package.
+To uninstall the darkstudio package, copy and
+paste remove.packages('darkstudio') into the console.</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

@@ -6,9 +6,6 @@
 \usage{
 update_styles()
 }
-\arguments{
-\item{...}{Optional arguments passed to \code{activate}}
-}
 \value{
 TRUE
 }

@@ -40,6 +40,7 @@ TRUE
 Activate daRkStudio
 }
 \examples{
+\dontrun{
 # Default:
 activate()
 
@@ -50,6 +51,6 @@ activate(backup = TRUE, index_file = index_htm)
 # Windows:
 index_htm <- "C:/Program Files/RStudio/www/index.htm"
 activate(backup = TRUE, index_file = index_htm)
-
+}
 
 }
