@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • darkstudio</title>
+<title>Activate daRkStudio — activate • darkstudio</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Activate daRkStudio — activate" />
+<meta property="og:description" content="Activate daRkStudio" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,54 +101,65 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Activate daRkStudio</h1>
+    
+    <div class="hidden name"><code>activate.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Activate daRkStudio</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>activate</span>(<span class='kw'>index_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>backup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="activate.html">activate()</a></code> </p>
-        </td>
-        <td><p>Activate daRkStudio</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="deactivate.html">deactivate()</a></code> </p>
-        </td>
-        <td><p>Deactivate daRkStudio</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="update_styles.html">update_styles()</a></code> </p>
-        </td>
-        <td><p>Update Styles</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>index_file</th>
+      <td><p>character:
+Path to RStudio's <code>index.htm</code>. Useful for times when the default
+installation method cannot successfully locate the file.</p></td>
+    </tr>
+    <tr>
+      <th>backup</th>
+      <td><p>logical:
+  TRUE or FALSE. Copies the default <code>index.htm</code> file to
+  <code>index.htm.pre-ds</code>. Defaults to TRUE.</p>
+<p>daRkStudio modifies <code>index.htm</code>, a file used by RStudio to construct
+it's DOM (Document Object Model).</p>
+<p>The only change to <code>index.htm</code> the inclusion of a <code>&lt;link&gt;</code> element
+near the end of the file, which tells RStudio to load <code>darkstudio.css</code>.</p>
+<p>daRkStudio creates a directory, "darkstudio", inside the <code>www</code> folder,
+which is found at <code>/Applications/RStudio.app/Contents/Resources/www</code> on
+macOS, and <code>C:\Program Files\RStudio\www</code> on Windows.</p>
+<p><code>activate()</code> will create a backup of <code>index.htm</code> at
+<code>www/darkstudio/index.htm.pre-ds</code>. <code>www/darkstudio</code> is also where
+you will find <code>darkstudio.css</code>, which is the bread and butter of this
+package.</p>
+<p>On Windows, you will likely need Administrator Privileges if you've
+installed RStudio to the default location, <code>C:\Program Files\RStudio</code>.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>TRUE</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># Default:</span>
+<span class='fu'>activate</span>()</div><div class='output co'>#&gt; <span class='error'>Error in activate(): RStudio must be running in order to install daRkStudio.</span></div><div class='input'>
+<span class='co'># macOS:</span>
+<span class='no'>index_htm</span> <span class='kw'>&lt;-</span> <span class='st'>"/Applications/RStudio.app/Contents/Resources/www/index.htm"</span>
+<span class='fu'>activate</span>(<span class='kw'>backup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>index_file</span> <span class='kw'>=</span> <span class='no'>index_htm</span>)</div><div class='output co'>#&gt; <span class='error'>Error in activate(backup = TRUE, index_file = index_htm): RStudio must be running in order to install daRkStudio.</span></div><div class='input'>
+<span class='co'># Windows:</span>
+<span class='no'>index_htm</span> <span class='kw'>&lt;-</span> <span class='st'>"C:/Program Files/RStudio/www/index.htm"</span>
+<span class='fu'>activate</span>(<span class='kw'>backup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>index_file</span> <span class='kw'>=</span> <span class='no'>index_htm</span>)</div><div class='output co'>#&gt; <span class='error'>Error in activate(backup = TRUE, index_file = index_htm): RStudio must be running in order to install daRkStudio.</span></div><div class='input'>
+
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
