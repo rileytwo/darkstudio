@@ -6,11 +6,8 @@
 \usage{
 update_styles()
 }
-\arguments{
-\item{...}{Optional arguments passed to \code{activate}}
-}
 \value{
-TRUE
+Returns \code{TRUE} if the operation is successful.
 }
 \description{
 Updates the \code{darkstudio.css}. Meant to be used after upgrading
