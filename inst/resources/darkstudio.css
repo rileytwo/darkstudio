@@ -237,7 +237,7 @@ input[type="checkbox"].focus-visible {
 *
 */
 
-#rstudio_workbench_panel_environment :-webkit-any(td) {
+#rstudio_workbench_panel_environment :-webkit-any(td, tr) {
   border-color: var(--ds-grid-border) !important;
 }
 
