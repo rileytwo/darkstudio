@@ -40,6 +40,27 @@ Here, the RStudio theme is set to Modern (remember, Sky would work here as well)
 
 ## Installation
 
+This used to not be an R package and required manual copying/moving/pasting files from one place to another. Now that `darkstudio` is an R package, installation and maintenance is much simpler. However, I've kept the old installation method in the README in case anyone would rather go that route.
+
+### Recommended Method
+
+You can install `darkstudio` by using `install_github()` from the `remotes` or `devtools` packages.
+
+```r
+# If you haven't installed remotes yet,
+# install.packages('remotes')
+remotes::install_github('rileytwo/darkstudio')
+```
+
+Or,
+
+```r
+# If you haven't installed devtools yet,
+# install.packages('devtools')
+devtools::install_github('rileytwo/darkstudio')
+```
+
+### Old Method
 **You may want to back up the original files.**
 
 I recommend placing them into a folder, something like `before-daRkStudio`,
