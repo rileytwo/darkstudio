@@ -60,6 +60,17 @@ Or,
 devtools::install_github('rileytwo/darkstudio')
 ```
 
+After installation, you'll need to activate the theme.
+
+In the RStudio console, type the following:
+
+```r
+darkstudio::activate()
+```
+
+If the installation was successful, the function will return `TRUE`. Otherwise
+an error will be returned.
+
 ### Old Method
 **You may want to back up the original files.**
 
@@ -88,7 +99,7 @@ Copy-Item "daRkStudio\darkstudio.css" `
     -Force
 
 Copy-Item "daRkStudio\index.htm" `
-    "C:\Program Files\RStudio\www\index.htm" ` 
+    "C:\Program Files\RStudio\www\index.htm" `
     -Force
 ```
 
@@ -116,11 +127,26 @@ cp "daRkStudio/index.htm" \
 
 ## Updating
 
+### Recommended Method
+
+```r
+darkstudio::update_styles()
+```
+
+### Old Method
+
 If you cloned the repositories, `cd` into the direcory that contains this repo.
 
 Execute `git pull --rebase`, and copy the files to `RStudio`'s `www` directory again.
 
 If you run into any troubles, please file an issue.
+
+## Uninstalling
+
+```r
+darkstudio::deactivate()
+remove.packages('darkstudio')
+```
 
 ## I love you
 
