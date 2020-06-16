@@ -104,7 +104,7 @@ modify_index_file <- function(.index_file = NULL, .ds_link = NULL) {
   for (.line in seq_along(.index_file)) {
     .line_current  <- .line
     .line_next     <- .line_current + 1
-    .line_previous <- .line_current - 1
+
 
     if (.index_file[[.line_current]] == "</html>") {
 
@@ -113,7 +113,7 @@ modify_index_file <- function(.index_file = NULL, .ds_link = NULL) {
       .index_file[[.line_next]] <- .index_file[[.line_current]]
 
       ## Add in the link
-      .index_file[[.line_previous]] <- .ds_link
+      .index_file[[.line]] <- .ds_link
     }
   }
 
