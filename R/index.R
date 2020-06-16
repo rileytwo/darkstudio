@@ -105,7 +105,6 @@ modify_index_file <- function(.index_file = NULL, .ds_link = NULL) {
     .line_current  <- .line
     .line_next     <- .line_current + 1
 
-
     if (.index_file[[.line_current]] == "</html>") {
 
       # Append a line to the index with the content of the current index's
@@ -113,10 +112,9 @@ modify_index_file <- function(.index_file = NULL, .ds_link = NULL) {
       .index_file[[.line_next]] <- .index_file[[.line_current]]
 
       ## Add in the link
-      .index_file[[.line]] <- .ds_link
+      .index_file[[.line_current]] <- .ds_link
     }
   }
-
 
   return(.index_file)
 }
