@@ -99,8 +99,24 @@ modify_index_file <- function(.index_file = NULL, .ds_link = NULL) {
     stop(err)
   }
 
-  .index_file[length(.index_file) + 1] <- .index_file[length(.index_file)]
-  .index_file[length(.index_file) - 1] <- .ds_link
+  # Dirty workaround to make sure we add our link in before the closing
+  # </html> tag
+  for (.line in seq_along(.index_file)) {
+    .line_current  <- .line
+    .line_next     <- .line_current + 1
+    .line_previous <- .line_current - 1
+
+    if (.index_file[[.line_current]] == "</html>") {
+
+      # Append a line to the index with the content of the current index's
+      # final line (which is hopefully "</html>")
+      .index_file[[.line_next]] <- .index_file[[.line_current]]
+
+      ## Add in the link
+      .index_file[[.line_previous]] <- .ds_link
+    }
+  }
+
 
   return(.index_file)
 }
