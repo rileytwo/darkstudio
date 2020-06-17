@@ -34,13 +34,13 @@ TL;DR: whether you have your RStudio theme set to Modern or Sky, darkstudio will
 
 ## Pics or it didn't happen
 
-![darkstudio](inst/media/darkstudio.png)
+![darkstudio](man/figures/darkstudio.png)
 
-![suggestions](inst/media/suggestions.png)
+![suggestions](man/figures/suggestions.png)
 
-![help-pane](inst/media/help-pane.png)
+![help-pane](man/figures/help-pane.png)
 
-![environment](inst/media/environment.png)
+![environment](man/figures/environment.png)
 
 Here, the RStudio theme is set to Modern (remember, Sky would work here as well), and the editor theme is using an `*.rstheme` with `rs-theme-is-dark: TRUE`. You can download that theme [here](https://github.com/rileytwo/kiss.git).
 
