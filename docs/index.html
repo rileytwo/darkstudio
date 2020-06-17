@@ -62,8 +62,8 @@
 
 <div id="darkstudio-is-a-package" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#darkstudio-is-a-package" class="anchor"></a>daRkStudio is a package!</h1></div>
-<p>daRkStudio can now be installed as an R package.</p>
+<a href="#darkstudio-is-a-package" class="anchor"></a>darkstudio is a package!</h1></div>
+<p>darkstudio can now be installed as an R package.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -79,7 +79,7 @@
 <div id="this-is-not-an-editor-theme" class="section level2">
 <h2 class="hasAnchor">
 <a href="#this-is-not-an-editor-theme" class="anchor"></a>This is not an editor theme</h2>
-<p>RStudio v1.2 introduced the ability to import <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html">your own theme</a>. <strong>daRkStudio is not an editor theme</strong>, and does not change the syntax highlighting in the editor. daRkStudio is an <em>RStudio theme</em>, that changes the default appearance of the Modern and Sky <em>RStudio themes</em> when using a dark <em>editor theme</em> (this is set by having <code>rs-theme-is-dark: TRUE</code> somewhere in an <code>*.rstheme</code> file).</p>
+<p>RStudio v1.2 introduced the ability to import <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html">your own theme</a>. <strong>darkstudio is not an editor theme</strong>, and does not change the syntax highlighting in the editor. darkstudio is an <em>RStudio theme</em>, that changes the default appearance of the Modern and Sky <em>RStudio themes</em> when using a dark <em>editor theme</em> (this is set by having <code>rs-theme-is-dark: TRUE</code> somewhere in an <code>*.rstheme</code> file).</p>
 <p>RStudio, by default, has three themes: Classic, Modern, and Sky (you can see for yourself by going to <code>Global Options -&gt; Appearance -&gt; RStudio theme</code>). On RStudio’s Support page, there is a fourth theme listed, called <a href="https://support.rstudio.com/hc/en-us/articles/115011846747-Using-RStudio-Themes#dark-theme">Dark</a>.</p>
 <blockquote>
 <p>The dark theme is a superset to the Modern and Sky themes that is activated whenever the Editor theme uses a dark palette.</p>
@@ -87,70 +87,109 @@
 <p>Meaning, when the editor theme is dark (i.e. <code>rs-theme-is-dark: TRUE</code>), RStudio’s panels, borders, tabs, and menus will be the same color if you select Modern or Sky as the RStudio theme.</p>
 <p>If you’re curious, they use a different palette when using a <a href="https://support.rstudio.com/hc/en-us/articles/115011846747-Using-RStudio-Themes#modern-theme">light theme</a>.</p>
 <p>Classic, however, does not change its appearance, regardless of <code>rs-theme-is-dark: TRUE</code> or <code>rs-theme-is-dark: FALSE</code>. I think this can be overriden, but I don’t plan to do so here.</p>
-<p>TL;DR: whether you have your RStudio theme set to Modern or Sky, daRkStudio will work as long as you’re using a dark editor theme.</p>
+<p>TL;DR: whether you have your RStudio theme set to Modern or Sky, darkstudio will work as long as you’re using a dark editor theme.</p>
 </div>
 <div id="pics-or-it-didnt-happen" class="section level2">
 <h2 class="hasAnchor">
 <a href="#pics-or-it-didnt-happen" class="anchor"></a>Pics or it didn’t happen</h2>
-<p><img src="inst/media/dark-rstudio.png" alt="DarkRStudio"></p>
-<p>Here, the RStudio theme is set to Modern (remember, Sky would work here as well), and the editor theme is using an <code>*.rstheme</code> with <code>rs-theme-is-dark: TRUE</code>.</p>
+<p><img src="inst/media/darkstudio.png" alt="darkstudio"></p>
+<p><img src="inst/media/suggestions.png" alt="suggestions"></p>
+<p><img src="inst/media/help-pane.png" alt="help-pane"></p>
+<p><img src="inst/media/environment.png" alt="environment"></p>
+<p>Here, the RStudio theme is set to Modern (remember, Sky would work here as well), and the editor theme is using an <code>*.rstheme</code> with <code>rs-theme-is-dark: TRUE</code>. You can download that theme <a href="https://github.com/rileytwo/kiss.git">here</a>.</p>
 </div>
 <div id="installation-1" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation-1" class="anchor"></a>Installation</h2>
+<p>This used to not be an R package and required manual copying/moving/pasting files from one place to another. Now that <code>darkstudio</code> is an R package, installation and maintenance is much simpler. However, I’ve kept the old installation method in the README in case anyone would rather go that route.</p>
+<div id="recommended-method" class="section level3">
+<h3 class="hasAnchor">
+<a href="#recommended-method" class="anchor"></a>Recommended Method</h3>
+<p>You can install <code>darkstudio</code> by using <code>install_github()</code> from the <code>remotes</code> or <code>devtools</code> packages.</p>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># If you haven't installed remotes yet,</span>
+<span class="co"># install.packages('remotes')</span>
+<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">'rileytwo/darkstudio'</span>)</pre></div>
+<p>Or,</p>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="co"># If you haven't installed devtools yet,</span>
+<span class="co"># install.packages('devtools')</span>
+<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">'rileytwo/darkstudio'</span>)</pre></div>
+<p>After installation, you’ll need to activate the theme.</p>
+<p>In the RStudio console, type the following:</p>
+<div class="sourceCode" id="cb4"><pre class="r"><span class="kw pkg">darkstudio</span><span class="kw ns">::</span><span class="fu"><a href="reference/activate.html">activate</a></span>()</pre></div>
+<p>If the installation was successful, the function will return <code>TRUE</code>. Otherwise an error will be returned.</p>
+</div>
+<div id="old-method" class="section level3">
+<h3 class="hasAnchor">
+<a href="#old-method" class="anchor"></a>Old Method</h3>
 <p><strong>You may want to back up the original files.</strong></p>
-<p>I recommend placing them into a folder, something like <code>before-daRkStudio</code>, <code>RStudio-original</code>, <code>original-rstudio-files-that-were-there-before-i-started-using-this-awesome-theme</code> etc., somewhere outside of RStudio’s file directory (so they won’t be removed when you update RStudio!).</p>
+<p>I recommend placing them into a folder, something like <code>before-darkstudio</code>, <code>RStudio-original</code>, <code>original-rstudio-files-that-were-there-before-i-started-using-this-awesome-theme</code> etc., somewhere outside of RStudio’s file directory (so they won’t be removed when you update RStudio!).</p>
+</div>
 <div id="macos" class="section level3">
 <h3 class="hasAnchor">
 <a href="#macos" class="anchor"></a>macOS</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> clone https://github.com/rileytwo/daRkStudio</span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">cp</span> <span class="st">"daRkStudio/darkstudio.css"</span> \</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="st">"/Applications/RStudio.app/Contents/Resources/www/darkstudio.css"</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">cp</span> <span class="st">"daRkStudio/index.htm"</span> \</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    <span class="st">"/Applications/RStudio.app/Contents/Resources/www/index.htm"</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">git</span> clone https://github.com/rileytwo/darkstudio</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">cp</span> <span class="st">"darkstudio/darkstudio.css"</span> \</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="st">"/Applications/RStudio.app/Contents/Resources/www/darkstudio.css"</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="fu">cp</span> <span class="st">"darkstudio/index.htm"</span> \</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="st">"/Applications/RStudio.app/Contents/Resources/www/index.htm"</span></span></code></pre></div>
 </div>
 <div id="windows" class="section level3">
 <h3 class="hasAnchor">
 <a href="#windows" class="anchor"></a>Windows</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1"></a>git clone https://github.<span class="fu">com</span>/rileytwo/daRkStudio</span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">Copy-Item</span> <span class="st">"daRkStudio\darkstudio.css"</span> `</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="st">"C:\Program Files\RStudio\www\darkstudio.css"</span> `</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    -Force</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="fu">Copy-Item</span> <span class="st">"daRkStudio\index.htm"</span> `</span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="st">"C:\Program Files\RStudio\www\index.htm"</span> ` </span>
-<span id="cb3-9"><a href="#cb3-9"></a>    -Force</span></code></pre></div>
-<p>You may not have the permission to copy or overwrite items in <code>C:\Program Files</code>. If that’s the case, run PowerShell in an elevated prompt (as an Adminstrator) and try to copy the items to <code>C:\Program Files\RStudio\Resources\www\darkstudio.css</code> again. If that doesn’t work, try opening the daRkStudio folder from File Explorer, and manually copying the files to the <code>C:\Program Files\RStudio\Resources\www\</code> directory.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb6-1"><a href="#cb6-1"></a>git clone https://github.<span class="fu">com</span>/rileytwo/darkstudio</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">Copy-Item</span> <span class="st">"darkstudio\darkstudio.css"</span> `</span>
+<span id="cb6-4"><a href="#cb6-4"></a>    <span class="st">"C:\Program Files\RStudio\www\darkstudio.css"</span> `</span>
+<span id="cb6-5"><a href="#cb6-5"></a>    -Force</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="fu">Copy-Item</span> <span class="st">"darkstudio\index.htm"</span> `</span>
+<span id="cb6-8"><a href="#cb6-8"></a>    <span class="st">"C:\Program Files\RStudio\www\index.htm"</span> `</span>
+<span id="cb6-9"><a href="#cb6-9"></a>    -Force</span></code></pre></div>
+<p>You may not have the permission to copy or overwrite items in <code>C:\Program Files</code>. If that’s the case, run PowerShell in an elevated prompt (as an Adminstrator) and try to copy the items to <code>C:\Program Files\RStudio\Resources\www\darkstudio.css</code> again. If that doesn’t work, try opening the darkstudio folder from File Explorer, and manually copying the files to the <code>C:\Program Files\RStudio\Resources\www\</code> directory.</p>
 <p>If you’re STILL unable to copy the files (it’s Windows, so who knows?) open an issue and I’ll do what I can to help.</p>
 </div>
 <div id="linux" class="section level3">
 <h3 class="hasAnchor">
 <a href="#linux" class="anchor"></a>Linux</h3>
 <p>It’s been a while since I’ve used RStudio on Linux (Kubuntu 18.04), so I’m not sure if the paths shown below are still correct. If you’re using Linux and find that these paths no longer work, please open an issue or pull request.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> clone https://github.com/rileytwo/daRkStudio</span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">cp</span> <span class="st">"daRkStudio/darkstudio.css"</span> \</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    <span class="st">"/usr/local/rstudio/&lt;version-goes-here&gt;/resources/www/darkstudio.css"</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">cp</span> <span class="st">"daRkStudio/index.htm"</span> \</span>
-<span id="cb4-7"><a href="#cb4-7"></a>    <span class="st">"/usr/local/rstudio/&lt;version-goes-here&gt;/resources/www/index.htm"</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">git</span> clone https://github.com/rileytwo/darkstudio</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">cp</span> <span class="st">"darkstudio/darkstudio.css"</span> \</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="st">"/usr/local/rstudio/&lt;version-goes-here&gt;/resources/www/darkstudio.css"</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="fu">cp</span> <span class="st">"darkstudio/index.htm"</span> \</span>
+<span id="cb7-7"><a href="#cb7-7"></a>    <span class="st">"/usr/local/rstudio/&lt;version-goes-here&gt;/resources/www/index.htm"</span></span></code></pre></div>
 </div>
 </div>
 <div id="updating" class="section level2">
 <h2 class="hasAnchor">
 <a href="#updating" class="anchor"></a>Updating</h2>
+<div id="recommended-method-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#recommended-method-1" class="anchor"></a>Recommended Method</h3>
+<div class="sourceCode" id="cb8"><pre class="r"><span class="kw pkg">darkstudio</span><span class="kw ns">::</span><span class="fu"><a href="reference/update_styles.html">update_styles</a></span>()</pre></div>
+</div>
+<div id="old-method-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#old-method-1" class="anchor"></a>Old Method</h3>
 <p>If you cloned the repositories, <code>cd</code> into the direcory that contains this repo.</p>
 <p>Execute <code>git pull --rebase</code>, and copy the files to <code>RStudio</code>’s <code>www</code> directory again.</p>
 <p>If you run into any troubles, please file an issue.</p>
 </div>
+</div>
+<div id="uninstalling" class="section level2">
+<h2 class="hasAnchor">
+<a href="#uninstalling" class="anchor"></a>Uninstalling</h2>
+<div class="sourceCode" id="cb9"><pre class="r"><span class="kw pkg">darkstudio</span><span class="kw ns">::</span><span class="fu"><a href="reference/deactivate.html">deactivate</a></span>()
+<span class="fu"><a href="https://rdrr.io/r/utils/remove.packages.html">remove.packages</a></span>(<span class="st">'darkstudio'</span>)</pre></div>
+</div>
 <div id="i-love-you" class="section level2">
 <h2 class="hasAnchor">
 <a href="#i-love-you" class="anchor"></a>I love you</h2>
-<p>Thanks for checking out daRkStudio.</p>
-<p>If you like it, you can show support by starring this repo. Or, if you know someone who may like daRkStudio, tell them to check it out!</p>
+<p>Thanks for checking out darkstudio.</p>
+<p>If you like it, you can show support by starring this repo. Or, if you know someone who may like darkstudio, tell them to check it out!</p>
 </div>
 </div>
 
