@@ -41,3 +41,6 @@ Icon
 # Exclude man from being ignored
 *install*
 !/man/*install*
+
+# PyCharm
+.idea/*
