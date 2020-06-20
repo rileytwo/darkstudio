@@ -5,7 +5,7 @@ darkstudio can now be installed as an R package.
 
 ```r
 remotes::install_github("rileytwo/darkstudio")
-darkstudio::install_darkstudio()
+darkstudio::activate()
 ```
 
 # Overview
