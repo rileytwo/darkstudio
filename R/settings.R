@@ -1,8 +1,8 @@
-#
-# storage.R
-# Created by Riley Roach on 2020-05-27
-#
-darkstudio_dir_create <- function(path = NULL) {
+#'
+#' storage.R
+#' Created by Riley Roach on 2020-05-27
+#' @keywords internal
+settings_dir_create <- function(path = NULL) {
   if (length(path) == 0) {
     err <- "No path name was given. (path = NULL)"
     stop(err)
@@ -18,7 +18,7 @@ darkstudio_dir_create <- function(path = NULL) {
 }
 
 
-darkstudio_dir_exists <- function(path = NULL, value = FALSE) {
+settings_dir_exists <- function(path = NULL, value = FALSE) {
   if (length(path) == 0) {
     path <- find_index_file()
   }
