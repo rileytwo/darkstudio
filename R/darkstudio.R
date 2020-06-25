@@ -61,10 +61,10 @@ activate <- function(index_file = NULL, backup = TRUE) {
 
   index_file_path <- find_index_file(path = index_file)
 
-  if (!darkstudio_dir_exists(path = index_file_path)) {
-    ds_dir <- darkstudio_dir_create(path = index_file_path)
+  if (!settings_dir_exists(path = index_file_path)) {
+    ds_dir <- settings_dir_create(path = index_file_path)
   } else {
-    ds_dir <- darkstudio_dir_exists(path = index_file_path, value = TRUE)
+    ds_dir <- settings_dir_exists(path = index_file_path, value = TRUE)
   }
 
   if (backup == TRUE) {
@@ -108,26 +108,11 @@ deactivate <- function(index_file = NULL) {
 
   restore_index_file(.index_file_path = index_file_path)
 
-  if (!darkstudio_dir_exists(path = index_file_path)) {
+  if (!settings_dir_exists(path = index_file_path)) {
     warning("daRkStudio directory does not exist.")
   } else {
-    ds_dir <- darkstudio_dir_exists(path = index_file_path, value = TRUE)
+    ds_dir <- settings_dir_exists(path = index_file_path, value = TRUE)
     fs::dir_delete(ds_dir)
-  }
-  return(TRUE)
-}
-
-
-#' Update Styles
-#'
-#' Updates the \code{darkstudio.css}. Meant to be used after upgrading
-#' \code{daRkStudio} and/or after upgrading RStudio.
-#'
-#' @return Returns \code{TRUE} if the operation is successful.
-#' @export
-update_styles <- function() {
-  if (deactivate() == TRUE) {
-    activate()
   }
   return(TRUE)
 }
