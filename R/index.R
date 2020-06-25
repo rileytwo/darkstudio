@@ -1,7 +1,7 @@
-#
-# index.R
-# Created by Riley Roach on 2020-05-24
-#
+#'
+#' index.R
+#' Created by Riley Roach on 2020-05-24
+#' @keywords internal
 find_index_file <- function(path = NULL) {
   # Allow user to manually specify path to index.htm
   if (length(path) != 0) {

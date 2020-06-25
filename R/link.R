@@ -1,7 +1,7 @@
-#
-# link.R
-# Created by Riley Roach on 2020-05-25
-#
+#'
+#' link.R
+#' Created by Riley Roach on 2020-05-25
+#' @keywords internal
 index_link <- function(href = NULL) {
   if (length(href) != 0) {
     link <- paste0('<link rel="stylesheet" href="', href,'" type="text/css"/>')
