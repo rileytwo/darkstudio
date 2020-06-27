@@ -1,18 +1,11 @@
 # darkstudio is a package!
-darkstudio can now be installed as an R package.
-
-## Installation
-
-```r
-remotes::install_github("rileytwo/darkstudio")
-darkstudio::activate()
-```
+darkstudio can now be installed as an R package. Instructions are below.
 
 # Overview
 
 This is something I did for fun, and figured other people might enjoy this as much as I do.
 
-I have little experience in writing css and javascript, and even less experience in building IDEs. I did most of the work in RStudio's DevTools, by selecting elements and changing their properties. So, if anyone would like to help out by contributing, please do! I'd love the help :smile:.
+I have little experience in writing CSS and javascript, and even less experience in building IDEs. I did most of the work in RStudio's DevTools, by selecting elements and changing their properties. So, if anyone would like to help out by contributing, please do! I'd love the help :smile:.
 
 ## This is not an editor theme
 
@@ -38,8 +31,6 @@ TL;DR: whether you have your RStudio theme set to Modern or Sky, darkstudio will
 
 ![suggestions](man/figures/suggestions.png)
 
-![help-pane](man/figures/help-pane.png)
-
 ![environment](man/figures/environment.png)
 
 Here, the RStudio theme is set to Modern (remember, Sky would work here as well), and the editor theme is using an `*.rstheme` with `rs-theme-is-dark: TRUE`. You can download that theme [here](https://github.com/rileytwo/kiss.git).
@@ -52,30 +43,45 @@ This used to not be an R package and required manual copying/moving/pasting file
 
 You can install `darkstudio` by using `install_github()` from the `remotes` or `devtools` packages.
 
-```r
-# If you haven't installed remotes yet,
-# install.packages('remotes')
-remotes::install_github('rileytwo/darkstudio')
-```
-
-Or,
+Just run
 
 ```r
-# If you haven't installed devtools yet,
-# install.packages('devtools')
-devtools::install_github('rileytwo/darkstudio')
+remotes::install_github("rileytwo/darkstudio")
 ```
+in RStudio to install the package. To activate the custom theme, the next step depends on the OS you're using.
 
-After installation, you'll need to activate the theme.
+`darkstudio` alters RStudio's DOM by adding a `<link/>` handle that points to a CSS file. Unless you installed RStudio to a non-default location, you may need to elevate your privileges when activating `darkstudio`.
 
-In the RStudio console, type the following:
+### Windows
+Run RStudio as an administrator. Next, run
 
 ```r
 darkstudio::activate()
 ```
 
-If the installation was successful, the function will return `TRUE`. Otherwise
-an error will be returned.
+in the console to activate the theme. The function will return `TRUE` if the activation was successful.
+
+### Linux
+Start RStudio from the terminal by running `sudo rstudio --no-sandbox`. 
+
+Once RStudio is running, run
+
+```r
+darkstudio::activate()
+```
+
+in the console.
+
+### macOS
+
+Simply run
+
+```r
+darkstudio::activate()
+```
+
+in the console. I personally own a mac, and haven't had an trouble activating `darkstudio` with non-elevated privileges. I understand I can't speak for all mac owners, so file an issue if you run into trouble.
+
 
 ### Old Method
 **You may want to back up the original files.**
@@ -125,10 +131,10 @@ If you're using Linux and find that these paths no longer work, please open an i
 git clone https://github.com/rileytwo/darkstudio
 
 cp "darkstudio/darkstudio.css" \
-    "/usr/local/rstudio/<version-goes-here>/resources/www/darkstudio.css"
+    "/usr/local/rstudio/resources/www/darkstudio.css"
 
 cp "darkstudio/index.htm" \
-    "/usr/local/rstudio/<version-goes-here>/resources/www/index.htm"
+    "/usr/local/rstudio/resources/www/index.htm"
 ```
 
 ## Updating
@@ -149,8 +155,17 @@ If you run into any troubles, please file an issue.
 
 ## Uninstalling
 
+I should note here that deactivating `darkstudio` **should be done _before_ uninstalling the package.** If you don't, you'll need to manually edit the `index.htm` file. If you wish to disable `darkstudio`.
+
+Deactivating the theme is relatively simple. The `deactivate()` function will return RStudio to it's normal appearance.
+
 ```r
 darkstudio::deactivate()
+```
+
+After that, you can uninstall `darkstudio` like any other package:
+
+```r
 remove.packages('darkstudio')
 ```
 
