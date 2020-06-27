@@ -4,10 +4,10 @@
 \alias{deactivate}
 \title{Deactivate daRkStudio}
 \usage{
-deactivate(index_file = NULL)
+deactivate(path = NULL)
 }
 \arguments{
-\item{index_file}{character:
+\item{file_index}{character:
 Path to RStudio's \code{index.htm}.}
 }
 \value{
