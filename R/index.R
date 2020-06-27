@@ -108,8 +108,8 @@ index_file_modify <- function(file = NULL, .ds_link = NULL) {
   # Dirty workaround to make sure we add our link in before the closing
   # </html> tag
   # The goal is to simply add in a <link> handle and modify nothing else.
-  # For example, the index file (as of 2020-06-27) usually looks as such
-  # near the end of the file:
+  # For example, the index file (as of 2020-06-27) usually looks something
+  # like this near the end of the file:
   #
   # ...
   #   </body>
