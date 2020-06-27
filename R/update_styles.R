@@ -5,9 +5,12 @@
 #'
 #' @return Returns \code{TRUE} if the operation is successful.
 #' @export
-update_styles <- function() {
-  if (deactivate() == TRUE) {
-    activate()
+update_styles <- function(path = NULL) {
+  if (length(path) != 0) {
+    path <- path
+  }
+  if (deactivate(path = path) == TRUE) {
+    activate(path = path)
   }
   return(TRUE)
 }
