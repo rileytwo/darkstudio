@@ -98,9 +98,24 @@ index_file_modify <- function(.index_file = NULL, .ds_link = NULL) {
     err <- "A file must be specified for modification."
     stop(err)
   }
-
   # Dirty workaround to make sure we add our link in before the closing
   # </html> tag
+  # The goal is to simply add in a <link> handle and modify nothing else.
+  # For example, the index file (as of 2020-06-27) usually looks as such
+  # near the end of the file:
+  #
+  # ...
+  #   </body>
+  #
+  # </html>
+  #
+  # We want to change that to
+  # ...
+  #   </body>
+  #
+  #   <link rel="stylesheet" href="darkstudio/darkstudio.css" type="text/css"/>
+  # </html>
+  #
   for (.line in seq_along(.index_file)) {
     .line_current  <- .line
     .line_next     <- .line_current + 1
@@ -111,7 +126,7 @@ index_file_modify <- function(.index_file = NULL, .ds_link = NULL) {
       # final line (which is hopefully "</html>")
       .index_file[[.line_next]] <- .index_file[[.line_current]]
 
-      ## Add in the link
+      # Add in the link
       .index_file[[.line_current]] <- .ds_link
     }
   }
