@@ -2,7 +2,7 @@
 #' index.R
 #' Created by Riley Roach on 2020-05-24
 #' @keywords internal
-find_index_file <- function(path = NULL) {
+index_file_find <- function(path = NULL) {
   # Allow user to manually specify path to index.htm
   if (length(path) != 0) {
     index_file <- path
@@ -24,9 +24,9 @@ find_index_file <- function(path = NULL) {
                     index   = "www/index.htm")
     },
     Linux = {
-      rs_ver <- as.character(rstudioapi::getVersion())
-      paths <- list(default = paste0("/usr/local/rstudio/", rs_ver),
-                    user    = paste0("/usr/local/rstudio/", rs_ver),
+      # RR: `rs_ver` is not needed on Debian-based distros. #13
+      paths <- list(default = "/usr/local/rstudio/",
+                    user    = "/usr/local/rstudio/",
                     index   = "www/index.htm")
     }
   )
@@ -51,7 +51,7 @@ find_index_file <- function(path = NULL) {
 }
 
 
-backup_index_file <- function(.index_file_path = NULL) {
+index_file_backup <- function(.index_file_path = NULL) {
   if (length(.index_file_path) == 0) {
     err <- "A file must be specified for backup."
     stop(err)
@@ -71,7 +71,7 @@ backup_index_file <- function(.index_file_path = NULL) {
 }
 
 
-restore_index_file <- function(.index_file_path = NULL) {
+index_file_restore <- function(.index_file_path = NULL) {
   if (length(.index_file_path) == 0) {
     err <- "A file must be specified for restoration."
     stop(err)
@@ -86,14 +86,14 @@ restore_index_file <- function(.index_file_path = NULL) {
 }
 
 
-read_index_file <- function(.index_file_path = NULL) {
+index_file_read <- function(.index_file_path = NULL) {
   .con <- .index_file_path
   index_htm <- readLines(con = .con)
   return(index_htm)
 }
 
 
-modify_index_file <- function(.index_file = NULL, .ds_link = NULL) {
+index_file_modify <- function(.index_file = NULL, .ds_link = NULL) {
   if (length(.index_file) == 0) {
     err <- "A file must be specified for modification."
     stop(err)

@@ -46,7 +46,7 @@
 activate <- function(index_file = NULL, backup = TRUE) {
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
-    stop("RStudio must be running in order to install daRkStudio.")
+    stop("RStudio must be running in order to install darkstudio.")
   }
   # Print message about compatibility with older RStudio versions
   if (rstudioapi::versionInfo()$version <= "1.2") {
@@ -59,7 +59,7 @@ activate <- function(index_file = NULL, backup = TRUE) {
     warning(wmsg)
   }
 
-  index_file_path <- find_index_file(path = index_file)
+  index_file_path <- index_file_find(path = index_file)
 
   if (!settings_dir_exists(path = index_file_path)) {
     ds_dir <- settings_dir_create(path = index_file_path)
@@ -68,7 +68,7 @@ activate <- function(index_file = NULL, backup = TRUE) {
   }
 
   if (backup == TRUE) {
-    backup_index_file(.index_file_path = index_file_path)
+    index_file_backup(.index_file_path = index_file_path)
   }
 
   ds_css <- fs::path(
@@ -77,13 +77,13 @@ activate <- function(index_file = NULL, backup = TRUE) {
 
   fs::file_copy(path = ds_css, new_path = ds_dir, overwrite = TRUE)
 
-  index_file <- read_index_file(.index_file_path = index_file_path)
-  new_index_file <- modify_index_file(
+  index_file <- index_file_read(.index_file_path = index_file_path)
+  index_file_new <- index_file_modify(
     .index_file = index_file,
     .ds_link = index_link()
   )
 
-  writeLines(text = new_index_file, con = index_file_path)
+  writeLines(text = index_file_new, con = index_file_path)
 
   return(TRUE)
 }
@@ -104,9 +104,9 @@ activate <- function(index_file = NULL, backup = TRUE) {
 #' @return Returns \code{TRUE} if the operation is successful.
 #' @export
 deactivate <- function(index_file = NULL) {
-  index_file_path <- find_index_file(path = index_file)
+  index_file_path <- index_file_find(path = index_file)
 
-  restore_index_file(.index_file_path = index_file_path)
+  index_file_restore(.index_file_path = index_file_path)
 
   if (!settings_dir_exists(path = index_file_path)) {
     warning("daRkStudio directory does not exist.")
