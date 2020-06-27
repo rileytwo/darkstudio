@@ -5,8 +5,8 @@
 index_file_find <- function(path = NULL) {
   # Allow user to manually specify path to index.htm
   if (length(path) != 0) {
-    index_file <- path
-    return(index_file)
+    path_index <- path
+    return(path_index)
   }
 
   host <- Sys.info()[["sysname"]]
@@ -35,66 +35,73 @@ index_file_find <- function(path = NULL) {
     .default <- fs::path_join(c(p$default, p$index))
     .user    <- fs::path_join(c(p$default, p$index))
 
-    index_path <- which(fs::file_exists(.default), fs::file_exists(.user))
-    if (length(index_path) == 0) {
+    path_index <- which(fs::file_exists(.default), fs::file_exists(.user))
+    if (length(path_index) == 0) {
       return(NULL)
     }
 
-    index_path <- names(index_path)
+    path_index <- names(path_index)
 
-    return(index_path)
+    return(path_index)
   }
 
-  index_file_path <- check_paths(p = paths)
+  path_index <- check_paths(p = paths)
 
-  return(index_file_path)
+  return(path_index)
 }
 
 
-index_file_backup <- function(.index_file_path = NULL) {
-  if (length(.index_file_path) == 0) {
+index_file_backup <- function(path = NULL) {
+  if (length(path) == 0) {
     err <- "A file must be specified for backup."
     stop(err)
   }
 
-  parent_dir <- dirname(.index_file_path)
+  parent_dir <- dirname(path)
   ds_dir <- fs::path_join(c(parent_dir, "darkstudio"))
 
-  backup_file_path <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
+  path_backup <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
 
-  if (fs::file_exists(backup_file_path)) {
-    msg <- "A backup index file already exists. Not backing up."
-    warning(msg)
+  if (fs::file_exists(path_backup)) {
+    err <- paste("A backup index file already exists.",
+                 "Run darkstudio::deactivate() and retry",
+                 "darkstudio::activate().")
+    stop(err)
   } else {
-    fs::file_copy(.index_file_path, backup_file_path)
+    fs::file_copy(path, path_backup)
   }
 }
 
 
-index_file_restore <- function(.index_file_path = NULL) {
-  if (length(.index_file_path) == 0) {
+index_file_restore <- function(path = NULL) {
+  if (length(path) == 0) {
     err <- "A file must be specified for restoration."
     stop(err)
   }
 
-  parent_dir <- dirname(.index_file_path)
+  parent_dir <- dirname(path)
   ds_dir <- fs::path_join(c(parent_dir, "darkstudio"))
 
-  backup_file_path <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
+  path_backup <- fs::path_join(c(ds_dir, "index.htm.pre-ds"))
 
-  fs::file_copy(backup_file_path, .index_file_path, overwrite = TRUE)
+  if (!fs::file_exists(path_backup)) {
+    err <- paste(path_backup, "does not exist.", "Is darkstudio activated?")
+    stop(err)
+  }
+
+  fs::file_copy(path_backup, path, overwrite = TRUE)
 }
 
 
-index_file_read <- function(.index_file_path = NULL) {
-  .con <- .index_file_path
-  index_htm <- readLines(con = .con)
-  return(index_htm)
+index_file_read <- function(path = NULL) {
+  .con <- path
+  contents_index <- readLines(con = .con)
+  return(contents_index)
 }
 
 
-index_file_modify <- function(.index_file = NULL, .ds_link = NULL) {
-  if (length(.index_file) == 0) {
+index_file_modify <- function(file = NULL, .ds_link = NULL) {
+  if (length(file) == 0) {
     err <- "A file must be specified for modification."
     stop(err)
   }
@@ -116,20 +123,27 @@ index_file_modify <- function(.index_file = NULL, .ds_link = NULL) {
   #   <link rel="stylesheet" href="darkstudio/darkstudio.css" type="text/css"/>
   # </html>
   #
-  for (.line in seq_along(.index_file)) {
+  for (.line in seq_along(file)) {
     .line_current  <- .line
     .line_next     <- .line_current + 1
 
-    if (.index_file[[.line_current]] == "</html>") {
+    if (file[[.line_current]] == .ds_link) {
+      err <- paste("The index file already contains a link to darkstudio.css.",
+            "Execute darkstudio::deactivate() in the console,",
+            "or manually remove the link in the index file")
+      stop(err)
+    }
+
+    if (file[[.line_current]] == "</html>") {
 
       # Append a line to the index with the content of the current index's
       # final line (which is hopefully "</html>")
-      .index_file[[.line_next]] <- .index_file[[.line_current]]
+      file[[.line_next]] <- file[[.line_current]]
 
       # Add in the link
-      .index_file[[.line_current]] <- .ds_link
+      file[[.line_current]] <- .ds_link
     }
   }
 
-  return(.index_file)
+  return(file)
 }

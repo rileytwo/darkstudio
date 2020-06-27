@@ -1,6 +1,6 @@
 #' Activate daRkStudio
 #'
-#' @param index_file character:
+#' @param path character:
 #'   Path to RStudio's \code{index.htm}. Useful for times when the default
 #'   installation method cannot successfully locate the file.
 #' @param backup logical:
@@ -32,43 +32,43 @@
 #' activate()
 #'
 #' # macOS:
-#' index_htm <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
-#' activate(backup = TRUE, index_file = index_htm)
+#' path_index <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
+#' activate(path = path_index, backup = TRUE)
 #'
 #' # Windows:
-#' index_htm <- "C:/Program Files/RStudio/www/index.htm"
-#' activate(backup = TRUE, index_file = index_htm)
+#' path_index <- "C:/Program Files/RStudio/www/index.htm"
+#' activate(path = path_index, backup = TRUE)
 #' }
 #'
 #' @return TRUE
 #' @return Returns \code{TRUE} if the operation is successful.
 #' @export
-activate <- function(index_file = NULL, backup = TRUE) {
+activate <- function(path = NULL, backup = TRUE) {
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
     stop("RStudio must be running in order to install darkstudio.")
   }
   # Print message about compatibility with older RStudio versions
   if (rstudioapi::versionInfo()$version <= "1.2") {
-    wmsg <- paste0(
+    msg <- paste0(
       "Colors, menus, buttons, and other UI elements of this version of ",
       "RStudio may not look or function as expected. Please consider ",
       "updating RStudio to the latest stable version. For the best results, ",
       "RStudio Preview is recommended."
     )
-    warning(wmsg)
+    warning(msg)
   }
 
-  index_file_path <- index_file_find(path = index_file)
+  path_index <- index_file_find(path = path)
 
-  if (!settings_dir_exists(path = index_file_path)) {
-    ds_dir <- settings_dir_create(path = index_file_path)
+  if (!settings_dir_exists(path = path_index)) {
+    ds_dir <- settings_dir_create(path = path_index)
   } else {
-    ds_dir <- settings_dir_exists(path = index_file_path, value = TRUE)
+    ds_dir <- settings_dir_exists(path = path_index, value = TRUE)
   }
 
   if (backup == TRUE) {
-    index_file_backup(.index_file_path = index_file_path)
+    index_file_backup(path = path_index)
   }
 
   ds_css <- fs::path(
@@ -77,13 +77,10 @@ activate <- function(index_file = NULL, backup = TRUE) {
 
   fs::file_copy(path = ds_css, new_path = ds_dir, overwrite = TRUE)
 
-  index_file <- index_file_read(.index_file_path = index_file_path)
-  index_file_new <- index_file_modify(
-    .index_file = index_file,
-    .ds_link = index_link()
-  )
+  file_index <- index_file_read(path = path_index)
+  index_file_new <- index_file_modify(file = file_index, .ds_link = index_link())
 
-  writeLines(text = index_file_new, con = index_file_path)
+  writeLines(text = index_file_new, con = path_index)
 
   return(TRUE)
 }
@@ -98,20 +95,20 @@ activate <- function(index_file = NULL, backup = TRUE) {
 #' To uninstall the darkstudio package, copy and
 #' paste remove.packages('darkstudio') into the console.
 #'
-#' @param index_file character:
+#' @param file_index character:
 #'   Path to RStudio's \code{index.htm}.
 #'
 #' @return Returns \code{TRUE} if the operation is successful.
 #' @export
-deactivate <- function(index_file = NULL) {
-  index_file_path <- index_file_find(path = index_file)
+deactivate <- function(path = NULL) {
+  path_index <- index_file_find(path = path)
 
-  index_file_restore(.index_file_path = index_file_path)
+  index_file_restore(path = path_index)
 
-  if (!settings_dir_exists(path = index_file_path)) {
-    warning("daRkStudio directory does not exist.")
+  if (!settings_dir_exists(path = path_index)) {
+    warning("darkstudio directory does not exist.")
   } else {
-    ds_dir <- settings_dir_exists(path = index_file_path, value = TRUE)
+    ds_dir <- settings_dir_exists(path = path_index, value = TRUE)
     fs::dir_delete(ds_dir)
   }
   return(TRUE)
