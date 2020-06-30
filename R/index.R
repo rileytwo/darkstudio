@@ -129,15 +129,17 @@ index_file_modify <- function(file = NULL, .ds_link = NULL) {
 
     if (file[[.line_current]] == .ds_link) {
       err <- paste("The index file already contains a link to darkstudio.css.",
-            "Execute darkstudio::deactivate() in the console,",
-            "or manually remove the link in the index file")
+                   "Execute darkstudio::deactivate() in the console,",
+                   "or manually remove the link in the index file")
       stop(err)
     }
 
     if (file[[.line_current]] == "</html>") {
+      html_found <- paste("`</html>` found at:", .line_current)
 
-      # Append a line to the index with the content of the current index's
+      # Copy the closing </html> and
       # final line (which is hopefully "</html>")
+      html_moved <- paste("Moving `</html>` to:", .line_next)
       file[[.line_next]] <- file[[.line_current]]
 
       # Add in the link
@@ -147,3 +149,19 @@ index_file_modify <- function(file = NULL, .ds_link = NULL) {
 
   return(file)
 }
+
+
+index_file_is_modified <- function(file = NULL, ...) {
+  for (.line in seq_along(file)) {
+    .line_current  <- .line
+    .line_next     <- .line_current + 1
+
+    if (file[[.line_current]] == .ds_link) {
+      err <- paste("The index file already contains a link to darkstudio.css.",
+                   "Execute darkstudio::deactivate() in the console,",
+                   "or manually remove the link in the index file")
+      stop(err)
+    }
+  }
+}
+
