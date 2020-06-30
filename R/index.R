@@ -102,7 +102,7 @@ index_file_read <- function(path = NULL) {
 
 index_file_modify <- function(file = NULL, .ds_link = NULL) {
   if (length(file) == 0) {
-    err <- "A file must be specified for modification."
+    err <- "No file was given to modify."
     stop(err)
   }
   # Dirty workaround to make sure we add our link in before the closing
@@ -127,7 +127,7 @@ index_file_modify <- function(file = NULL, .ds_link = NULL) {
     .line_current  <- .line
     .line_next     <- .line_current + 1
 
-    if (file[[.line_current]] == .ds_link) {
+    if (index_file_is_modified()) {
       err <- paste("The index file already contains a link to darkstudio.css.",
                    "Execute darkstudio::deactivate() in the console,",
                    "or manually remove the link in the index file")
@@ -137,8 +137,7 @@ index_file_modify <- function(file = NULL, .ds_link = NULL) {
     if (file[[.line_current]] == "</html>") {
       html_found <- paste("`</html>` found at:", .line_current)
 
-      # Copy the closing </html> and
-      # final line (which is hopefully "</html>")
+      # Create a new line, and copy the closing </html> to that new line
       html_moved <- paste("Moving `</html>` to:", .line_next)
       file[[.line_next]] <- file[[.line_current]]
 
@@ -151,17 +150,24 @@ index_file_modify <- function(file = NULL, .ds_link = NULL) {
 }
 
 
-index_file_is_modified <- function(file = NULL, ...) {
-  for (.line in seq_along(file)) {
-    .line_current  <- .line
-    .line_next     <- .line_current + 1
+index_file_is_modified <- function(index_file = NULL) {
+  if (length(index_file) == 0) {
+    err <- "The path of the index file is unknown."
+    stop(err)
+  }
 
-    if (file[[.line_current]] == .ds_link) {
-      err <- paste("The index file already contains a link to darkstudio.css.",
-                   "Execute darkstudio::deactivate() in the console,",
-                   "or manually remove the link in the index file")
-      stop(err)
+  status <- list(msg = "", modified = logical())
+
+  for (.line in seq_along(index_file)) {
+    .line_current  <- .line
+
+    if (grepl("darkstudio", index_file[[.line_current]], perl = TRUE) == TRUE) {
+      status$msg <- paste(
+        "The index file is already modified on line", .line_current
+      )
+      status$modified <- TRUE
     }
   }
+  return(status)
 }
 
