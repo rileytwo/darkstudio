@@ -127,7 +127,8 @@ index_file_modify <- function(file = NULL, .ds_link = NULL) {
     .line_current  <- .line
     .line_next     <- .line_current + 1
 
-    if (index_file_is_modified()) {
+
+    if (index_file_is_modified(index_file = file)$modified) {
       err <- paste("The index file already contains a link to darkstudio.css.",
                    "Execute darkstudio::deactivate() in the console,",
                    "or manually remove the link in the index file")
@@ -166,6 +167,8 @@ index_file_is_modified <- function(index_file = NULL) {
         "The index file is already modified on line", .line_current
       )
       status$modified <- TRUE
+    } else {
+      status$modified <- FALSE
     }
   }
   return(status)
