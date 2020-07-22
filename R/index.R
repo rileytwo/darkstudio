@@ -3,7 +3,7 @@
 #' Created by Riley Roach on 2020-05-24
 #' @keywords internal
 index_file_find <- function(path = NULL) {
-  # Allow user to manually specify path to index.htm
+  # RR: Check if path has been provided
   if (length(path) != 0) {
     path_index <- path
     return(path_index)
@@ -102,7 +102,7 @@ index_file_read <- function(path = NULL) {
 
 index_file_modify <- function(file = NULL, .ds_link = NULL) {
   if (length(file) == 0) {
-    err <- "No file was given to modify."
+    err <- "No index file was given to modify."
     stop(err)
   }
   # Dirty workaround to make sure we add our link in before the closing
