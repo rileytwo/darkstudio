@@ -6,8 +6,8 @@
 	],
 	"settings": {
 		"editor.colorDecorators": false,
-		"editor.formatOnSave": true,
 		"editor.hover.enabled": false,
-		"prettier.configPath": ".prettierrc"
+		"prettier.configPath": ".prettierrc",
+		"editor.formatOnSave": true
 	}
 }
