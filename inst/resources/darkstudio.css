@@ -150,6 +150,28 @@ input[type="checkbox"].focus-visible {
   margin-top: 3px !important;
 }
 
+/* I'm not sure what these are for. TODO: Figure out what these are for */
+.rstudio-themes-flat .rstudio-themes-dark button.GJQ3LUQCC1 > table:first-child,
+.rstudio-themes-flat
+  .rstudio-themes-dark
+  button.GD15MCFCB1
+  > table:first-child {
+  border-color: #444444;
+  background: #777777;
+}
+/* general app items--this isn't constant */
+.rstudio-themes-flat,
+.rstudio-themes-dark .GD15MCFCJU,
+.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
+  font-family: var(--ds-ui-font) !important;
+}
+
+/* settings "Basic" & "Advanced" buttons */
+.GD15MCFCGP .gwt-TabLayoutPanelTab:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
 /*******
 *
 * Editor
@@ -301,14 +323,6 @@ input[type="checkbox"].focus-visible {
   background-color: var(--ds-inactive-tab) !important;
 }
 
-/* general app items--this isn't constant */
-.rstudio-themes-flat,
-.rstudio-themes-dark .GD15MCFCJU,
-.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
-  font-family: var(--ds-ui-font) !important;
-  /* font-size: 1.1em; */
-}
-
 /* Toolbar Fonts */
 .GD15MCFCMU {
   font-family: var(--ds-ui-font) !important;
@@ -432,12 +446,6 @@ utCenter,
   border: 1px solid var(--ds-ui-border);
 }
 
-/* settings "Basic" & "Advanced" buttons */
-.GD15MCFCGP .gwt-TabLayoutPanelTab:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
 /* gradient in files pane that displays when path is too long */
 .rstudio-themes-flat
   .rstudio-themes-dark-grey
@@ -494,16 +502,6 @@ utCenter,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCHBC,
 .rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCGCC {
   border-color: #333 !important;
-}
-
-/* buttons */
-.rstudio-themes-flat .rstudio-themes-dark button.GJQ3LUQCC1 > table:first-child,
-.rstudio-themes-flat
-  .rstudio-themes-dark
-  button.GD15MCFCB1
-  > table:first-child {
-  border-color: #444444;
-  background: #777777;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark-menus:-webkit-any(.gwt-MenuItemSeparator, .menuSeparatorInner) {
