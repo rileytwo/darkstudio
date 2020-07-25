@@ -6,7 +6,7 @@
 preview_changes <- function(path = ".") {
   darkstudio_css <- fs::path(path, "/inst/resources/darkstudio.css")
 
-  index_file <- darkstudio:::index_file_find()
+  index_file <- darkstudio:::index$find()
 
   darkstudio_dir <- darkstudio:::settings_dir_exists(
     path = index_file, value = TRUE

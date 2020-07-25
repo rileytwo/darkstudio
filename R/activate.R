@@ -59,7 +59,7 @@ activate <- function(path = NULL, backup = TRUE) {
     warning(msg)
   }
 
-  path_index <- index_file_find(path = path)
+  path_index <- index$find(path = path)
 
   if (!settings_dir_exists(path = path_index)) {
     ds_dir <- settings_dir_create(path = path_index)
@@ -68,7 +68,7 @@ activate <- function(path = NULL, backup = TRUE) {
   }
 
   if (backup == TRUE) {
-    index_file_backup(path = path_index)
+    index$backup(path = path_index)
   }
 
   ds_css <- fs::path(
@@ -77,8 +77,8 @@ activate <- function(path = NULL, backup = TRUE) {
 
   fs::file_copy(path = ds_css, new_path = ds_dir, overwrite = TRUE)
 
-  file_index <- index_file_read(path = path_index)
-  index_file_new <- index_file_modify(file = file_index, .ds_link = index_link())
+  file_index <- index$read(path = path_index)
+  index_file_new <- index$modify(file = file_index, .ds_link = index_link())
 
   writeLines(text = index_file_new, con = path_index)
 
