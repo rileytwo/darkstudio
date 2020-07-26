@@ -6,13 +6,15 @@
   --ds-ui-bg: #2c2c2c;
   --ds-ui-font-fg: #ffffff;
   --ds-ui-divider-bg: #282828;
+  --ds-ui-button-bg: #3482d1;
+  --ds-ui-button-bg-selected: #5c8bbb;
+  --ds-ui-border: #0a0a0a;
   --ds-input-bg: #141414;
   --ds-active-tab: #3b3b3b;
   --ds-inactive-tab: #303030;
   --ds-active-secondary-tab: #2c2c2c;
   --ds-tab-gradient-dark: linear-gradient(to right, #28282800, #282828 13%);
   --ds-tab-gradient-light: linear-gradient(to right, #3b3b3b, #3b3b3b00);
-  --ds-ui-border: #0a0a0a;
   --ds-grid-border: #2f2f2f;
   --ds-scrollbar-bg: #282828;
   --ds-scrollbar-bg-hover: #333333;
@@ -129,7 +131,7 @@ input[type="text"] {
 
 .js-focus-visible .focus-visible:not(.gwt-MenuBar),
 input[type="checkbox"].focus-visible {
-  outline: #3482d1 solid 2px !important;
+  outline: var(--ds-ui-button-bg) solid 2px !important;
   outline-offset: -1px !important;
 }
 
@@ -137,10 +139,28 @@ input[type="checkbox"].focus-visible {
 * Buttons
 */
 #rstudio_find_replace_bar :-webkit-any(button) > table:first-child {
-  background-color: #3482d1 !important;
+  background-color: var(--ds-ui-button-bg) !important;
 }
 .GGBOEFPDE1 {
   font-size: 10px;
+}
+
+/* find in files button borders */
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDCX,
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDPW {
+  border: solid 1px var(--ds-ui-border);
+}
+
+/* find in files button backgrounds */
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDPW .GGBOEFPDDX,
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDOW,
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDDX {
+  background: var(--ds-ui-button-bg-selected);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDPW .GGBOEFPDDX,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDCX .GGBOEFPDOW {
+  background: var(--ds-ui-button-bg);
 }
 
 /* Check box options in find and replace bar */
