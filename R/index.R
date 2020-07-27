@@ -165,7 +165,7 @@ index <- list(
     for (.line in seq_along(index_file)) {
       .line_current  <- .line
 
-      if (grepl("darkstudio", index_file[[.line_current]], perl = TRUE) == TRUE) {
+      if (isTRUE(grepl("darkstudio", index_file[[.line_current]], perl = TRUE))) {
         status$msg <- paste(
           "The index file is already modified on line", .line_current
         )

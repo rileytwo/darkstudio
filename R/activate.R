@@ -67,7 +67,7 @@ activate <- function(path = NULL, backup = TRUE) {
     ds_dir <- settings_dir_exists(path = path_index, value = TRUE)
   }
 
-  if (backup == TRUE) {
+  if (isTRUE(backup)) {
     index$backup(path = path_index)
   }
 
