@@ -9,7 +9,7 @@ update_styles <- function(path = NULL) {
   if (length(path) != 0) {
     path <- path
   }
-  if (deactivate(path = path) == TRUE) {
+  if (isTRUE(deactivate(path = path))) {
     activate(path = path)
   }
   return(TRUE)
