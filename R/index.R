@@ -125,12 +125,12 @@ index <- list(
     #   <link rel="stylesheet" href="darkstudio/darkstudio.css" type="text/css"/>
     # </html>
     #
-    for (.line in seq_along(file)) {
-      .line_current  <- .line
-      .line_next     <- .line_current + 1
+    for (line in seq_along(file)) {
+      line_current  <- line
+      line_next     <- line_current + 1
 
 
-      if (index$modified(index_file = file)$modified) {
+      if (index$modified(index_file = file)) {
         err <- paste(
           "The index file already contains a link to darkstudio.css.",
           "Execute darkstudio::deactivate() in the console,",
@@ -138,15 +138,12 @@ index <- list(
         stop(err)
       }
 
-      if (file[[.line_current]] == "</html>") {
-        html_found <- paste("`</html>` found at:", .line_current)
-
+      if (file[[line_current]] == "</html>") {
         # Create a new line, and copy the closing </html> to that new line
-        html_moved <- paste("Moving `</html>` to:", .line_next)
-        file[[.line_next]] <- file[[.line_current]]
+        file[[line_next]] <- file[[line_current]]
 
         # Add in the link
-        file[[.line_current]] <- .ds_link
+        file[[line_current]] <- .ds_link
       }
     }
 
@@ -156,22 +153,18 @@ index <- list(
 
   modified = function(index_file = NULL) {
     if (length(index_file) == 0) {
-      err <- "The path of the index file is unknown."
-      stop(err)
+      stop("The path of the index file is unknown.")
     }
 
-    status <- list(msg = "", modified = logical())
+    status <- logical()
 
-    for (.line in seq_along(index_file)) {
-      .line_current  <- .line
+    for (line in seq_along(index_file)) {
+      line_current  <- line
 
-      if (isTRUE(grepl("darkstudio", index_file[[.line_current]], perl = TRUE))) {
-        status$msg <- paste(
-          "The index file is already modified on line", .line_current
-        )
-        status$modified <- TRUE
+      if (isTRUE(grepl("darkstudio", index_file[[line_current]], perl = TRUE))) {
+        status <- TRUE
       } else {
-        status$modified <- FALSE
+        status <- FALSE
       }
     }
     return(status)
