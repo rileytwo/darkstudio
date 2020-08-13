@@ -12,7 +12,11 @@ preview_changes <- function(path = ".") {
     path = index_file, value = TRUE
   )
 
-  fs::file_copy(darkstudio_css, darkstudio_dir, overwrite = TRUE)
+  if (isTRUE(darkstudio_dir)) {
+    fs::file_copy(darkstudio_css, darkstudio_dir, overwrite = TRUE)
+  } else {
+    stop("darkstudio is not activated.")
+  }
 }
 
 
