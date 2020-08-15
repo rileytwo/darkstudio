@@ -3,7 +3,7 @@
 #' Created by Riley Roach on 2020-05-24
 #' @keywords internal
 index <- list(
-  find = function(path = NULL) {
+  find = function(path = NULL, type = NULL) {
     # RR: Check if path has been provided
     if (length(path) != 0) {
       path_index <- path
@@ -15,28 +15,28 @@ index <- list(
     switch(
       host, stop("Could not determine the operating system."),
       Darwin = {
-        paths <- list(default = "/Applications/RStudio.app/",
+        paths <- list(system = "/Applications/RStudio.app/",
                       user    = "~/Applications/RStudio.app/",
                       index   = "Contents/Resources/www/index.htm")
       },
       Windows = {
-        paths <- list(default = "C:/Program Files/RStudio/",
+        paths <- list(system = "C:/Program Files/RStudio/",
                       user    = "~/R/RStudio/",
                       index   = "www/index.htm")
       },
       Linux = {
         # RR: `rs_ver` is not needed on Debian-based distros. #13
-        paths <- list(default = "/usr/local/rstudio/",
+        paths <- list(system = "/usr/local/rstudio/",
                       user    = "/usr/local/rstudio/",
                       index   = "www/index.htm")
       }
     )
 
     check_paths <- function(p) {
-      .default <- fs::path_join(c(p$default, p$index))
-      .user    <- fs::path_join(c(p$default, p$index))
+      .system <- fs::path_join(c(p$system, p$index))
+      .user    <- fs::path_join(c(p$system, p$index))
 
-      path_index <- which(fs::file_exists(.default), fs::file_exists(.user))
+      path_index <- which(fs::file_exists(.system), fs::file_exists(.user))
       if (length(path_index) == 0) {
         return(NULL)
       }
