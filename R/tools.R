@@ -6,13 +6,13 @@
 preview_changes <- function(path = ".") {
   darkstudio_css <- fs::path(path, "/inst/resources/darkstudio.css")
 
-  index_file <- darkstudio:::index$find()
+  index_file <- index$find()
 
-  darkstudio_dir <- darkstudio:::settings_dir(
+  darkstudio_dir <- settings_dir(
     path = index_file, value = TRUE
   )
 
-  if (isTRUE(darkstudio_dir)) {
+  if (fs::file_exists(darkstudio_dir)) {
     fs::file_copy(darkstudio_css, darkstudio_dir, overwrite = TRUE)
   } else {
     stop("darkstudio is not activated.")
