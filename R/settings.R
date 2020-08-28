@@ -18,7 +18,7 @@ settings_dir_create <- function(path = NULL) {
 }
 
 
-settings_dir_exists <- function(path = NULL, value = FALSE) {
+settings_dir <- function(path = NULL, value = FALSE) {
   if (length(path) == 0) {
     path <- index$find()
   }

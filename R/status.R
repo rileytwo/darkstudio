@@ -8,7 +8,7 @@ status <- function(path = NULL) {
     index_status = "",
     css_status = ""
   )
-  if (!darkstudio:::settings_dir_exists(path = path)) {
+  if (!darkstudio:::settings_dir(path = path)) {
     darkstudio_status$dir_status <- paste(
       "No darkstudio directory exists, or one could not be found.",
       "If you know there is a directory, provide the path to ",
@@ -16,7 +16,7 @@ status <- function(path = NULL) {
       "For example: darkstudio::status(path = <path_to_dir>)"
     )
   } else {
-    darkstudio_status$dir_status <- darkstudio:::settings_dir_exists(
+    darkstudio_status$dir_status <- darkstudio:::settings_dir(
       path = path,
       value = TRUE
     )

@@ -64,10 +64,10 @@ activate <- function(path = NULL, backup = TRUE, type = NULL) {
 
   path_index <- index$find(path = path, type = type)
 
-  if (!settings_dir_exists(path = path_index)) {
+  if (!settings_dir(path = path_index)) {
     ds_dir <- settings_dir_create(path = path_index)
   } else {
-    ds_dir <- settings_dir_exists(path = path_index, value = TRUE)
+    ds_dir <- settings_dir(path = path_index, value = TRUE)
   }
 
   if (isTRUE(backup)) {

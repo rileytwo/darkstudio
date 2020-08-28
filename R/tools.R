@@ -8,7 +8,7 @@ preview_changes <- function(path = ".") {
 
   index_file <- darkstudio:::index$find()
 
-  darkstudio_dir <- darkstudio:::settings_dir_exists(
+  darkstudio_dir <- darkstudio:::settings_dir(
     path = index_file, value = TRUE
   )
 

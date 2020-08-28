@@ -17,10 +17,10 @@ deactivate <- function(path = NULL) {
 
   index$restore(path = path_index)
 
-  if (!settings_dir_exists(path = path_index)) {
+  if (!settings_dir(path = path_index)) {
     warning("darkstudio directory does not exist.")
   } else {
-    ds_dir <- settings_dir_exists(path = path_index, value = TRUE)
+    ds_dir <- settings_dir(path = path_index, value = TRUE)
     fs::dir_delete(ds_dir)
   }
   return(TRUE)
