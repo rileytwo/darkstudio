@@ -18,18 +18,17 @@ settings_dir_create <- function(path = NULL) {
 }
 
 
-settings_dir_exists <- function(path = NULL, value = FALSE) {
+settings_dir <- function(path = NULL, value = FALSE) {
   if (length(path) == 0) {
     path <- index$find()
   }
   dir_name <- dirname(path)
   darkstudio_dir <- fs::path_join(c(dir_name, "darkstudio"))
 
-  if (isTRUE(value)) {
-    return(darkstudio_dir)
-  }
-
   if (fs::dir_exists(darkstudio_dir)) {
+    if (isTRUE(value)) {
+      return(darkstudio_dir)
+    }
     return(TRUE)
   } else {
     return(FALSE)

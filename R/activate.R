@@ -6,6 +6,9 @@
 #' @param backup logical:
 #'   TRUE or FALSE. Copies the default \code{index.htm} file to
 #'   \code{index.htm.pre-ds}. Defaults to TRUE.
+#' @param type character:
+#'   Accepts 'user' or NULL. If 'user', \code{activate()} will look for RStudio
+#'   in \code{/Users/xxx/Applications} instead of \code{/Applications} on macOS.
 #'
 #' daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
 #' it's DOM (Document Object Model).
@@ -37,13 +40,13 @@
 #'
 #' # Windows:
 #' path_index <- "C:/Program Files/RStudio/www/index.htm"
-#' activate(path = path_index, backup = TRUE)
+#'   activate(path = path_index, backup = TRUE)
 #' }
 #'
 #' @return TRUE
 #' @return Returns \code{TRUE} if the operation is successful.
 #' @export
-activate <- function(path = NULL, backup = TRUE) {
+activate <- function(path = NULL, backup = TRUE, type = NULL) {
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
     stop("RStudio must be running in order to install darkstudio.")
@@ -59,12 +62,12 @@ activate <- function(path = NULL, backup = TRUE) {
     warning(msg)
   }
 
-  path_index <- index$find(path = path)
+  path_index <- index$find(path = path, type = type)
 
-  if (!settings_dir_exists(path = path_index)) {
+  if (!settings_dir(path = path_index)) {
     ds_dir <- settings_dir_create(path = path_index)
   } else {
-    ds_dir <- settings_dir_exists(path = path_index, value = TRUE)
+    ds_dir <- settings_dir(path = path_index, value = TRUE)
   }
 
   if (isTRUE(backup)) {
