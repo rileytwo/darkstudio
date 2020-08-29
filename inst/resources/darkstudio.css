@@ -477,22 +477,10 @@ utCenter,
 /* Console Pane (without any other tabs) */
 .rstudio-themes-flat
   .rstudio-themes-dark-grey
-  .GD15MCFCKV.GD15MCFCPO
-  div.GD15MCFCMO
-  .GD15MCFCIS {
+  :-webkit-any(.GD15MCFCKV.GD15MCFCPO, .GGBOEFPDNV.GGBOEFPDPO)
+  :-webkit-any(div.GD15MCFCMO, div.GGBOEFPDMO)
+  :-webkit-any(.GD15MCFCIS, .GGBOEFPDKS) {
   background-color: var(--ds-ui-bg) !important;
-  border-color: var(--ds-ui-border) !important;
-}
-
-/* Console Pane top border (without any other tabs) */
-.rstudio-themes-flat
-  .rstudio-themes-dark-grey
-  .GD15MCFCKV.GD15MCFCPO
-  div.GD15MCFCMO
-  .GD15MCFCIS,
-.rstudio-themes-flat
-  .rstudio-themes-dark-grey
-  :-webkit-any(.GD15MCFCKV.GD15MCFCPO, .GJQ3LUQCLV.GJQ3LUQCPO) {
   border-color: var(--ds-ui-border) !important;
 }
 
