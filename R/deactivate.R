@@ -12,10 +12,12 @@
 #'
 #' @return Returns \code{TRUE} if the operation is successful.
 #' @export
-deactivate <- function(path = NULL) {
+deactivate <- function(path = NULL, restore_index = TRUE) {
   path_index <- index$find(path = path)
 
-  index$restore(path = path_index)
+  if (isTRUE(restore_index)) {
+    index$restore(path = path_index)
+  }
 
   if (!settings_dir(path = path_index)) {
     warning("darkstudio directory does not exist.")
