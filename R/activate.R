@@ -81,9 +81,14 @@ activate <- function(path = NULL, backup = TRUE, type = NULL) {
   fs::file_copy(path = ds_css, new_path = ds_dir, overwrite = TRUE)
 
   file_index <- index$read(path = path_index)
-  file_index_new <- index$modify(file = file_index, .ds_link = index_link())
 
-  writeLines(text = file_index_new, con = path_index)
+  if (!index$modified(file_index)) {
+    file_index <- index$modify(
+      file = file_index, .ds_link = index_link()
+    )
+  }
+
+  writeLines(text = file_index, con = path_index)
 
   return(TRUE)
 }
