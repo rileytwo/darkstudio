@@ -55,8 +55,7 @@ index <- list(
 
   backup = function(path = NULL) {
     if (length(path) == 0) {
-      err <- "A file must be specified for backup."
-      stop(err)
+      stop("A file must be specified for backup.")
     }
 
     parent_dir <- dirname(path)
@@ -77,8 +76,7 @@ index <- list(
 
   restore = function(path = NULL) {
     if (length(path) == 0) {
-      err <- "A file must be specified for restoration."
-      stop(err)
+      stop("A file must be specified for restoration.")
     }
 
     parent_dir <- dirname(path)
@@ -104,8 +102,7 @@ index <- list(
 
   modify = function(file = NULL, .ds_link = NULL) {
     if (length(file) == 0) {
-      err <- "No index file was given to modify."
-      stop(err)
+      stop("No index file was given to modify.")
     }
     # Dirty workaround to make sure we add our link in before the closing
     # </html> tag
