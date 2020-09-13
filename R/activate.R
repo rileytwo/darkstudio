@@ -53,10 +53,10 @@ activate <- function(path = NULL, backup = TRUE, type = NULL) {
   }
   # Print message about compatibility with older RStudio versions
   if (rstudioapi::versionInfo()$version <= "1.2") {
-    msg <- paste0(
-      "Colors, menus, buttons, and other UI elements of this version of ",
-      "RStudio may not look or function as expected. Please consider ",
-      "updating RStudio to the latest stable version. For the best results, ",
+    msg <- paste(
+      "Colors, menus, buttons, and other UI elements of this version of",
+      "RStudio may not look or function as expected. Please consider",
+      "updating RStudio to the latest stable version. For the best results,",
       "RStudio Preview is recommended."
     )
     warning(msg)
