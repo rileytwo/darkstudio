@@ -160,6 +160,7 @@ index <- list(
 
       if (isTRUE(grepl("darkstudio", index_file[[line_current]], perl = TRUE))) {
         status <- TRUE
+        break
       } else {
         status <- FALSE
       }
