@@ -126,15 +126,6 @@ index <- list(
       line_current  <- line
       line_next     <- line_current + 1
 
-
-      if (index$modified(index_file = file)) {
-        err <- paste(
-          "The index file already contains a link to darkstudio.css.",
-          "Execute darkstudio::deactivate() in the console,",
-          "or manually remove the link in the index file")
-        stop(err)
-      }
-
       if (file[[line_current]] == "</html>") {
         # Create a new line, and copy the closing </html> to that new line
         file[[line_next]] <- file[[line_current]]
@@ -150,11 +141,10 @@ index <- list(
 
   modified = function(index_file = NULL) {
     if (length(index_file) == 0) {
-      stop("The path of the index file is unknown.")
+      stop("No index file was given to check for modifications")
     }
 
     status <- logical()
-
     for (line in seq_along(index_file)) {
       line_current  <- line
 
@@ -165,6 +155,11 @@ index <- list(
         status <- FALSE
       }
     }
+
+    if (isTRUE(status)) {
+      warning("index.htm is already modified. Not modifying.")
+    }
+
     return(status)
   }
 )
