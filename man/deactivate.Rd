@@ -4,7 +4,7 @@
 \alias{deactivate}
 \title{Deactivate daRkStudio}
 \usage{
-deactivate(path = NULL)
+deactivate(path = NULL, restore_index = TRUE)
 }
 \arguments{
 \item{file_index}{character:

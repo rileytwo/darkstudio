@@ -2,4 +2,3 @@
 
 export(activate)
 export(deactivate)
-export(update_styles)
