@@ -141,9 +141,7 @@ cp "darkstudio/index.htm" \
 
 ### Recommended Method
 
-```r
-darkstudio::update_styles()
-```
+**WIP**
 
 ### Old Method
 
