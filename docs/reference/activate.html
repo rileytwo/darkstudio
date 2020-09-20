@@ -112,7 +112,7 @@
     <p>Activate daRkStudio</p>
     </div>
 
-    <pre class="usage"><span class='fu'>activate</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>backup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>activate</span>(path = <span class='kw'>NULL</span>, backup = <span class='fl'>TRUE</span>, type = <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -126,8 +126,14 @@ installation method cannot successfully locate the file.</p></td>
     <tr>
       <th>backup</th>
       <td><p>logical:
-  TRUE or FALSE. Copies the default <code>index.htm</code> file to
-  <code>index.htm.pre-ds</code>. Defaults to TRUE.</p>
+TRUE or FALSE. Copies the default <code>index.htm</code> file to
+<code>index.htm.pre-ds</code>. Defaults to TRUE.</p></td>
+    </tr>
+    <tr>
+      <th>type</th>
+      <td><p>character:
+  Accepts 'user' or NULL. If 'user', <code>activate()</code> will look for RStudio
+  in <code>/Users/xxx/Applications</code> instead of <code>/Applications</code> on macOS.</p>
 <p>daRkStudio modifies <code>index.htm</code>, a file used by RStudio to construct
 it's DOM (Document Object Model).</p>
 <p>The only change to <code>index.htm</code> the inclusion of a <code>&lt;link&gt;</code> element
@@ -150,18 +156,20 @@ installed RStudio to the default location, <code>C:\Program Files\RStudio</code>
 <p>Returns <code>TRUE</code> if the operation is successful.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># Default:</span>
 <span class='fu'>activate</span>()
 
 <span class='co'># macOS:</span>
-<span class='no'>path_index</span> <span class='kw'>&lt;-</span> <span class='st'>"/Applications/RStudio.app/Contents/Resources/www/index.htm"</span>
-<span class='fu'>activate</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='no'>path_index</span>, <span class='kw'>backup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='kw'>path_index</span> <span class='op'>&lt;-</span> <span class='st'>"/Applications/RStudio.app/Contents/Resources/www/index.htm"</span>
+<span class='fu'>activate</span>(path = <span class='kw'>path_index</span>, backup = <span class='fl'>TRUE</span>)
 
 <span class='co'># Windows:</span>
-<span class='no'>path_index</span> <span class='kw'>&lt;-</span> <span class='st'>"C:/Program Files/RStudio/www/index.htm"</span>
-<span class='fu'>activate</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='no'>path_index</span>, <span class='kw'>backup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-}</div></pre>
+<span class='kw'>path_index</span> <span class='op'>&lt;-</span> <span class='st'>"C:/Program Files/RStudio/www/index.htm"</span>
+  <span class='fu'>activate</span>(path = <span class='kw'>path_index</span>, backup = <span class='fl'>TRUE</span>)
+}
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -177,7 +185,7 @@ installed RStudio to the default location, <code>C:\Program Files\RStudio</code>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
