@@ -4,7 +4,7 @@
 \alias{activate}
 \title{Activate daRkStudio}
 \usage{
-activate(path = NULL, backup = TRUE)
+activate(path = NULL, backup = TRUE, type = NULL)
 }
 \arguments{
 \item{path}{character:
@@ -12,8 +12,12 @@ Path to RStudio's \code{index.htm}. Useful for times when the default
 installation method cannot successfully locate the file.}
 
 \item{backup}{logical:
-  TRUE or FALSE. Copies the default \code{index.htm} file to
-  \code{index.htm.pre-ds}. Defaults to TRUE.
+TRUE or FALSE. Copies the default \code{index.htm} file to
+\code{index.htm.pre-ds}. Defaults to TRUE.}
+
+\item{type}{character:
+  Accepts 'user' or NULL. If 'user', \code{activate()} will look for RStudio
+  in \code{/Users/xxx/Applications} instead of \code{/Applications} on macOS.
 
 daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
 it's DOM (Document Object Model).
@@ -52,7 +56,7 @@ activate(path = path_index, backup = TRUE)
 
 # Windows:
 path_index <- "C:/Program Files/RStudio/www/index.htm"
-activate(path = path_index, backup = TRUE)
+  activate(path = path_index, backup = TRUE)
 }
 
 }
