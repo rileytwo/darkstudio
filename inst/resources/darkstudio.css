@@ -477,9 +477,9 @@ utCenter,
 /* Console Pane (without any other tabs) */
 .rstudio-themes-flat
   .rstudio-themes-dark-grey
-  :-webkit-any(.GD15MCFCKV.GD15MCFCPO, .GGBOEFPDNV.GGBOEFPDPO)
-  :-webkit-any(div.GD15MCFCMO, div.GGBOEFPDMO)
-  :-webkit-any(.GD15MCFCIS, .GGBOEFPDKS) {
+  :-webkit-any(.GD15MCFCKV.GD15MCFCPO, .GGBOEFPDNV.GGBOEFPDPO, .GCHYANPCPV.GCHYANPCBP)
+  :-webkit-any(div.GD15MCFCMO, div.GGBOEFPDMO, div.GCHYANPCOO)
+  :-webkit-any(.GD15MCFCIS, .GGBOEFPDKS, .GCHYANPCLS) {
   background-color: var(--ds-ui-bg) !important;
   border-color: var(--ds-ui-border) !important;
 }
