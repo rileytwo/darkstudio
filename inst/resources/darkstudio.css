@@ -16,10 +16,11 @@
   --ds-tab-gradient-dark: linear-gradient(to right, #28282800, #282828 13%);
   --ds-tab-gradient-light: linear-gradient(to right, #3b3b3b, #3b3b3b00);
   --ds-grid-border: #2f2f2f;
-  --ds-scrollbar-bg: #282828;
+  --ds-scrollbar-bg: transparent;
+  --ds-scrollbar-thumb-bg: #282828;
   --ds-scrollbar-bg-hover: #333333;
   --ds-scrollbar-bg-active: #3482d1;
-  --ds-scrollbar-border: solid 2px #6a6a6a;
+  --ds-scrollbar-border: solid 2px #282828;
   --ds-autocomplete-bg: #222222;
   --ds-autocomplete-fg: #dddddd;
   --ds-autocomplete-border: #0a0a0a;
@@ -30,14 +31,48 @@
 * Scrollbars
 *
 */
-::-webkit-scrollbar {
-  height: calc(17px * 10 / 14) !important;
+
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars
+  ::-webkit-scrollbar,
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .rstudio-themes-scrollbars
+  ::-webkit-scrollbar {
+  background: var(--ds-scrollbar-bg);
 }
 
-::-webkit-scrollbar-thumb {
-  border: none !important;
-  border-radius: 0 !important;
-  background-color: var(--ds-scrollbar-bg) !important;
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars
+  ::-webkit-scrollbar-thumb,
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .rstudio-themes-scrollbars
+  ::-webkit-scrollbar-thumb {
+  border: var(--ds-scrollbar-border);
+  background: var(--ds-scrollbar-thumb-bg);
+  -webkit-border-radius: 10px;
+}
+
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars
+  ::-webkit-scrollbar-track,
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars
+  ::-webkit-scrollbar-corner,
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
+.rstudio-themes-flat
+  .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .rstudio-themes-scrollbars
+  ::-webkit-scrollbar-track,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .rstudio-themes-scrollbars
+  ::-webkit-scrollbar-corner {
+  background: transparent !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -46,16 +81,6 @@
 
 ::-webkit-scrollbar-thumb:active {
   background-color: var(--ds-scrollbar-bg-active) !important;
-}
-
-::-webkit-scrollbar,
-::-webkit-scrollbar-corner,
-::-webkit-scrollbar-track {
-  background-color: transparent !important;
-}
-
-::-webkit-scrollbar-track:vertical {
-  box-shadow: inset 1px 0 0 0 var(--ds-scrollbar-bg);
 }
 
 #rstudio_shell_widget.ace_editor.ace_scroller,
