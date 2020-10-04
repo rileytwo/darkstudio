@@ -441,8 +441,9 @@ utCenter,
 }
 
 /* Source editor tab overflow gradient */
-.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDDS,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCCS {
+.rstudio-themes-flat
+  .rstudio-themes-dark-grey
+  :-webkit-any(.GGBOEFPDDS, .GD15MCFCCS, .GCHYANPCES) {
   background: var(--ds-tab-gradient-dark);
 }
 
