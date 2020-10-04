@@ -444,7 +444,7 @@ utCenter,
 .rstudio-themes-flat
   .rstudio-themes-dark-grey
   :-webkit-any(.GGBOEFPDDS, .GD15MCFCCS, .GCHYANPCES) {
-  background: var(--ds-tab-gradient-dark);
+  background: var(--ds-tab-gradient-dark) !important;
 }
 
 /* panel dividers */
