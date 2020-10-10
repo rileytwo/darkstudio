@@ -28,10 +28,20 @@
 
 /*******
 *
+* Fonts
+*
+*/
+.rstudio-themes-flat,
+.rstudio-themes-dark .GD15MCFCJU,
+.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
+  font-family: var(--ds-ui-font) !important;
+}
+
+/*******
+*
 * Scrollbars
 *
 */
-
 .rstudio-themes-flat
   .rstudio-themes-dark.rstudio-themes-scrollbars
   ::-webkit-scrollbar,
@@ -91,134 +101,6 @@
 
 /*******
 *
-* General (Not Specific to Any Individual Pane)
-*
-*/
-
-/* Outer Container/Pane Borders */
-.rstudio-themes-flat
-  > .rstudio-themes-dark
-  :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
-  > div:last-child {
-  border: 1px solid var(--ds-ui-border) !important;
-}
-
-/* introduced in RStudio 1.4 */
-.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border {
-  border-color: var(--ds-ui-border) !important;
-}
-
-#rstudio_command_palette_search {
-  font-size: 12px;
-}
-
-/**
-* Active Primary/Secondary Tab Toolbar(s)
-*/
-.rstudio-themes-dark .rstheme_toolbarWrapper,
-.rstudio-themes-dark .rstheme_secondaryToolbar {
-  background-color: var(--ds-active-tab) !important;
-  border-color: var(--ds-active-tab) !important;
-}
-
-/**
-* UI of Elements Attached to a Tab
-* Example: Background of Path bar in the Files Pane
-*/
-.rstudio-themes-flat > .rstudio-themes-dark,
-.rstudio-themes-flat
-  > .rstudio-themes-dark
-  :-webkit-any(.gwt-TabLayoutPanel, .gwt-TabLayoutPanelContent) {
-  background: var(--ds-ui-bg) !important;
-}
-
-/**
-* Input Boxes
-*/
-input[type="text"] {
-  font-family: var(--ds-ui-font) !important;
-}
-
-/* Search */
-.rstudio-themes-dark .search input {
-  font-family: var(--ds-ui-font) !important;
-  font-size: 11px;
-}
-
-.rstudio-themes-dark
-  :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar)
-  .search,
-.rstudio-themes-flat .themedPopupPanel .search,
-.rstudio-themes-flat.rstudio-themes-dark-menus .search {
-  border-color: var(--ds-ui-border) !important;
-  background: var(--ds-input-bg) !important;
-}
-
-.js-focus-visible .focus-visible:not(.gwt-MenuBar),
-input[type="checkbox"].focus-visible {
-  outline: var(--ds-ui-button-bg) solid 2px !important;
-  outline-offset: -1px !important;
-}
-
-/**
-* Buttons
-*/
-#rstudio_find_replace_bar :-webkit-any(button) > table:first-child {
-  background-color: var(--ds-ui-button-bg) !important;
-}
-.GGBOEFPDE1 {
-  font-size: 10px;
-}
-
-/* find in files button borders */
-.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDCX,
-.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDPW {
-  border: solid 1px var(--ds-ui-border);
-}
-
-/* find in files button backgrounds */
-.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDPW .GGBOEFPDDX,
-.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDOW,
-.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDDX {
-  background: var(--ds-ui-button-bg-selected);
-}
-
-.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDPW .GGBOEFPDDX,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDCX .GGBOEFPDOW {
-  background: var(--ds-ui-button-bg);
-}
-
-/* Check box options in find and replace bar */
-.GGBOEFPDD3B .gwt-Label,
-.GGBOEFPDA3B .gwt-Label {
-  font-size: 11px;
-  margin-top: 3px !important;
-}
-
-/* I'm not sure what these are for. TODO: Figure out what these are for */
-.rstudio-themes-flat .rstudio-themes-dark button.GJQ3LUQCC1 > table:first-child,
-.rstudio-themes-flat
-  .rstudio-themes-dark
-  button.GD15MCFCB1
-  > table:first-child {
-  border-color: #444444;
-  background: #777777;
-}
-/* general app items--this isn't constant */
-.rstudio-themes-flat,
-.rstudio-themes-dark .GD15MCFCJU,
-.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCJU button {
-  font-family: var(--ds-ui-font) !important;
-}
-
-/* settings "Basic" & "Advanced" buttons */
-.GD15MCFCGP .gwt-TabLayoutPanelTab:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-/*******
-*
 * Editor
 * (#rstudio_source_text_editor)
 */
@@ -264,13 +146,15 @@ input[type="checkbox"].focus-visible {
 }
 
 /* actual documentation */
-.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDAXB {
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  :-webkit-any(.GGBOEFPDAXB, .GCHYANPCN1B) {
   color: var(--ds-autocomplete-fg);
   background-color: var(--ds-autocomplete-bg);
   border: 1px solid var(--ds-autocomplete-border);
 }
 
-.rstudio-themes-flat.rstudio-themes-dark-menus .GGBOEFPDHWB {
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  :-webkit-any(.GGBOEFPDHWB, .GGBOEFPDGWB, .GCHYANPCE1B) {
   background-color: var(--ds-ui-bg);
 }
 
@@ -332,6 +216,27 @@ input[type="checkbox"].focus-visible {
   border-color: var(--ds-grid-border) !important;
 }
 
+/* Packages tab */
+.rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCHBC,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCGCC {
+  border-color: #333 !important;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus:-webkit-any(.gwt-MenuItemSeparator, .menuSeparatorInner) {
+  border-color: var(--ds-ui-border) !important;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus .GJQ3LUQCIVB {
+  color: #eaeaea;
+  background: #444444;
+  border: 1px solid #3e3e3e;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus .GJQ3LUQCPUB {
+  background: #444444;
+}
+
 /*******
 *
 *  History
@@ -384,7 +289,45 @@ input[type="checkbox"].focus-visible {
   font-family: var(--ds-ui-font) !important;
 }
 
-/* ------ MAIN ------- */
+/*******
+*
+* Console Pane
+*
+*/
+/* Console Pane (without any other tabs) */
+.rstudio-themes-flat
+  .rstudio-themes-dark-grey
+  :-webkit-any(.GD15MCFCKV.GD15MCFCPO, .GGBOEFPDNV.GGBOEFPDPO, .GCHYANPCPV.GCHYANPCBP)
+  :-webkit-any(div.GD15MCFCMO, div.GGBOEFPDMO, div.GCHYANPCOO)
+  :-webkit-any(.GD15MCFCIS, .GGBOEFPDKS, .GCHYANPCLS) {
+  background-color: var(--ds-ui-bg) !important;
+  border-color: var(--ds-ui-border) !important;
+}
+
+/*******
+*
+* General (Not Specific to Any Individual Pane)
+*
+*/
+/* introduced in RStudio 1.4 */
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border {
+  border-color: var(--ds-ui-border) !important;
+}
+
+/* Outer Container/Pane Borders */
+.rstudio-themes-flat
+  > .rstudio-themes-dark
+  :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
+  > div:last-child {
+  border: 1px solid var(--ds-ui-border) !important;
+}
+
+/* panel dividers */
+.rstudio-themes-flat
+  .rstudio-themes-dark-grey
+  :-webkit-any(.gwt-SplitLayoutPanel-HDragger, .gwt-SplitLayoutPanel-VDragger) {
+  background: var(--ds-ui-divider-bg) !important;
+}
 
 /* wrapper around four panes */
 body.rstudio-themes-flat .rstudio-themes-dark-grey,
@@ -407,11 +350,11 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey,
   border-color: var(--ds-ui-border) !important;
 }
 
-.rstudio-themes-flat .GJQ3LUQCLV.GJQ3LUQCPO div.GJQ3LUQCMO .GJQ3LUQCIS {
-  margin-right: 0;
-  margin-bottom: 2px;
-  border-bottom: solid 1px var(--ds-ui-border);
-  background-color: var(--ds-ui-bg) !important;
+/* Active Primary/Secondary Tab Toolbar(s) */
+.rstudio-themes-dark .rstheme_toolbarWrapper,
+.rstudio-themes-dark .rstheme_secondaryToolbar {
+  background-color: var(--ds-active-tab) !important;
+  border-color: var(--ds-active-tab) !important;
 }
 
 /* tabs */
@@ -434,6 +377,34 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey,
   border-color: var(--ds-ui-border) !important;
 }
 
+utCenter,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs {
+  background: var(--ds-ui-bg) !important;
+}
+
+/* Gradients */
+.rstudio-themes-flat
+  .rstudio-themes-dark
+  :-webkit-any(.gwt-TabLayoutPanelTabs, .windowframe, .rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS, .GGFDNYQDDS) {
+  background: var(--ds-tab-gradient-dark);
+  border-color: var(--ds-ui-border) !important;
+}
+
+/* Source editor tab overflow gradient */
+.rstudio-themes-flat
+  .rstudio-themes-dark-grey
+  :-webkit-any(.GGBOEFPDDS, .GD15MCFCCS, .GCHYANPCES, .GCHYANPCFS) {
+  background: var(--ds-tab-gradient-dark) !important;
+}
+
+/* gradient in files pane that displays when path is too long */
+.rstudio-themes-flat
+  .rstudio-themes-dark-grey
+  .breadcrumb
+  :-webkit-any(.GD15MCFCCJ, .GGBOEFPDCJ, .GCHYANPCCJ) {
+  background: var(--ds-tab-gradient-light);
+}
+
 /* other toolbars */
 .rstudio-themes-dark .rstudio-themes-background {
   background-color: var(--ds-active-secondary-tab) !important;
@@ -441,42 +412,84 @@ body.rstudio-themes-flat .rstudio-themes-dark-grey,
   border-bottom-color: var(--ds-ui-border) !important;
 }
 
+/**
+* UI of Elements Attached to a Tab
+* Example: Background of Path bar in the Files Pane
+*/
+.rstudio-themes-flat > .rstudio-themes-dark,
+.rstudio-themes-flat
+  > .rstudio-themes-dark
+  :-webkit-any(.gwt-TabLayoutPanel, .gwt-TabLayoutPanelContent) {
+  background: var(--ds-ui-bg) !important;
+}
+
+#rstudio_command_palette_search {
+  font-size: 12px;
+}
+
 .rstudio-themes-dark .gwt-TabLayoutPanelTab .gwt-Label {
   cursor: pointer;
 }
 
-/* tabs container */
-.rstudio-themes-dark .gwt-TabLayoutPanelTabs,
-/* windows */
-.rstudio-themes-dark .windowframe,
-/* gradients */
-.rstudio-themes-flat .rstudio-themes-dark :-webkit-any(.gwt-TabLayoutPanelTabs,
-  .windowframe,
-  .rstheme_multiPodUtilityTabArea,
-  .GD15MCFCCS,
-  .GJQ3LUQCCS,
-  .GGFDNYQDDS) {
-  background: var(--ds-tab-gradient-dark);
+/* Search */
+.rstudio-themes-dark .search input {
+  font-family: var(--ds-ui-font) !important;
+  font-size: 11px;
+}
+
+.rstudio-themes-dark
+  :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar)
+  .search,
+.rstudio-themes-flat .themedPopupPanel .search,
+.rstudio-themes-flat.rstudio-themes-dark-menus .search {
   border-color: var(--ds-ui-border) !important;
+  background: var(--ds-input-bg) !important;
 }
 
-utCenter,
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs {
-  background: var(--ds-ui-bg) !important;
+.js-focus-visible .focus-visible:not(.gwt-MenuBar),
+input[type="checkbox"].focus-visible {
+  outline: var(--ds-ui-button-bg) solid 2px !important;
+  outline-offset: -1px !important;
 }
 
-/* Source editor tab overflow gradient */
-.rstudio-themes-flat
-  .rstudio-themes-dark-grey
-  :-webkit-any(.GGBOEFPDDS, .GD15MCFCCS, .GCHYANPCES) {
-  background: var(--ds-tab-gradient-dark) !important;
+/* Inputs */
+input[type="text"] {
+  font-family: var(--ds-ui-font) !important;
 }
 
-/* panel dividers */
-.rstudio-themes-flat
-  .rstudio-themes-dark-grey
-  :-webkit-any(.gwt-SplitLayoutPanel-HDragger, .gwt-SplitLayoutPanel-VDragger) {
-  background: var(--ds-ui-divider-bg) !important;
+/* settings "Basic" & "Advanced" buttons */
+.GD15MCFCGP .gwt-TabLayoutPanelTab:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#rstudio_find_replace_bar :-webkit-any(button) > table:first-child {
+  background-color: var(--ds-ui-button-bg) !important;
+}
+
+/* find in files button borders */
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDCX,
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDPW {
+  border: solid 1px var(--ds-ui-border);
+}
+
+/* find in files button backgrounds */
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDPW .GGBOEFPDDX,
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDOW,
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDDX {
+  background: var(--ds-ui-button-bg-selected);
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDPW .GGBOEFPDDX,
+.rstudio-themes-flat .rstudio-themes-dark-grey .GGBOEFPDCX .GGBOEFPDOW {
+  background: var(--ds-ui-button-bg);
+}
+
+/* Check box options in find and replace bar */
+.GGBOEFPDD3B .gwt-Label,
+.GGBOEFPDA3B .gwt-Label {
+  font-size: 11px;
+  margin-top: 3px !important;
 }
 
 /* settings pane */
@@ -492,22 +505,25 @@ utCenter,
   border: 1px solid var(--ds-ui-border);
 }
 
-/* gradient in files pane that displays when path is too long */
-.rstudio-themes-flat
-  .rstudio-themes-dark-grey
-  .breadcrumb
-  :-webkit-any(.GD15MCFCCJ, .GGBOEFPDCJ) {
-  background: var(--ds-tab-gradient-light);
+.GGBOEFPDE1 {
+  font-size: 10px;
 }
 
-/* Console Pane (without any other tabs) */
+/* I'm not sure what these are for. TODO: Figure out what these are for */
+.rstudio-themes-flat .rstudio-themes-dark button.GJQ3LUQCC1 > table:first-child,
 .rstudio-themes-flat
-  .rstudio-themes-dark-grey
-  :-webkit-any(.GD15MCFCKV.GD15MCFCPO, .GGBOEFPDNV.GGBOEFPDPO, .GCHYANPCPV.GCHYANPCBP)
-  :-webkit-any(div.GD15MCFCMO, div.GGBOEFPDMO, div.GCHYANPCOO)
-  :-webkit-any(.GD15MCFCIS, .GGBOEFPDKS, .GCHYANPCLS) {
+  .rstudio-themes-dark
+  button.GD15MCFCB1
+  > table:first-child {
+  border-color: #444444;
+  background: #777777;
+}
+
+.rstudio-themes-flat .GJQ3LUQCLV.GJQ3LUQCPO div.GJQ3LUQCMO .GJQ3LUQCIS {
+  margin-right: 0;
+  margin-bottom: 2px;
+  border-bottom: solid 1px var(--ds-ui-border);
   background-color: var(--ds-ui-bg) !important;
-  border-color: var(--ds-ui-border) !important;
 }
 
 /* datagrid */
@@ -529,27 +545,6 @@ utCenter,
 
 .rstudio-themes-dark .dataTable tbody > tr:hover > td {
   background-color: var(--ds-ui-bg) !important;
-}
-
-/* Packages tab */
-.rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCHBC,
-.rstudio-themes-flat .rstudio-themes-dark-grey .GD15MCFCGCC {
-  border-color: #333 !important;
-}
-
-.rstudio-themes-flat.rstudio-themes-dark-menus:-webkit-any(.gwt-MenuItemSeparator, .menuSeparatorInner) {
-  border-color: var(--ds-ui-border) !important;
-}
-
-.rstudio-themes-flat.rstudio-themes-dark-menus .GJQ3LUQCIVB {
-  color: #eaeaea;
-  background: #444444;
-  border: 1px solid #3e3e3e;
-}
-
-.rstudio-themes-flat.rstudio-themes-dark-menus .GJQ3LUQCPUB {
-  background: #444444;
 }
 
 /* JS Changing the data viewing window colors */
