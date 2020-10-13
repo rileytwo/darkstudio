@@ -154,7 +154,7 @@
 }
 
 .rstudio-themes-flat.rstudio-themes-dark-menus
-  :-webkit-any(.GGBOEFPDHWB, .GGBOEFPDGWB, .GCHYANPCE1B) {
+  :-webkit-any(.GGBOEFPDHWB, .GGBOEFPDGWB, .GCHYANPCE1B):not(.ace_keyword) {
   background-color: var(--ds-ui-bg);
 }
 
