@@ -393,7 +393,7 @@ utCenter,
 /* Source editor tab overflow gradient */
 .rstudio-themes-flat
   .rstudio-themes-dark-grey
-  :-webkit-any(.GGBOEFPDDS, .GD15MCFCCS, .GCHYANPCES) {
+  :-webkit-any(.GGBOEFPDDS, .GD15MCFCCS, .GCHYANPCES, .GEL-OVUBOR) {
   background: var(--ds-tab-gradient-dark) !important;
 }
 
