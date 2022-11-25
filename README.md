@@ -131,10 +131,10 @@ If you're using Linux and find that these paths no longer work, please open an i
 git clone https://github.com/rileytwo/darkstudio
 
 cp "darkstudio/darkstudio.css" \
-    "/usr/local/rstudio/resources/www/darkstudio.css"
+    "/usr/lib/rstudio/resources/www/darkstudio.css"
 
 cp "darkstudio/index.htm" \
-    "/usr/local/rstudio/resources/www/index.htm"
+    "/usr/lib/rstudio/resources/www/index.htm"
 ```
 
 ## Updating
