@@ -26,8 +26,9 @@ index <- list(
       },
       Linux = {
         # RR: `rs_ver` is not needed on Debian-based distros. #13
-        paths <- list(system = "/usr/local/rstudio/",
-                      user    = "/usr/local/rstudio/",
+        # RR: `lib`, not `local`, for Linux common distros. #13`
+        paths <- list(system = "/usr/lib/rstudio/",
+                      user    = "/usr/lib/rstudio/",
                       index   = "www/index.htm")
       }
     )
