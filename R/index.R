@@ -22,7 +22,7 @@ index <- list(
       Windows = {
         paths <- list(system = "C:/Program Files/RStudio/",
                       user    = "~/R/RStudio/",
-                      index   = "www/index.htm")
+                      index   = "resources/app/www/index.htm")
       },
       Linux = {
         # RR: `rs_ver` is not needed on Debian-based distros. #13
@@ -34,10 +34,10 @@ index <- list(
     )
 
     check_paths <- function(p) {
-      .system <- fs::path_join(c(p$system, p$index))
-      .user    <- fs::path_join(c(p$system, p$index))
+      systempath <- fs::path_join(c(p$system, p$index))
+      userpath    <- fs::path_join(c(p$system, p$index))
 
-      path_index <- which(fs::file_exists(.system), fs::file_exists(.user))
+      path_index <- which(fs::file_exists(systempath), fs::file_exists(userpath))
       if (length(path_index) == 0) {
         return(NULL)
       }
