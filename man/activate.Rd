@@ -26,8 +26,8 @@ The only change to \code{index.htm} the inclusion of a \code{<link>} element
 near the end of the file, which tells RStudio to load \code{darkstudio.css}.
 
 daRkStudio creates a directory, "darkstudio", inside the \code{www} folder,
-which is found at \code{/Applications/RStudio.app/Contents/Resources/www} on
-macOS, and \code{C:\\Program Files\\RStudio\\www} on Windows.
+which is found at \code{/Applications/RStudio.app/Contents/Resources/app/www} on
+macOS, and \code{C:\\Program Files\\RStudio\\app\\www} on Windows.
 
 \code{activate()} will create a backup of \code{index.htm} at
 \code{www/darkstudio/index.htm.pre-ds}. \code{www/darkstudio} is also where
@@ -51,11 +51,11 @@ Activate daRkStudio
 activate()
 
 # macOS:
-path_index <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
+path_index <- "/Applications/RStudio.app/Contents/Resources/app/www/index.htm"
 activate(path = path_index, backup = TRUE)
 
 # Windows:
-path_index <- "C:/Program Files/RStudio/www/index.htm"
+path_index <- "C:/Program Files/RStudio/app/www/index.htm"
   activate(path = path_index, backup = TRUE)
 }
 
