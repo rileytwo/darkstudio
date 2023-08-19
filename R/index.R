@@ -17,7 +17,7 @@ index <- list(
       Darwin = {
         paths <- list(system = "/Applications/RStudio.app/",
                       user    = "~/Applications/RStudio.app/",
-                      index   = "Contents/Resources/www/index.htm")
+                      index   = "Contents/Resources/app/www/index.htm")
       },
       Windows = {
         paths <- list(system = "C:/Program Files/RStudio/",
