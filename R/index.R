@@ -102,37 +102,14 @@ index <- list(
 
 
   modify = function(file = NULL, .ds_link = NULL) {
+    
     if (length(file) == 0) {
       stop("No index file was given to modify.")
     }
-    # Dirty workaround to make sure we add our link in before the closing
-    # </html> tag
-    # The goal is to simply add in a <link> handle and modify nothing else.
-    # For example, the index file (as of 2020-06-27) usually looks something
-    # like this near the end of the file:
-    #
-    # ...
-    #   </body>
-    #
-    # </html>
-    #
-    # We want to change that to
-    # ...
-    #   </body>
-    #
-    #   <link rel="stylesheet" href="darkstudio/darkstudio.css" type="text/css"/>
-    # </html>
-    #
-    for (line in seq_along(file)) {
-      line_current  <- line
-      line_next     <- line_current + 1
-
-      if (file[[line_current]] == "</html>") {
-        # Create a new line, and copy the closing </html> to that new line
-        file[[line_next]] <- file[[line_current]]
-
-        # Add in the link
-        file[[line_current]] <- .ds_link
+    
+    for(i in (1:length(file))) {
+      if (grepl("</head>", file[i])) {
+        file[i] <- paste0(.ds_link, "\n", file[i])
       }
     }
 
