@@ -1,7 +1,7 @@
 Package: darkstudio
 Type: Package
 Title: An Alternative Look for RStudio's Modern and Sky Themes
-Version: 0.2.0
+Version: 0.3.0
 Author: Riley Roach
 Maintainer: Riley Roach <curt@null.net>
 Description: Modifies RStudio's Modern and Sky themes to use grey rather than blue.
@@ -11,4 +11,4 @@ LazyData: true
 Imports: 
     rstudioapi,
     fs
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
