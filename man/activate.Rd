@@ -4,7 +4,7 @@
 \alias{activate}
 \title{Activate daRkStudio}
 \usage{
-activate(path = NULL, backup = TRUE, type = NULL)
+activate(path = NULL, backup = TRUE, type = NULL, font_family = NULL)
 }
 \arguments{
 \item{path}{character:
@@ -16,8 +16,12 @@ TRUE or FALSE. Copies the default \code{index.htm} file to
 \code{index.htm.pre-ds}. Defaults to TRUE.}
 
 \item{type}{character:
-  Accepts 'user' or NULL. If 'user', \code{activate()} will look for RStudio
-  in \code{/Users/xxx/Applications} instead of \code{/Applications} on macOS.
+Accepts 'user' or NULL. If 'user', \code{activate()} will look for RStudio
+in \code{/Users/xxx/Applications} instead of \code{/Applications} on macOS.}
+
+\item{font_family}{character:
+  Name of the font family to use for the RStudio UI. If \code{NULL}, uses
+  to darkstudio defaults. If \code{"rstudio"}, uses default RStudio fonts.
 
 daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
 it's DOM (Document Object Model).
@@ -49,6 +53,9 @@ Activate daRkStudio
 \dontrun{
 # Default:
 activate()
+
+# Set UI font
+activate(font_family = "Noto Sans")
 
 # macOS:
 path_index <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"

@@ -9,6 +9,9 @@
 #' @param type character:
 #'   Accepts 'user' or NULL. If 'user', \code{activate()} will look for RStudio
 #'   in \code{/Users/xxx/Applications} instead of \code{/Applications} on macOS.
+#' @param font_family character:
+#'   Name of the font family to use for the RStudio UI. If \code{NULL}, uses
+#'   to darkstudio defaults. If \code{"rstudio"}, uses default RStudio fonts.
 #'
 #' daRkStudio modifies \code{index.htm}, a file used by RStudio to construct
 #' it's DOM (Document Object Model).
@@ -34,6 +37,9 @@
 #' # Default:
 #' activate()
 #'
+#' # Set UI font
+#' activate(font_family = "Noto Sans")
+#'
 #' # macOS:
 #' path_index <- "/Applications/RStudio.app/Contents/Resources/www/index.htm"
 #' activate(path = path_index, backup = TRUE)
@@ -46,7 +52,7 @@
 #' @return TRUE
 #' @return Returns \code{TRUE} if the operation is successful.
 #' @export
-activate <- function(path = NULL, backup = TRUE, type = NULL) {
+activate <- function(path = NULL, backup = TRUE, type = NULL, font_family = NULL) {
   # Fail quickly if the RStudio API is not available
   if (!rstudioapi::isAvailable()) {
     stop("RStudio must be running in order to install darkstudio.")
@@ -77,6 +83,8 @@ activate <- function(path = NULL, backup = TRUE, type = NULL) {
   ds_css <- fs::path(
     fs::path_package(package = "darkstudio"), "resources/darkstudio.css"
   )
+
+  customise(ds_css, font_family)
 
   fs::file_copy(path = ds_css, new_path = ds_dir, overwrite = TRUE)
 

@@ -1,7 +1,10 @@
 /* -------- FONTS --------- */
 
 :root {
-  --ds-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+--ds-ui-font: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    Arial, sans-serif;
+    Arial, sans-serif;
     Arial, sans-serif;
   --ds-ui-bg: #2c2c2c;
   --ds-ui-font-fg: #ffffff;
