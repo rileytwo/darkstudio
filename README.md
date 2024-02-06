@@ -68,6 +68,7 @@ Once RStudio is running, run
 
 ```r
 darkstudio::activate()
+# darkstudio::activate(path = "/usr/lib/rstudio/resources/app/www/index.htm") # Alternate location of index.htm
 ```
 
 in the console.
